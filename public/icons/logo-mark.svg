@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="popote-mark-titre">
+  <title id="popote-mark-titre">Popote</title>
+  <!-- Pictogramme seul, fond transparent : marmite orange, visage et vapeur lisibles sur fond clair comme sombre. -->
+  <!-- pictogramme:debut -->
+  <g transform="translate(0 10)">
+    <g fill="#FF6B1A">
+      <rect x="76" y="268" width="80" height="38" rx="19"/>
+      <rect x="356" y="268" width="80" height="38" rx="19"/>
+      <path d="M128 252h256v64a88 88 0 0 1-88 88h-80a88 88 0 0 1-88-88z"/>
+      <rect x="108" y="232" width="296" height="36" rx="18"/>
+      <g transform="rotate(-9 124 220)">
+        <path d="M128 220a128 96 0 0 1 256 0z"/>
+        <rect x="232" y="104" width="48" height="36" rx="18"/>
+      </g>
+    </g>
+    <g fill="none" stroke="#FF6B1A" stroke-width="16" stroke-linecap="round">
+      <path d="M398 196c20-14 2-32 22-48"/>
+      <path d="M432 206c16-10 4-24 18-36"/>
+    </g>
+    <g fill="none" stroke="#FFF8F1" stroke-width="14" stroke-linecap="round">
+      <path d="M196 314q19-21 38 0M278 314q19-21 38 0"/>
+      <path d="M230 348q26 24 52 0"/>
+    </g>
+  </g>
+  <!-- pictogramme:fin -->
+</svg>

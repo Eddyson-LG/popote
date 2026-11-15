@@ -1,11 +1,6 @@
-import type { ListeCourses } from '@/types'
-
-/** Boutons d'export / partage de la liste — en attente du sous-agent « export ». */
-export function ZoneExport(_: { liste: ListeCourses }) {
-  return null
-}
-
-/** Bloc de sauvegarde / restauration JSON pour les réglages — en attente du sous-agent « export ». */
-export function SauvegardeDonnees() {
-  return null
-}
+/**
+ * Module « export » : partage de la liste (texte, Rappels, PDF) et sauvegarde JSON des données.
+ * Points d'entrée branchés ailleurs : ZoneExport (liste de courses) et SauvegardeDonnees (réglages).
+ */
+export { ZoneExport } from './ZoneExport'
+export { SauvegardeDonnees } from './SauvegardeDonnees'

@@ -9,3 +9,6 @@ coverage
 .claude/
 tsconfig.tsbuildinfo
 *.tsbuildinfo
+
+# Cahier des charges perso (contient des infos personnelles) : jamais publié
+prompt-popote.xml

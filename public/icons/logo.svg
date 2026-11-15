@@ -1,8 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Popote">
-  <!-- Logo provisoire : une marmite orange stylisée (remplacé par le module identité). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="popote-titre">
+  <title id="popote-titre">Popote</title>
+  <!-- Popote : une marmite souriante dont le couvercle se soulève sous la vapeur. -->
   <rect width="512" height="512" rx="112" fill="#FF6B1A"/>
-  <path d="M136 232h240v72c0 66-54 112-120 112s-120-46-120-112z" fill="#FFF8F1"/>
-  <rect x="112" y="208" width="288" height="36" rx="18" fill="#FFF8F1"/>
-  <rect x="226" y="164" width="60" height="30" rx="15" fill="#FFF8F1"/>
-  <path d="M206 128c-10-14 10-26 0-40M256 124c-10-14 10-26 0-40M306 128c-10-14 10-26 0-40" stroke="#FFF8F1" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <!-- pictogramme:debut -->
+  <g transform="translate(0 10)">
+    <g fill="#FFF8F1">
+      <rect x="76" y="268" width="80" height="38" rx="19"/>
+      <rect x="356" y="268" width="80" height="38" rx="19"/>
+      <path d="M128 252h256v64a88 88 0 0 1-88 88h-80a88 88 0 0 1-88-88z"/>
+      <rect x="108" y="232" width="296" height="36" rx="18"/>
+      <g transform="rotate(-9 124 220)">
+        <path d="M128 220a128 96 0 0 1 256 0z"/>
+        <rect x="232" y="104" width="48" height="36" rx="18"/>
+      </g>
+    </g>
+    <g fill="none" stroke="#FFF8F1" stroke-width="16" stroke-linecap="round">
+      <path d="M398 196c20-14 2-32 22-48"/>
+      <path d="M432 206c16-10 4-24 18-36"/>
+    </g>
+    <g fill="none" stroke="#FF6B1A" stroke-width="14" stroke-linecap="round">
+      <path d="M196 314q19-21 38 0M278 314q19-21 38 0"/>
+      <path d="M230 348q26 24 52 0"/>
+    </g>
+  </g>
+  <!-- pictogramme:fin -->
 </svg>

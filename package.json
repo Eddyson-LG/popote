@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "lint": "tsc -b --noEmit"
+    "lint": "tsc -b --noEmit",
+    "icones": "node scripts/generer-icones.mjs"
   },
   "dependencies": {
     "@fontsource-variable/bricolage-grotesque": "^5.3.0",
@@ -31,6 +32,7 @@
     "@vitejs/plugin-react": "^6.3.0",
     "fake-indexeddb": "^6.2.8",
     "jsdom": "^31.0.1",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4.3.5",
     "typescript": "^7.0.2",
     "vite": "^8.3.8",

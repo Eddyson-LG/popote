@@ -24,6 +24,7 @@ export const zAliment = z.object({
   tags: z.array(zTagExclusion),
   conservationJours: z.number().int().positive().optional(),
   synonymes: z.array(z.string()).optional(),
+  perso: z.boolean().optional(),
 })
 
 export const zIngredient = z.object({

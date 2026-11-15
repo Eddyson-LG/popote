@@ -28,9 +28,14 @@ describe('scoring', () => {
     expect(recetteExclue(pates, PAR_ID, reglages(), gouts)).toBe(true)
     expect(recetteExclue(RECETTES[0], PAR_ID, reglages(), gouts)).toBe(false)
   })
-  it('exclut les aliments portant un tag exclu (fromage dans le pesto)', () => {
-    const r = { ...RECETTES[0], ingredients: [...RECETTES[0].ingredients, { alimentId: 'pesto-basilic', quantite: 30, unite: 'g' as const }] }
-    expect(recetteExclue(r, PAR_ID, reglages(), new Map())).toBe(true)
+  it('exclut un aliment de la famille fromage, mais pas le pesto', () => {
+    const tomme = { ...PAR_ID.get('skyr')!, id: 'tomme', nom: 'Tomme', tags: ['fromage' as const] }
+    const parId = new Map([...PAR_ID, ['tomme', tomme]])
+    const avec = (id: string) => ({ ...RECETTES[0], ingredients: [...RECETTES[0].ingredients, { alimentId: id, quantite: 30, unite: 'g' as const }] })
+    expect(recetteExclue(avec('tomme'), parId, reglages(), new Map())).toBe(true)
+    expect(recetteExclue(avec('pesto-basilic'), parId, reglages(), new Map())).toBe(false)
+    // Si l'utilisateur débannit la famille fromage, la tomme repasse.
+    expect(recetteExclue(avec('tomme'), parId, reglages({ exclusions: ['puree', 'soupe'] }), new Map())).toBe(false)
   })
   it('remonte une recette dont les ingrédients sont adorés', () => {
     const gouts: CarteGouts = new Map([g('aliment', 'poulet-filet', { verdict: 'adore' }), g('aliment', 'riz-blanc', { verdict: 'aime' })])

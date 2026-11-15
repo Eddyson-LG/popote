@@ -109,6 +109,23 @@ export interface Aliment {
   conservationJours?: number
   /** Synonymes pour la recherche et la correspondance OCR (« pdt » pour pomme de terre). */
   synonymes?: string[]
+  /** Aliment ajouté par l'utilisateur (absent des données de départ). */
+  perso?: boolean
+}
+
+export const CATEGORIE_LIBELLES: Record<CategorieAliment, string> = {
+  legume: 'Légumes',
+  fruit: 'Fruits',
+  feculent: 'Féculents',
+  'proteine-animale': 'Viandes, poissons, œufs',
+  'proteine-vegetale': 'Protéines végétales',
+  'produit-laitier': 'Produits laitiers',
+  'matiere-grasse': 'Matières grasses',
+  condiment: 'Sauces et condiments',
+  'epice-herbe': 'Épices et herbes',
+  sucre: 'Sucré',
+  boisson: 'Boissons',
+  autre: 'Autres',
 }
 
 export interface IngredientRecette {

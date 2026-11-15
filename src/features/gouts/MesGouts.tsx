@@ -5,6 +5,7 @@ import type { Gout, Verdict } from '@/types'
 import { db } from '@/lib/db'
 import { enregistrerGout } from '@/lib/contexte'
 import { Bouton, Page, Vide } from '@/ui'
+import { ChoixAliments } from './ChoixAliments'
 
 const GROUPES: { verdicts: Verdict[]; titre: string }[] = [
   { verdicts: ['adore'], titre: '😍 J’adore' },
@@ -21,6 +22,7 @@ const OPTIONS: { v: Verdict; label: string; nom: string }[] = [
 
 export default function MesGouts() {
   const [ouvert, setOuvert] = useState<string | null>(null)
+  const [onglet, setOnglet] = useState<'aliments' | 'avis'>('aliments')
   const donnees = useLiveQuery(async () => {
     const [gouts, aliments, recettes, produits] = await Promise.all([db.gouts.toArray(), db.aliments.toArray(), db.recettes.toArray(), db.produits.toArray()])
     const noms = new Map<string, { nom: string; emoji: string }>()
@@ -39,8 +41,18 @@ export default function MesGouts() {
   }
 
   return (
-    <Page titre="Mes goûts" sousTitre="Touche un élément pour le modifier.">
-      {gouts.length === 0 ? (
+    <Page titre="Mes goûts" sousTitre="Tes coups de cœur, tes bannis, et tes aliments à toi.">
+      <div className="mb-4 grid grid-cols-2 gap-1 rounded-full bg-surface-2 p-1" role="tablist">
+        {([['aliments', 'Tous les aliments'], ['avis', 'Mes avis (plats inclus)']] as const).map(([id, l]) => (
+          <button key={id} type="button" role="tab" aria-selected={onglet === id} onClick={() => setOnglet(id)}
+            className={`min-h-11 rounded-full text-sm font-semibold ${onglet === id ? 'bg-surface shadow-carte' : 'text-encre-2'}`}>
+            {l}
+          </button>
+        ))}
+      </div>
+      {onglet === 'aliments' ? (
+        <ChoixAliments />
+      ) : gouts.length === 0 ? (
         <Vide emoji="🔥" titre="Pas encore de goûts" texte="Swipe quelques cartes pour que je te connaisse." action={<Link to="/swipe"><Bouton>Swiper 2 min</Bouton></Link>} />
       ) : (
         <div className="space-y-6">

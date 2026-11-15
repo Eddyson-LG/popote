@@ -206,7 +206,7 @@ export function assainirRecetteIA(
     source: 'ia',
   }
   if (r.tempsMinutes > Math.min(30, reglages.tempsMaxMinutes)) return null
-  if (violationInterdits(r, alimentsParId)) return null
+  if (violationInterdits(r, alimentsParId, reglages.exclusions)) return null
   if (r.ingredients.some((i) => alimentExclu(alimentsParId.get(i.alimentId), reglages, gouts))) return null
   return r
 }

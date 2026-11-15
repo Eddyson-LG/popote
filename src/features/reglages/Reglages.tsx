@@ -138,7 +138,11 @@ export default function Reglages() {
         <p className="mt-3 text-xs text-encre-3">Les changements s’appliquent à la prochaine génération de la semaine.</p>
       </Section>
 
-      <Section titre="Exclusions et allergies">
+      <Section titre="Familles bannies et allergies">
+        <p className="mb-3 text-sm text-encre-2">
+          Une famille bannie écarte ses plats et ses aliments (un plat « au fromage », une purée…), pas ce qui en contient un peu, comme le pesto ou les gnocchis.
+          Pour un aliment précis : <a href="#/plus/gouts" className="font-semibold text-orange-texte underline underline-offset-4">Mes goûts → Tous les aliments</a>.
+        </p>
         <Puces options={EXCLUSIONS} valeurs={r.exclusions} onChange={(v) => maj({ exclusions: v }, true)} libelle={(t) => ({ puree: 'purée', oeuf: 'œufs', 'fruits-a-coque': 'fruits à coque' } as Record<string, string>)[t] ?? t} />
         <textarea value={r.allergies} onChange={(e) => maj({ allergies: e.target.value })} placeholder="Allergies ou intolérances (texte libre, transmis à l’IA)" aria-label="Allergies ou intolérances" className="mt-3 min-h-20 w-full rounded-xl bg-surface-2 p-3" />
       </Section>

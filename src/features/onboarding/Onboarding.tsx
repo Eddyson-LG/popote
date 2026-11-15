@@ -13,6 +13,7 @@ import { JOURS_COURTS } from '@/lib/dates'
 import { Bouton } from '@/ui'
 import { chargerDemo } from '@/lib/demo'
 import { ALIMENTS } from '@/lib/seed'
+import { ChoixAliments } from '@/features/gouts/ChoixAliments'
 
 const NOMS = new Map(ALIMENTS.map((a) => [a.id, a]))
 
@@ -170,14 +171,23 @@ export default function Onboarding() {
       ),
     },
     {
-      titre: 'Ce que tu ne veux jamais voir',
-      sous: 'Fromage, purée et soupe sont déjà exclus. Tu affineras avec le swipe.',
+      titre: 'Des familles entières à bannir ?',
+      sous: 'Fromage, purée et soupe sont cochés : ça vise les plats et les aliments de ces familles, pas le pesto ou les gnocchis. Décoche si tu veux.',
       contenu: (
         <Choix
           options={EXCLUSIONS.map((e) => ({ id: e.tag, label: e.label }))}
           valeurs={r.exclusions}
           onChange={(v) => maj({ exclusions: v as TagExclusion[] })}
         />
+      ),
+    },
+    {
+      titre: 'Tes coups de cœur et tes bannis',
+      sous: '❤️ ce que t’adores, 🚫 ce que tu veux jamais voir. Un truc manque ? Ajoute-le. Tu pourras tout changer dans « Mes goûts ».',
+      contenu: (
+        <div className="mt-4">
+          <ChoixAliments compact />
+        </div>
       ),
     },
     {

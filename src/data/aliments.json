@@ -1654,8 +1654,7 @@
     },
     "saisons": [],
     "tags": [
-      "gluten",
-      "puree"
+      "gluten"
     ],
     "conservationJours": 30,
     "synonymes": [
@@ -2286,7 +2285,6 @@
     },
     "saisons": [],
     "tags": [
-      "fromage",
       "lactose"
     ],
     "conservationJours": 21,
@@ -2651,7 +2649,6 @@
     },
     "saisons": [],
     "tags": [
-      "fromage",
       "fruits-a-coque",
       "lactose"
     ],

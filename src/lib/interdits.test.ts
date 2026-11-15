@@ -13,7 +13,7 @@ describe('garde-fou fromage / purée / soupe', () => {
   it('rejette un fromage caché dans les étapes', () => {
     expect(violationInterdits(r('Pâtes', 'Saupoudre de pecorino.'), PAR_ID)).not.toBeNull()
   })
-  it.each(['Poulet à l’ail écrasé', 'Riz au bouillon', 'Tomates confites', 'Curry de pois chiches', 'Wrap thon crudités', 'Brick à l’œuf'])(
+  it.each(['Pâtes au pesto', 'Gnocchis poêlés aux épinards', 'Skyr et kiwi', 'Poulet à l’ail écrasé', 'Riz au bouillon', 'Tomates confites', 'Curry de pois chiches', 'Wrap thon crudités', 'Brick à l’œuf'])(
     'accepte « %s »',
     (nom) => expect(violationInterdits(r(nom, 'Ajoute 1 c. à s. d’huile et l’ail écrasé.'), PAR_ID)).toBeNull(),
   )

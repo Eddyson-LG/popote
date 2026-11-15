@@ -290,8 +290,8 @@
     "source": "base"
   },
   {
-    "id": "yaourt-grec-kiwi-muesli",
-    "nom": "Yaourt grec, kiwi et muesli",
+    "id": "skyr-kiwi-muesli",
+    "nom": "Skyr, kiwi et muesli",
     "emoji": "🥝",
     "types": [
       "petit-dejeuner",
@@ -301,7 +301,7 @@
     "portions": 1,
     "ingredients": [
       {
-        "alimentId": "yaourt-grec",
+        "alimentId": "skyr",
         "quantite": 150,
         "unite": "g"
       },
@@ -318,7 +318,7 @@
     ],
     "etapes": [
       "Épluche et coupe les kiwis en dés.",
-      "Verse le yaourt grec dans un bol, ajoute les kiwis et le muesli."
+      "Verse le skyr dans un bol, ajoute les kiwis et le muesli."
     ],
     "equipement": [],
     "gamelle": false,
@@ -4120,8 +4120,8 @@
     "source": "base"
   },
   {
-    "id": "pates-epinards-tomates-cerises",
-    "nom": "Pâtes poêlées aux épinards et tomates cerises",
+    "id": "gnocchis-epinards-tomates",
+    "nom": "Gnocchis poêlés aux épinards et tomates cerises",
     "emoji": "🍅",
     "types": [
       "diner",
@@ -4131,8 +4131,8 @@
     "portions": 2,
     "ingredients": [
       {
-        "alimentId": "pates",
-        "quantite": 200,
+        "alimentId": "gnocchis",
+        "quantite": 500,
         "unite": "g"
       },
       {
@@ -4157,10 +4157,9 @@
       }
     ],
     "etapes": [
-      "Fais cuire les pâtes dans l'eau salée bouillante, égoutte-les.",
-      "Pendant ce temps, fais revenir l'ail dans l'huile 1 min, ajoute les tomates cerises, 2 min.",
-      "Ajoute les épinards et laisse-les tomber 2 min.",
-      "Mélange avec les pâtes et fais dorer 2 min à feu vif."
+      "Fais dorer les gnocchis 6 min dans l'huile, sans les cuire avant.",
+      "Ajoute l'ail et les tomates cerises, 2 min.",
+      "Ajoute les épinards et laisse-les tomber 2 min."
     ],
     "equipement": [
       "plaques"
@@ -4915,5 +4914,111 @@
       "assiette-complete"
     ],
     "source": "base"
+  },
+  {
+    "equipement": [
+      "plaques"
+    ],
+    "batch": false,
+    "peuSucre": true,
+    "source": "base",
+    "id": "pates-pesto-poulet-tomates",
+    "nom": "Pâtes au pesto, poulet et tomates cerises",
+    "emoji": "🌿",
+    "types": [
+      "diner",
+      "gamelle",
+      "dejeuner"
+    ],
+    "tempsMinutes": 20,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "pates",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "poulet-filet",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "pesto-basilic",
+        "quantite": 60,
+        "unite": "g"
+      },
+      {
+        "alimentId": "tomate-cerise",
+        "quantite": 150,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Fais cuire les pâtes dans l'eau salée, égoutte-les.",
+      "Coupe le poulet en dés et fais-le dorer 6 à 8 min à la poêle.",
+      "Mélange pâtes, poulet, pesto et tomates cerises coupées en deux."
+    ],
+    "gamelle": true,
+    "tags": [
+      "rapide",
+      "assiette-complete"
+    ]
+  },
+  {
+    "equipement": [
+      "plaques"
+    ],
+    "batch": false,
+    "peuSucre": true,
+    "source": "base",
+    "id": "wrap-pesto-oeuf-crudites",
+    "nom": "Wrap pesto, œuf dur et crudités",
+    "emoji": "🌯",
+    "types": [
+      "gamelle",
+      "dejeuner",
+      "diner"
+    ],
+    "tempsMinutes": 15,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "tortilla",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "oeuf",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "pesto-basilic",
+        "quantite": 25,
+        "unite": "g"
+      },
+      {
+        "alimentId": "carotte",
+        "quantite": 80,
+        "unite": "g"
+      },
+      {
+        "alimentId": "salade-verte",
+        "quantite": 0.25,
+        "unite": "piece"
+      }
+    ],
+    "etapes": [
+      "Fais cuire les œufs 9 min dans l'eau bouillante, écale-les et coupe-les en rondelles.",
+      "Râpe la carotte.",
+      "Tartine les tortillas de pesto, garnis de salade, carotte et œuf, roule serré."
+    ],
+    "gamelle": true,
+    "tags": [
+      "rapide",
+      "oeuf",
+      "vegetarien"
+    ]
   }
 ]

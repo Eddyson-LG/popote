@@ -6,7 +6,7 @@ const ENTREES = [
   { to: '/plus/tickets', emoji: '🧾', titre: 'Scanner un ticket', sous: 'Tes vrais prix, sans rien taper' },
   { to: '/plus/prix', emoji: '🏷️', titre: 'Prix et comparateur', sous: 'Où ta liste coûte le moins cher' },
   { to: '/plus/economies', emoji: '💰', titre: 'Économies', sous: 'Gamelles vs sandwichs' },
-  { to: '/plus/gouts', emoji: '😍', titre: 'Mes goûts', sous: 'J’adore, j’aime, jamais' },
+  { to: '/plus/gouts', emoji: '😍', titre: 'Mes goûts', sous: 'Coups de cœur, bannis, tes propres aliments' },
   { to: '/plus/reglages', emoji: '⚙️', titre: 'Réglages', sous: 'Budget, magasins, IA, sauvegarde' },
 ]
 

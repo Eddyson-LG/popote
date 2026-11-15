@@ -19,7 +19,17 @@ describe('IA : assainissement des recettes', () => {
     expect(assainirRecetteIA(brute({ nom: 'Pâtes au fromage' }), PAR_ID, reglages(), new Map())).toBeNull()
     expect(assainirRecetteIA(brute({ etapes: ['Mixe en purée.'] }), PAR_ID, reglages(), new Map())).toBeNull()
     expect(assainirRecetteIA(brute({ nom: 'Soupe express' }), PAR_ID, reglages(), new Map())).toBeNull()
-    expect(assainirRecetteIA(brute({ ingredients: [{ alimentId: 'pesto-basilic', quantite: 30 }] }), PAR_ID, reglages(), new Map())).toBeNull()
+  })
+  it('accepte le pesto, les gnocchis et le skyr (pas des plats de fromage ou de purée)', () => {
+    expect(assainirRecetteIA(brute({ nom: 'Pâtes au pesto', ingredients: [{ alimentId: 'pates', quantite: 200 }, { alimentId: 'pesto-basilic', quantite: 30 }] }), PAR_ID, reglages(), new Map())).not.toBeNull()
+    expect(assainirRecetteIA(brute({ nom: 'Gnocchis poêlés', ingredients: [{ alimentId: 'gnocchis', quantite: 300 }] }), PAR_ID, reglages(), new Map())).not.toBeNull()
+  })
+  it('rejette un aliment que l’utilisateur a banni lui-même', () => {
+    const gouts = new Map([['aliment:poulet-filet', { id: 'aliment:poulet-filet', cible: 'aliment' as const, refId: 'poulet-filet', verdict: 'jamais' as const, achats: 0, score: -1, majLe: '' }]])
+    expect(assainirRecetteIA(brute(), PAR_ID, reglages(), gouts)).toBeNull()
+  })
+  it('suit les familles bannies des réglages', () => {
+    expect(assainirRecetteIA(brute({ nom: 'Pâtes au fromage' }), PAR_ID, reglages({ exclusions: ['puree', 'soupe'] }), new Map())).not.toBeNull()
   })
   it('rejette les ingrédients inventés et les recettes trop longues', () => {
     expect(assainirRecetteIA(brute({ ingredients: [{ alimentId: 'licorne', quantite: 1 }, { alimentId: 'riz-blanc', quantite: 100 }] }), PAR_ID, reglages(), new Map())).toBeNull()

@@ -6,22 +6,22 @@
  },
  {
   "id": "oignon",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Oignon"
  },
  {
   "id": "oignon-rouge",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Oignon rouge"
  },
  {
   "id": "ail",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Ail (gousse)"
  },
  {
   "id": "echalote",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Échalote"
  },
  {
@@ -36,27 +36,27 @@
  },
  {
   "id": "courgette",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Courgette"
  },
  {
   "id": "aubergine",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Aubergine"
  },
  {
   "id": "poivron-rouge",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Poivron rouge"
  },
  {
   "id": "poivron-vert",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Poivron vert"
  },
  {
   "id": "tomate",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Tomate"
  },
  {
@@ -66,12 +66,12 @@
  },
  {
   "id": "concombre",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Concombre"
  },
  {
   "id": "salade-verte",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Salade verte"
  },
  {
@@ -81,27 +81,27 @@
  },
  {
   "id": "chou-fleur",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Chou-fleur"
  },
  {
   "id": "brocoli",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Brocoli"
  },
  {
   "id": "chou-blanc",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Chou blanc"
  },
  {
   "id": "chou-rouge",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Chou rouge"
  },
  {
   "id": "poireau",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Poireau"
  },
  {
@@ -126,7 +126,7 @@
  },
  {
   "id": "courge-butternut",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Courge butternut"
  },
  {
@@ -136,17 +136,17 @@
  },
  {
   "id": "radis",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Radis (botte)"
  },
  {
   "id": "celeri-branche",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Céleri branche"
  },
  {
   "id": "fenouil",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Fenouil"
  },
  {
@@ -161,47 +161,47 @@
  },
  {
   "id": "avocat",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Avocat"
  },
  {
   "id": "endive",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Endive"
  },
  {
   "id": "banane",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Banane"
  },
  {
   "id": "pomme",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Pomme"
  },
  {
   "id": "poire",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Poire"
  },
  {
   "id": "orange",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Orange"
  },
  {
   "id": "clementine",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Clémentine"
  },
  {
   "id": "citron",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Citron"
  },
  {
   "id": "kiwi",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Kiwi"
  },
  {
@@ -216,7 +216,7 @@
  },
  {
   "id": "peche",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Pêche"
  },
  {
@@ -226,22 +226,22 @@
  },
  {
   "id": "melon",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Melon"
  },
  {
   "id": "pasteque",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Pastèque"
  },
  {
   "id": "ananas",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Ananas"
  },
  {
   "id": "mangue",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Mangue"
  },
  {
@@ -356,7 +356,7 @@
  },
  {
   "id": "baguette",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Baguette"
  },
  {
@@ -366,7 +366,7 @@
  },
  {
   "id": "tortilla",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Tortilla de blé"
  },
  {
@@ -391,12 +391,12 @@
  },
  {
   "id": "pain-pita",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Pain pita"
  },
  {
   "id": "oeuf",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Œuf"
  },
  {
@@ -521,7 +521,7 @@
  },
  {
   "id": "yaourt-nature",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Yaourt nature"
  },
  {
@@ -631,7 +631,7 @@
  },
  {
   "id": "bouillon-cube",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Bouillon cube"
  },
  {
@@ -706,22 +706,22 @@
  },
  {
   "id": "persil",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Persil (bouquet)"
  },
  {
   "id": "coriandre",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Coriandre (bouquet)"
  },
  {
   "id": "basilic",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Basilic (pot)"
  },
  {
   "id": "ciboulette",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Ciboulette (bouquet)"
  },
  {
@@ -841,7 +841,7 @@
  },
  {
   "id": "the",
-  "uniteBase": "p",
+  "uniteBase": "piece",
   "nom": "Thé (sachet)"
  },
  {

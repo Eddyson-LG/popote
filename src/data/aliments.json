@@ -1,5 +1,3593 @@
 [
-  { "id": "riz-blanc", "nom": "Riz blanc", "emoji": "🍚", "categorie": "feculent", "rayon": "epicerie-salee", "uniteBase": "g", "formatVente": { "quantite": 1000, "libelle": "paquet de 1 kg" }, "saisons": [], "tags": [], "conservationJours": 365 },
-  { "id": "oeuf", "nom": "Œuf", "emoji": "🥚", "categorie": "proteine-animale", "rayon": "frais", "uniteBase": "piece", "formatVente": { "quantite": 6, "libelle": "boîte de 6" }, "poidsPieceG": 60, "saisons": [], "tags": ["oeuf"], "conservationJours": 28 },
-  { "id": "carotte", "nom": "Carotte", "emoji": "🥕", "categorie": "legume", "rayon": "fruits-legumes", "uniteBase": "g", "formatVente": { "quantite": 1000, "libelle": "sachet de 1 kg" }, "saisons": [], "tags": [], "conservationJours": 21 }
+  {
+    "id": "carotte",
+    "nom": "Carotte",
+    "emoji": "🥕",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 1000,
+      "libelle": "sachet de 1 kg"
+    },
+    "saisons": [
+      "automne",
+      "hiver"
+    ],
+    "tags": [],
+    "conservationJours": 21,
+    "synonymes": [
+      "carottes",
+      "carot",
+      "carottes vrac"
+    ]
+  },
+  {
+    "id": "oignon",
+    "nom": "Oignon jaune",
+    "emoji": "🧅",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 150,
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 30,
+    "synonymes": [
+      "oignons",
+      "oign jaune",
+      "oignon jaune"
+    ]
+  },
+  {
+    "id": "oignon-rouge",
+    "nom": "Oignon rouge",
+    "emoji": "🧅",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 150,
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 30,
+    "synonymes": [
+      "oignons rouges",
+      "oign rouge"
+    ]
+  },
+  {
+    "id": "ail",
+    "nom": "Ail (gousse)",
+    "emoji": "🧄",
+    "categorie": "condiment",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 10,
+      "libelle": "tête d'ail (≈ 10 gousses)"
+    },
+    "poidsPieceG": 5,
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 60,
+    "synonymes": [
+      "gousse d'ail",
+      "tete ail",
+      "ail blanc"
+    ]
+  },
+  {
+    "id": "echalote",
+    "nom": "Échalote",
+    "emoji": "🧅",
+    "categorie": "condiment",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 30,
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 45,
+    "synonymes": [
+      "echalote",
+      "échalotes",
+      "echal"
+    ]
+  },
+  {
+    "id": "pomme-de-terre",
+    "nom": "Pomme de terre",
+    "emoji": "🥔",
+    "categorie": "feculent",
+    "rayon": "fruits-legumes",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 2500,
+      "libelle": "filet de 2,5 kg"
+    },
+    "saisons": [
+      "ete",
+      "automne"
+    ],
+    "tags": [],
+    "conservationJours": 30,
+    "synonymes": [
+      "pdt",
+      "pommes de terre",
+      "patates"
+    ]
+  },
+  {
+    "id": "patate-douce",
+    "nom": "Patate douce",
+    "emoji": "🍠",
+    "categorie": "feculent",
+    "rayon": "fruits-legumes",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 1000,
+      "libelle": "sachet de 1 kg"
+    },
+    "saisons": [
+      "automne",
+      "hiver"
+    ],
+    "tags": [],
+    "conservationJours": 21,
+    "synonymes": [
+      "patates douces",
+      "pat douce"
+    ]
+  },
+  {
+    "id": "courgette",
+    "nom": "Courgette",
+    "emoji": "🥒",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 250,
+    "saisons": [
+      "ete"
+    ],
+    "tags": [],
+    "conservationJours": 7,
+    "synonymes": [
+      "courgettes",
+      "courg"
+    ]
+  },
+  {
+    "id": "aubergine",
+    "nom": "Aubergine",
+    "emoji": "🍆",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 300,
+    "saisons": [
+      "ete"
+    ],
+    "tags": [],
+    "conservationJours": 7,
+    "synonymes": [
+      "aubergines",
+      "auberg"
+    ]
+  },
+  {
+    "id": "poivron-rouge",
+    "nom": "Poivron rouge",
+    "emoji": "🫑",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 180,
+    "saisons": [
+      "ete"
+    ],
+    "tags": [],
+    "conservationJours": 10,
+    "synonymes": [
+      "poivrons rouges",
+      "poivron rge"
+    ]
+  },
+  {
+    "id": "poivron-vert",
+    "nom": "Poivron vert",
+    "emoji": "🫑",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 170,
+    "saisons": [
+      "ete"
+    ],
+    "tags": [],
+    "conservationJours": 10,
+    "synonymes": [
+      "poivrons verts",
+      "poivron vrt"
+    ]
+  },
+  {
+    "id": "tomate",
+    "nom": "Tomate",
+    "emoji": "🍅",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 120,
+    "saisons": [
+      "ete"
+    ],
+    "tags": [],
+    "conservationJours": 7,
+    "synonymes": [
+      "tomates",
+      "tom grappe",
+      "tomate ronde"
+    ]
+  },
+  {
+    "id": "tomate-cerise",
+    "nom": "Tomate cerise",
+    "emoji": "🍅",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 250,
+      "libelle": "barquette de 250 g"
+    },
+    "saisons": [
+      "ete"
+    ],
+    "tags": [],
+    "conservationJours": 7,
+    "synonymes": [
+      "tomates cerises",
+      "tom cerise",
+      "cherry"
+    ]
+  },
+  {
+    "id": "concombre",
+    "nom": "Concombre",
+    "emoji": "🥒",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 350,
+    "saisons": [
+      "ete"
+    ],
+    "tags": [],
+    "conservationJours": 7,
+    "synonymes": [
+      "concombres",
+      "concomb"
+    ]
+  },
+  {
+    "id": "salade-verte",
+    "nom": "Salade verte",
+    "emoji": "🥬",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 300,
+    "saisons": [
+      "printemps",
+      "ete",
+      "automne"
+    ],
+    "tags": [],
+    "conservationJours": 5,
+    "synonymes": [
+      "laitue",
+      "batavia",
+      "salade"
+    ]
+  },
+  {
+    "id": "epinards-frais",
+    "nom": "Épinards frais",
+    "emoji": "🥬",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 300,
+      "libelle": "sachet de 300 g"
+    },
+    "saisons": [
+      "printemps",
+      "automne"
+    ],
+    "tags": [],
+    "conservationJours": 3,
+    "synonymes": [
+      "epinards",
+      "pousses d'epinards",
+      "epin"
+    ]
+  },
+  {
+    "id": "chou-fleur",
+    "nom": "Chou-fleur",
+    "emoji": "🥦",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 1000,
+    "saisons": [
+      "automne",
+      "hiver"
+    ],
+    "tags": [],
+    "conservationJours": 7,
+    "synonymes": [
+      "choufleur",
+      "chou fleur"
+    ]
+  },
+  {
+    "id": "brocoli",
+    "nom": "Brocoli",
+    "emoji": "🥦",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 400,
+    "saisons": [
+      "automne",
+      "hiver"
+    ],
+    "tags": [],
+    "conservationJours": 5,
+    "synonymes": [
+      "brocolis",
+      "broco"
+    ]
+  },
+  {
+    "id": "chou-blanc",
+    "nom": "Chou blanc",
+    "emoji": "🥬",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 1200,
+    "saisons": [
+      "automne",
+      "hiver"
+    ],
+    "tags": [],
+    "conservationJours": 21,
+    "synonymes": [
+      "chou",
+      "chou pomme blanc"
+    ]
+  },
+  {
+    "id": "chou-rouge",
+    "nom": "Chou rouge",
+    "emoji": "🥬",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 1000,
+    "saisons": [
+      "automne",
+      "hiver"
+    ],
+    "tags": [],
+    "conservationJours": 21,
+    "synonymes": [
+      "chou violet",
+      "chou rge"
+    ]
+  },
+  {
+    "id": "poireau",
+    "nom": "Poireau",
+    "emoji": "🥬",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 200,
+    "saisons": [
+      "automne",
+      "hiver"
+    ],
+    "tags": [],
+    "conservationJours": 10,
+    "synonymes": [
+      "poireaux",
+      "poir"
+    ]
+  },
+  {
+    "id": "champignon-paris",
+    "nom": "Champignon de Paris",
+    "emoji": "🍄",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 250,
+      "libelle": "barquette de 250 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 5,
+    "synonymes": [
+      "champignons",
+      "champ paris",
+      "champignons blancs"
+    ]
+  },
+  {
+    "id": "haricot-vert",
+    "nom": "Haricots verts",
+    "emoji": "🫛",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "barquette de 500 g"
+    },
+    "saisons": [
+      "ete"
+    ],
+    "tags": [],
+    "conservationJours": 4,
+    "synonymes": [
+      "haricots verts frais",
+      "har vert"
+    ]
+  },
+  {
+    "id": "petits-pois-frais",
+    "nom": "Petits pois frais",
+    "emoji": "🫛",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "barquette de 500 g"
+    },
+    "saisons": [
+      "printemps",
+      "ete"
+    ],
+    "tags": [],
+    "conservationJours": 3,
+    "synonymes": [
+      "petits pois",
+      "pois frais"
+    ]
+  },
+  {
+    "id": "potiron",
+    "nom": "Potiron",
+    "emoji": "🎃",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 1000,
+      "libelle": "tranche d'environ 1 kg"
+    },
+    "saisons": [
+      "automne",
+      "hiver"
+    ],
+    "tags": [],
+    "conservationJours": 7,
+    "synonymes": [
+      "citrouille",
+      "potimarron",
+      "courge"
+    ]
+  },
+  {
+    "id": "courge-butternut",
+    "nom": "Courge butternut",
+    "emoji": "🎃",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 1200,
+    "saisons": [
+      "automne",
+      "hiver"
+    ],
+    "tags": [],
+    "conservationJours": 60,
+    "synonymes": [
+      "butternut",
+      "doubeurre",
+      "courge musquee"
+    ]
+  },
+  {
+    "id": "betterave-cuite",
+    "nom": "Betterave cuite",
+    "emoji": "🟣",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "sachet de 500 g (sous vide)"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 10,
+    "synonymes": [
+      "betteraves",
+      "betterave rouge",
+      "bett cuite"
+    ]
+  },
+  {
+    "id": "radis",
+    "nom": "Radis (botte)",
+    "emoji": "🌱",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la botte"
+    },
+    "poidsPieceG": 250,
+    "saisons": [
+      "printemps"
+    ],
+    "tags": [],
+    "conservationJours": 4,
+    "synonymes": [
+      "radis rose",
+      "botte radis"
+    ]
+  },
+  {
+    "id": "celeri-branche",
+    "nom": "Céleri branche",
+    "emoji": "🥬",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 500,
+    "saisons": [
+      "automne",
+      "hiver"
+    ],
+    "tags": [],
+    "conservationJours": 10,
+    "synonymes": [
+      "celeri",
+      "céleri",
+      "celeri branche"
+    ]
+  },
+  {
+    "id": "fenouil",
+    "nom": "Fenouil",
+    "emoji": "🌿",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 300,
+    "saisons": [
+      "automne",
+      "hiver"
+    ],
+    "tags": [],
+    "conservationJours": 7,
+    "synonymes": [
+      "bulbe de fenouil",
+      "fenouils"
+    ]
+  },
+  {
+    "id": "navet",
+    "nom": "Navet",
+    "emoji": "🥔",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 1000,
+      "libelle": "botte d'environ 1 kg"
+    },
+    "saisons": [
+      "automne",
+      "hiver"
+    ],
+    "tags": [],
+    "conservationJours": 14,
+    "synonymes": [
+      "navets",
+      "navet violet"
+    ]
+  },
+  {
+    "id": "mais-doux",
+    "nom": "Maïs doux (boîte)",
+    "emoji": "🌽",
+    "categorie": "legume",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 285,
+      "libelle": "boîte de 285 g (égoutté)"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "mais",
+      "maïs",
+      "mais doux boite"
+    ]
+  },
+  {
+    "id": "avocat",
+    "nom": "Avocat",
+    "emoji": "🥑",
+    "categorie": "fruit",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 200,
+    "saisons": [
+      "hiver"
+    ],
+    "tags": [],
+    "conservationJours": 5,
+    "synonymes": [
+      "avocats",
+      "avoc"
+    ]
+  },
+  {
+    "id": "endive",
+    "nom": "Endive",
+    "emoji": "🥬",
+    "categorie": "legume",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 120,
+    "saisons": [
+      "automne",
+      "hiver"
+    ],
+    "tags": [],
+    "conservationJours": 7,
+    "synonymes": [
+      "endives",
+      "chicon"
+    ]
+  },
+  {
+    "id": "banane",
+    "nom": "Banane",
+    "emoji": "🍌",
+    "categorie": "fruit",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 120,
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 6,
+    "synonymes": [
+      "bananes",
+      "ban"
+    ]
+  },
+  {
+    "id": "pomme",
+    "nom": "Pomme",
+    "emoji": "🍎",
+    "categorie": "fruit",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 150,
+    "saisons": [
+      "automne",
+      "hiver"
+    ],
+    "tags": [],
+    "conservationJours": 30,
+    "synonymes": [
+      "pommes",
+      "pom golden",
+      "gala"
+    ]
+  },
+  {
+    "id": "poire",
+    "nom": "Poire",
+    "emoji": "🍐",
+    "categorie": "fruit",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 150,
+    "saisons": [
+      "automne"
+    ],
+    "tags": [],
+    "conservationJours": 10,
+    "synonymes": [
+      "poires",
+      "conference"
+    ]
+  },
+  {
+    "id": "orange",
+    "nom": "Orange",
+    "emoji": "🍊",
+    "categorie": "fruit",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 200,
+    "saisons": [
+      "hiver"
+    ],
+    "tags": [],
+    "conservationJours": 14,
+    "synonymes": [
+      "oranges",
+      "orange table",
+      "orang"
+    ]
+  },
+  {
+    "id": "clementine",
+    "nom": "Clémentine",
+    "emoji": "🍊",
+    "categorie": "fruit",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 70,
+    "saisons": [
+      "hiver"
+    ],
+    "tags": [],
+    "conservationJours": 14,
+    "synonymes": [
+      "clementines",
+      "mandarine",
+      "clem"
+    ]
+  },
+  {
+    "id": "citron",
+    "nom": "Citron",
+    "emoji": "🍋",
+    "categorie": "fruit",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 120,
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 21,
+    "synonymes": [
+      "citrons",
+      "citron jaune"
+    ]
+  },
+  {
+    "id": "kiwi",
+    "nom": "Kiwi",
+    "emoji": "🥝",
+    "categorie": "fruit",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 80,
+    "saisons": [
+      "hiver"
+    ],
+    "tags": [],
+    "conservationJours": 21,
+    "synonymes": [
+      "kiwis",
+      "kiwi vert"
+    ]
+  },
+  {
+    "id": "fraise",
+    "nom": "Fraise",
+    "emoji": "🍓",
+    "categorie": "fruit",
+    "rayon": "fruits-legumes",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 250,
+      "libelle": "barquette de 250 g"
+    },
+    "saisons": [
+      "printemps"
+    ],
+    "tags": [],
+    "conservationJours": 3,
+    "synonymes": [
+      "fraises",
+      "gariguette"
+    ]
+  },
+  {
+    "id": "raisin",
+    "nom": "Raisin",
+    "emoji": "🍇",
+    "categorie": "fruit",
+    "rayon": "fruits-legumes",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "barquette de 500 g"
+    },
+    "saisons": [
+      "automne"
+    ],
+    "tags": [],
+    "conservationJours": 5,
+    "synonymes": [
+      "raisins",
+      "raisin blanc",
+      "raisin noir"
+    ]
+  },
+  {
+    "id": "peche",
+    "nom": "Pêche",
+    "emoji": "🍑",
+    "categorie": "fruit",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 150,
+    "saisons": [
+      "ete"
+    ],
+    "tags": [],
+    "conservationJours": 4,
+    "synonymes": [
+      "peches",
+      "pêches",
+      "nectarine"
+    ]
+  },
+  {
+    "id": "abricot",
+    "nom": "Abricot",
+    "emoji": "🍑",
+    "categorie": "fruit",
+    "rayon": "fruits-legumes",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "barquette de 500 g"
+    },
+    "saisons": [
+      "ete"
+    ],
+    "tags": [],
+    "conservationJours": 4,
+    "synonymes": [
+      "abricots",
+      "abric"
+    ]
+  },
+  {
+    "id": "melon",
+    "nom": "Melon",
+    "emoji": "🍈",
+    "categorie": "fruit",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 900,
+    "saisons": [
+      "ete"
+    ],
+    "tags": [],
+    "conservationJours": 5,
+    "synonymes": [
+      "melons",
+      "charentais"
+    ]
+  },
+  {
+    "id": "pasteque",
+    "nom": "Pastèque",
+    "emoji": "🍉",
+    "categorie": "fruit",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 4000,
+    "saisons": [
+      "ete"
+    ],
+    "tags": [],
+    "conservationJours": 10,
+    "synonymes": [
+      "pasteques",
+      "melon d'eau"
+    ]
+  },
+  {
+    "id": "ananas",
+    "nom": "Ananas",
+    "emoji": "🍍",
+    "categorie": "fruit",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 1200,
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 5,
+    "synonymes": [
+      "ananas victoria",
+      "anan"
+    ]
+  },
+  {
+    "id": "mangue",
+    "nom": "Mangue",
+    "emoji": "🥭",
+    "categorie": "fruit",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 400,
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 5,
+    "synonymes": [
+      "mangues",
+      "mang"
+    ]
+  },
+  {
+    "id": "prune",
+    "nom": "Prune",
+    "emoji": "🟣",
+    "categorie": "fruit",
+    "rayon": "fruits-legumes",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "barquette de 500 g"
+    },
+    "saisons": [
+      "ete"
+    ],
+    "tags": [],
+    "conservationJours": 4,
+    "synonymes": [
+      "prunes",
+      "reine-claude",
+      "quetsche"
+    ]
+  },
+  {
+    "id": "fruits-rouges-surgeles",
+    "nom": "Fruits rouges surgelés",
+    "emoji": "🫐",
+    "categorie": "fruit",
+    "rayon": "surgeles",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "sachet de 500 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 180,
+    "synonymes": [
+      "melange fruits rouges",
+      "fruits rges surg",
+      "framboises surgelees"
+    ]
+  },
+  {
+    "id": "compote-sans-sucre",
+    "nom": "Compote sans sucre ajouté",
+    "emoji": "🍏",
+    "categorie": "fruit",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 400,
+      "libelle": "lot de 4 coupelles de 100 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 21,
+    "synonymes": [
+      "compote",
+      "compote pomme",
+      "cpte ssa"
+    ]
+  },
+  {
+    "id": "raisins-secs",
+    "nom": "Raisins secs",
+    "emoji": "🍇",
+    "categorie": "fruit",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 250,
+      "libelle": "sachet de 250 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 180,
+    "synonymes": [
+      "raisin sec",
+      "rais secs"
+    ]
+  },
+  {
+    "id": "dattes",
+    "nom": "Dattes",
+    "emoji": "🌴",
+    "categorie": "fruit",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 250,
+      "libelle": "barquette de 250 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 120,
+    "synonymes": [
+      "datte",
+      "dattes deglet nour",
+      "dattes medjool"
+    ]
+  },
+  {
+    "id": "riz-blanc",
+    "nom": "Riz blanc",
+    "emoji": "🍚",
+    "categorie": "feculent",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 1000,
+      "libelle": "paquet de 1 kg"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "riz",
+      "riz long",
+      "riz rond"
+    ]
+  },
+  {
+    "id": "riz-basmati",
+    "nom": "Riz basmati",
+    "emoji": "🍚",
+    "categorie": "feculent",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 1000,
+      "libelle": "paquet de 1 kg"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "basmati",
+      "riz basm"
+    ]
+  },
+  {
+    "id": "riz-complet",
+    "nom": "Riz complet",
+    "emoji": "🍚",
+    "categorie": "feculent",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 1000,
+      "libelle": "paquet de 1 kg"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "riz brun",
+      "riz compl"
+    ]
+  },
+  {
+    "id": "pates",
+    "nom": "Pâtes",
+    "emoji": "🍝",
+    "categorie": "feculent",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "paquet de 500 g"
+    },
+    "saisons": [],
+    "tags": [
+      "gluten"
+    ],
+    "conservationJours": 365,
+    "synonymes": [
+      "pates",
+      "penne",
+      "coquillettes",
+      "fusilli"
+    ]
+  },
+  {
+    "id": "pates-completes",
+    "nom": "Pâtes complètes",
+    "emoji": "🍝",
+    "categorie": "feculent",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "paquet de 500 g"
+    },
+    "saisons": [],
+    "tags": [
+      "gluten"
+    ],
+    "conservationJours": 365,
+    "synonymes": [
+      "pates completes",
+      "pates compl",
+      "penne complètes"
+    ]
+  },
+  {
+    "id": "spaghetti",
+    "nom": "Spaghetti",
+    "emoji": "🍝",
+    "categorie": "feculent",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "paquet de 500 g"
+    },
+    "saisons": [],
+    "tags": [
+      "gluten"
+    ],
+    "conservationJours": 365,
+    "synonymes": [
+      "spaghettis",
+      "spagh"
+    ]
+  },
+  {
+    "id": "nouilles-asiatiques",
+    "nom": "Nouilles asiatiques",
+    "emoji": "🍜",
+    "categorie": "feculent",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 250,
+      "libelle": "paquet de 250 g"
+    },
+    "saisons": [],
+    "tags": [
+      "gluten"
+    ],
+    "conservationJours": 365,
+    "synonymes": [
+      "nouilles",
+      "nouilles chinoises",
+      "nouilles aux oeufs"
+    ]
+  },
+  {
+    "id": "semoule",
+    "nom": "Semoule",
+    "emoji": "🌾",
+    "categorie": "feculent",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 1000,
+      "libelle": "paquet de 1 kg"
+    },
+    "saisons": [],
+    "tags": [
+      "gluten"
+    ],
+    "conservationJours": 365,
+    "synonymes": [
+      "couscous",
+      "semoule fine",
+      "semoule moyenne"
+    ]
+  },
+  {
+    "id": "boulgour",
+    "nom": "Boulgour",
+    "emoji": "🌾",
+    "categorie": "feculent",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "paquet de 500 g"
+    },
+    "saisons": [],
+    "tags": [
+      "gluten"
+    ],
+    "conservationJours": 365,
+    "synonymes": [
+      "boulghour",
+      "bulgur"
+    ]
+  },
+  {
+    "id": "quinoa",
+    "nom": "Quinoa",
+    "emoji": "🌾",
+    "categorie": "feculent",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "paquet de 500 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "quinoa blanc",
+      "quinoa gourmand"
+    ]
+  },
+  {
+    "id": "lentilles-vertes",
+    "nom": "Lentilles vertes",
+    "emoji": "🫘",
+    "categorie": "proteine-vegetale",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "paquet de 500 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "lentilles",
+      "lentilles du puy",
+      "lent vertes"
+    ]
+  },
+  {
+    "id": "lentilles-corail",
+    "nom": "Lentilles corail",
+    "emoji": "🫘",
+    "categorie": "proteine-vegetale",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "paquet de 500 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "lentilles rouges",
+      "lent corail"
+    ]
+  },
+  {
+    "id": "pois-chiches-boite",
+    "nom": "Pois chiches (boîte)",
+    "emoji": "🫘",
+    "categorie": "proteine-vegetale",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 265,
+      "libelle": "boîte de 265 g (égoutté)"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "pois chiches",
+      "pois chic",
+      "pois chiches cuits"
+    ]
+  },
+  {
+    "id": "haricots-rouges-boite",
+    "nom": "Haricots rouges (boîte)",
+    "emoji": "🫘",
+    "categorie": "proteine-vegetale",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 250,
+      "libelle": "boîte de 250 g (égoutté)"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "haricots rouges",
+      "har rouges",
+      "red kidney"
+    ]
+  },
+  {
+    "id": "haricots-blancs-boite",
+    "nom": "Haricots blancs (boîte)",
+    "emoji": "🫘",
+    "categorie": "proteine-vegetale",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 250,
+      "libelle": "boîte de 250 g (égoutté)"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "haricots blancs",
+      "lingots",
+      "har blancs"
+    ]
+  },
+  {
+    "id": "flocons-avoine",
+    "nom": "Flocons d'avoine",
+    "emoji": "🥣",
+    "categorie": "feculent",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "paquet de 500 g"
+    },
+    "saisons": [],
+    "tags": [
+      "gluten"
+    ],
+    "conservationJours": 240,
+    "synonymes": [
+      "avoine",
+      "flocons",
+      "porridge"
+    ]
+  },
+  {
+    "id": "pain-complet",
+    "nom": "Pain complet",
+    "emoji": "🍞",
+    "categorie": "feculent",
+    "rayon": "boulangerie",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 400,
+      "libelle": "pain de 400 g"
+    },
+    "saisons": [],
+    "tags": [
+      "gluten"
+    ],
+    "conservationJours": 4,
+    "synonymes": [
+      "pain compl",
+      "pain aux cereales",
+      "pain"
+    ]
+  },
+  {
+    "id": "baguette",
+    "nom": "Baguette",
+    "emoji": "🥖",
+    "categorie": "feculent",
+    "rayon": "boulangerie",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "la pièce"
+    },
+    "poidsPieceG": 250,
+    "saisons": [],
+    "tags": [
+      "gluten"
+    ],
+    "conservationJours": 1,
+    "synonymes": [
+      "baguette tradition",
+      "pain",
+      "bag trad"
+    ]
+  },
+  {
+    "id": "pain-de-mie",
+    "nom": "Pain de mie",
+    "emoji": "🍞",
+    "categorie": "feculent",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "paquet de 500 g"
+    },
+    "saisons": [],
+    "tags": [
+      "gluten"
+    ],
+    "conservationJours": 10,
+    "synonymes": [
+      "pain mie",
+      "harrys",
+      "toast"
+    ]
+  },
+  {
+    "id": "tortilla",
+    "nom": "Tortilla de blé",
+    "emoji": "🌯",
+    "categorie": "feculent",
+    "rayon": "epicerie-salee",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 8,
+      "libelle": "paquet de 8"
+    },
+    "poidsPieceG": 40,
+    "saisons": [],
+    "tags": [
+      "gluten"
+    ],
+    "conservationJours": 20,
+    "synonymes": [
+      "tortillas",
+      "wraps",
+      "galette de ble"
+    ]
+  },
+  {
+    "id": "galette-riz",
+    "nom": "Galettes de riz soufflé",
+    "emoji": "🍘",
+    "categorie": "feculent",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 130,
+      "libelle": "paquet de 130 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 90,
+    "synonymes": [
+      "galettes de riz",
+      "gal riz",
+      "galettes soufflées"
+    ]
+  },
+  {
+    "id": "farine",
+    "nom": "Farine de blé",
+    "emoji": "🌾",
+    "categorie": "feculent",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 1000,
+      "libelle": "paquet de 1 kg"
+    },
+    "saisons": [],
+    "tags": [
+      "gluten"
+    ],
+    "conservationJours": 240,
+    "synonymes": [
+      "farine t45",
+      "farine t55",
+      "farine ble"
+    ]
+  },
+  {
+    "id": "gnocchis",
+    "nom": "Gnocchis",
+    "emoji": "🥔",
+    "categorie": "feculent",
+    "rayon": "frais",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "paquet de 500 g"
+    },
+    "saisons": [],
+    "tags": [
+      "gluten"
+    ],
+    "conservationJours": 30,
+    "synonymes": [
+      "gnocchi",
+      "gnocchis frais"
+    ]
+  },
+  {
+    "id": "muesli-sans-sucre",
+    "nom": "Muesli sans sucre ajouté",
+    "emoji": "🥣",
+    "categorie": "feculent",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "paquet de 500 g"
+    },
+    "saisons": [],
+    "tags": [
+      "gluten"
+    ],
+    "conservationJours": 180,
+    "synonymes": [
+      "muesli",
+      "cereales",
+      "muesli ssa"
+    ]
+  },
+  {
+    "id": "pain-pita",
+    "nom": "Pain pita",
+    "emoji": "🫓",
+    "categorie": "feculent",
+    "rayon": "epicerie-salee",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 6,
+      "libelle": "paquet de 6"
+    },
+    "poidsPieceG": 70,
+    "saisons": [],
+    "tags": [
+      "gluten"
+    ],
+    "conservationJours": 10,
+    "synonymes": [
+      "pita",
+      "pains pita",
+      "pain libanais"
+    ]
+  },
+  {
+    "id": "oeuf",
+    "nom": "Œuf",
+    "emoji": "🥚",
+    "categorie": "proteine-animale",
+    "rayon": "frais",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 6,
+      "libelle": "boîte de 6"
+    },
+    "poidsPieceG": 60,
+    "saisons": [],
+    "tags": [
+      "oeuf"
+    ],
+    "conservationJours": 28,
+    "synonymes": [
+      "oeufs",
+      "œufs",
+      "oeufs plein air"
+    ]
+  },
+  {
+    "id": "poulet-filet",
+    "nom": "Filet de poulet",
+    "emoji": "🍗",
+    "categorie": "proteine-animale",
+    "rayon": "boucherie-poisson",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "barquette de 500 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 3,
+    "synonymes": [
+      "blanc de poulet",
+      "filets poulet",
+      "aiguillettes"
+    ]
+  },
+  {
+    "id": "poulet-cuisse",
+    "nom": "Cuisse de poulet",
+    "emoji": "🍗",
+    "categorie": "proteine-animale",
+    "rayon": "boucherie-poisson",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 1000,
+      "libelle": "barquette de 1 kg"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 3,
+    "synonymes": [
+      "cuisses de poulet",
+      "pilons",
+      "haut de cuisse"
+    ]
+  },
+  {
+    "id": "dinde-escalope",
+    "nom": "Escalope de dinde",
+    "emoji": "🦃",
+    "categorie": "proteine-animale",
+    "rayon": "boucherie-poisson",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "barquette de 500 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 3,
+    "synonymes": [
+      "escalopes dinde",
+      "dinde",
+      "esc dinde"
+    ]
+  },
+  {
+    "id": "boeuf-hache",
+    "nom": "Bœuf haché 5 %",
+    "emoji": "🥩",
+    "categorie": "proteine-animale",
+    "rayon": "boucherie-poisson",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "barquette de 500 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 2,
+    "synonymes": [
+      "steak hache",
+      "viande hachee",
+      "boeuf hache"
+    ]
+  },
+  {
+    "id": "boeuf-emince",
+    "nom": "Émincé de bœuf",
+    "emoji": "🥩",
+    "categorie": "proteine-animale",
+    "rayon": "boucherie-poisson",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 400,
+      "libelle": "barquette de 400 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 2,
+    "synonymes": [
+      "emince boeuf",
+      "boeuf",
+      "lamelles de boeuf"
+    ]
+  },
+  {
+    "id": "porc-filet-mignon",
+    "nom": "Filet mignon de porc",
+    "emoji": "🥩",
+    "categorie": "proteine-animale",
+    "rayon": "boucherie-poisson",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "pièce d'environ 500 g"
+    },
+    "saisons": [],
+    "tags": [
+      "porc"
+    ],
+    "conservationJours": 3,
+    "synonymes": [
+      "filet mignon",
+      "porc"
+    ]
+  },
+  {
+    "id": "lardons",
+    "nom": "Lardons",
+    "emoji": "🥓",
+    "categorie": "proteine-animale",
+    "rayon": "frais",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 200,
+      "libelle": "lot de 2 barquettes de 100 g"
+    },
+    "saisons": [],
+    "tags": [
+      "porc"
+    ],
+    "conservationJours": 21,
+    "synonymes": [
+      "lardons fumes",
+      "allumettes",
+      "lard"
+    ]
+  },
+  {
+    "id": "jambon-blanc",
+    "nom": "Jambon blanc",
+    "emoji": "🍖",
+    "categorie": "proteine-animale",
+    "rayon": "frais",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 160,
+      "libelle": "paquet de 4 tranches (160 g)"
+    },
+    "saisons": [],
+    "tags": [
+      "porc"
+    ],
+    "conservationJours": 7,
+    "synonymes": [
+      "jambon",
+      "jambon cuit",
+      "jamb sup"
+    ]
+  },
+  {
+    "id": "chorizo",
+    "nom": "Chorizo",
+    "emoji": "🌭",
+    "categorie": "proteine-animale",
+    "rayon": "frais",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 200,
+      "libelle": "paquet de 200 g (tranché)"
+    },
+    "saisons": [],
+    "tags": [
+      "porc"
+    ],
+    "conservationJours": 30,
+    "synonymes": [
+      "chorizo fort",
+      "chorizo doux"
+    ]
+  },
+  {
+    "id": "saucisse-toulouse",
+    "nom": "Saucisse de Toulouse",
+    "emoji": "🌭",
+    "categorie": "proteine-animale",
+    "rayon": "boucherie-poisson",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "barquette de 500 g"
+    },
+    "saisons": [],
+    "tags": [
+      "porc"
+    ],
+    "conservationJours": 4,
+    "synonymes": [
+      "saucisses",
+      "saucisse",
+      "sauc toulouse"
+    ]
+  },
+  {
+    "id": "merguez",
+    "nom": "Merguez",
+    "emoji": "🌭",
+    "categorie": "proteine-animale",
+    "rayon": "boucherie-poisson",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 400,
+      "libelle": "barquette de 400 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 3,
+    "synonymes": [
+      "merguez boeuf mouton",
+      "merg"
+    ]
+  },
+  {
+    "id": "thon-boite",
+    "nom": "Thon (boîte)",
+    "emoji": "🐟",
+    "categorie": "proteine-animale",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 140,
+      "libelle": "boîte de 140 g (égoutté)"
+    },
+    "saisons": [],
+    "tags": [
+      "poisson"
+    ],
+    "conservationJours": 730,
+    "synonymes": [
+      "thon",
+      "thon naturel",
+      "thon albacore"
+    ]
+  },
+  {
+    "id": "sardine-boite",
+    "nom": "Sardines (boîte)",
+    "emoji": "🐟",
+    "categorie": "proteine-animale",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 135,
+      "libelle": "boîte de 135 g"
+    },
+    "saisons": [],
+    "tags": [
+      "poisson"
+    ],
+    "conservationJours": 730,
+    "synonymes": [
+      "sardines",
+      "sardines huile"
+    ]
+  },
+  {
+    "id": "maquereau-boite",
+    "nom": "Maquereau (boîte)",
+    "emoji": "🐟",
+    "categorie": "proteine-animale",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 169,
+      "libelle": "boîte de 169 g"
+    },
+    "saisons": [],
+    "tags": [
+      "poisson"
+    ],
+    "conservationJours": 730,
+    "synonymes": [
+      "maquereaux",
+      "filets de maquereau",
+      "maquer"
+    ]
+  },
+  {
+    "id": "saumon-filet",
+    "nom": "Filet de saumon",
+    "emoji": "🍣",
+    "categorie": "proteine-animale",
+    "rayon": "boucherie-poisson",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 250,
+      "libelle": "lot de 2 pavés (250 g)"
+    },
+    "saisons": [],
+    "tags": [
+      "poisson"
+    ],
+    "conservationJours": 2,
+    "synonymes": [
+      "saumon",
+      "pave saumon",
+      "saumon frais"
+    ]
+  },
+  {
+    "id": "colin-surgele",
+    "nom": "Colin surgelé",
+    "emoji": "🐟",
+    "categorie": "proteine-animale",
+    "rayon": "surgeles",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 400,
+      "libelle": "sachet de 400 g"
+    },
+    "saisons": [],
+    "tags": [
+      "poisson"
+    ],
+    "conservationJours": 180,
+    "synonymes": [
+      "colin",
+      "lieu",
+      "filets de colin"
+    ]
+  },
+  {
+    "id": "crevettes",
+    "nom": "Crevettes",
+    "emoji": "🦐",
+    "categorie": "proteine-animale",
+    "rayon": "surgeles",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 300,
+      "libelle": "sachet de 300 g (décortiquées)"
+    },
+    "saisons": [],
+    "tags": [
+      "poisson"
+    ],
+    "conservationJours": 180,
+    "synonymes": [
+      "crevettes cuites",
+      "crevette",
+      "gambas"
+    ]
+  },
+  {
+    "id": "surimi",
+    "nom": "Surimi",
+    "emoji": "🦀",
+    "categorie": "proteine-animale",
+    "rayon": "frais",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 250,
+      "libelle": "paquet de 250 g"
+    },
+    "saisons": [],
+    "tags": [
+      "poisson",
+      "oeuf"
+    ],
+    "conservationJours": 14,
+    "synonymes": [
+      "batonnets de surimi",
+      "surimi batonnets"
+    ]
+  },
+  {
+    "id": "tofu",
+    "nom": "Tofu nature",
+    "emoji": "🧈",
+    "categorie": "proteine-vegetale",
+    "rayon": "frais",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 400,
+      "libelle": "bloc de 400 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 21,
+    "synonymes": [
+      "tofu",
+      "tofu ferme"
+    ]
+  },
+  {
+    "id": "tofu-fume",
+    "nom": "Tofu fumé",
+    "emoji": "🧈",
+    "categorie": "proteine-vegetale",
+    "rayon": "frais",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 200,
+      "libelle": "bloc de 200 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 21,
+    "synonymes": [
+      "tofu fume",
+      "tofu fumé"
+    ]
+  },
+  {
+    "id": "edamame-surgele",
+    "nom": "Edamame surgelés",
+    "emoji": "🫛",
+    "categorie": "proteine-vegetale",
+    "rayon": "surgeles",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 400,
+      "libelle": "sachet de 400 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 180,
+    "synonymes": [
+      "edamame",
+      "feves de soja"
+    ]
+  },
+  {
+    "id": "beurre-cacahuete",
+    "nom": "Beurre de cacahuète",
+    "emoji": "🥜",
+    "categorie": "proteine-vegetale",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 350,
+      "libelle": "pot de 350 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 180,
+    "synonymes": [
+      "beurre de cacahuetes",
+      "peanut butter",
+      "pate arachide"
+    ]
+  },
+  {
+    "id": "houmous",
+    "nom": "Houmous",
+    "emoji": "🫘",
+    "categorie": "proteine-vegetale",
+    "rayon": "frais",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 200,
+      "libelle": "pot de 200 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 7,
+    "synonymes": [
+      "hummus",
+      "houmos"
+    ]
+  },
+  {
+    "id": "lait",
+    "nom": "Lait demi-écrémé",
+    "emoji": "🥛",
+    "categorie": "produit-laitier",
+    "rayon": "frais",
+    "uniteBase": "ml",
+    "formatVente": {
+      "quantite": 1000,
+      "libelle": "bouteille de 1 L"
+    },
+    "saisons": [],
+    "tags": [
+      "lactose"
+    ],
+    "conservationJours": 7,
+    "synonymes": [
+      "lait",
+      "lait demi ecreme",
+      "lait 1/2 ecr"
+    ]
+  },
+  {
+    "id": "yaourt-nature",
+    "nom": "Yaourt nature",
+    "emoji": "🥛",
+    "categorie": "produit-laitier",
+    "rayon": "frais",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 4,
+      "libelle": "pack de 4 pots de 125 g"
+    },
+    "poidsPieceG": 125,
+    "saisons": [],
+    "tags": [
+      "lactose"
+    ],
+    "conservationJours": 21,
+    "synonymes": [
+      "yaourt",
+      "yaourts nature",
+      "yog nat"
+    ]
+  },
+  {
+    "id": "yaourt-grec",
+    "nom": "Yaourt à la grecque",
+    "emoji": "🥛",
+    "categorie": "produit-laitier",
+    "rayon": "frais",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "pot de 500 g"
+    },
+    "saisons": [],
+    "tags": [
+      "lactose"
+    ],
+    "conservationJours": 21,
+    "synonymes": [
+      "yaourt grec",
+      "yaourt a la grecque"
+    ]
+  },
+  {
+    "id": "skyr",
+    "nom": "Skyr nature",
+    "emoji": "🥛",
+    "categorie": "produit-laitier",
+    "rayon": "frais",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 450,
+      "libelle": "pot de 450 g"
+    },
+    "saisons": [],
+    "tags": [
+      "lactose"
+    ],
+    "conservationJours": 21,
+    "synonymes": [
+      "skyr",
+      "skyr nat"
+    ]
+  },
+  {
+    "id": "creme-fraiche",
+    "nom": "Crème fraîche",
+    "emoji": "🥛",
+    "categorie": "produit-laitier",
+    "rayon": "frais",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 200,
+      "libelle": "pot de 20 cl (200 g)"
+    },
+    "saisons": [],
+    "tags": [
+      "lactose"
+    ],
+    "conservationJours": 14,
+    "synonymes": [
+      "creme epaisse",
+      "creme fraiche",
+      "cr fraiche"
+    ]
+  },
+  {
+    "id": "creme-liquide",
+    "nom": "Crème liquide",
+    "emoji": "🥛",
+    "categorie": "produit-laitier",
+    "rayon": "frais",
+    "uniteBase": "ml",
+    "formatVente": {
+      "quantite": 200,
+      "libelle": "brique de 20 cl"
+    },
+    "saisons": [],
+    "tags": [
+      "lactose"
+    ],
+    "conservationJours": 14,
+    "synonymes": [
+      "creme liquide",
+      "creme fleurette",
+      "cr liq"
+    ]
+  },
+  {
+    "id": "beurre",
+    "nom": "Beurre",
+    "emoji": "🧈",
+    "categorie": "matiere-grasse",
+    "rayon": "frais",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 250,
+      "libelle": "plaquette de 250 g"
+    },
+    "saisons": [],
+    "tags": [
+      "lactose"
+    ],
+    "conservationJours": 60,
+    "synonymes": [
+      "beurre doux",
+      "beurre demi sel",
+      "plaq beurre"
+    ]
+  },
+  {
+    "id": "lait-coco",
+    "nom": "Lait de coco",
+    "emoji": "🥥",
+    "categorie": "matiere-grasse",
+    "rayon": "epicerie-salee",
+    "uniteBase": "ml",
+    "formatVente": {
+      "quantite": 400,
+      "libelle": "boîte de 400 ml"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "lait coco",
+      "creme de coco"
+    ]
+  },
+  {
+    "id": "boisson-avoine",
+    "nom": "Boisson à l'avoine",
+    "emoji": "🥛",
+    "categorie": "boisson",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "ml",
+    "formatVente": {
+      "quantite": 1000,
+      "libelle": "brique de 1 L"
+    },
+    "saisons": [],
+    "tags": [
+      "gluten"
+    ],
+    "conservationJours": 180,
+    "synonymes": [
+      "lait d'avoine",
+      "boisson avoine",
+      "oat"
+    ]
+  },
+  {
+    "id": "huile-olive",
+    "nom": "Huile d'olive",
+    "emoji": "🫒",
+    "categorie": "matiere-grasse",
+    "rayon": "epicerie-salee",
+    "uniteBase": "ml",
+    "formatVente": {
+      "quantite": 750,
+      "libelle": "bouteille de 75 cl"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "huile olive",
+      "h olive vierge extra"
+    ]
+  },
+  {
+    "id": "huile-tournesol",
+    "nom": "Huile de tournesol",
+    "emoji": "🌻",
+    "categorie": "matiere-grasse",
+    "rayon": "epicerie-salee",
+    "uniteBase": "ml",
+    "formatVente": {
+      "quantite": 1000,
+      "libelle": "bouteille de 1 L"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "huile tournesol",
+      "h tournesol"
+    ]
+  },
+  {
+    "id": "huile-sesame",
+    "nom": "Huile de sésame",
+    "emoji": "🫙",
+    "categorie": "matiere-grasse",
+    "rayon": "epicerie-salee",
+    "uniteBase": "ml",
+    "formatVente": {
+      "quantite": 250,
+      "libelle": "bouteille de 25 cl"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "huile sesame",
+      "h sesame"
+    ]
+  },
+  {
+    "id": "sauce-soja",
+    "nom": "Sauce soja",
+    "emoji": "🫙",
+    "categorie": "condiment",
+    "rayon": "epicerie-salee",
+    "uniteBase": "ml",
+    "formatVente": {
+      "quantite": 250,
+      "libelle": "bouteille de 25 cl"
+    },
+    "saisons": [],
+    "tags": [
+      "gluten"
+    ],
+    "conservationJours": 365,
+    "synonymes": [
+      "soja",
+      "sauce soja salee",
+      "shoyu"
+    ]
+  },
+  {
+    "id": "vinaigre-balsamique",
+    "nom": "Vinaigre balsamique",
+    "emoji": "🫙",
+    "categorie": "condiment",
+    "rayon": "epicerie-salee",
+    "uniteBase": "ml",
+    "formatVente": {
+      "quantite": 250,
+      "libelle": "bouteille de 25 cl"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 730,
+    "synonymes": [
+      "balsamique",
+      "vin balsamique"
+    ]
+  },
+  {
+    "id": "vinaigre-cidre",
+    "nom": "Vinaigre de cidre",
+    "emoji": "🍎",
+    "categorie": "condiment",
+    "rayon": "epicerie-salee",
+    "uniteBase": "ml",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "bouteille de 50 cl"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 730,
+    "synonymes": [
+      "vinaigre",
+      "vin cidre"
+    ]
+  },
+  {
+    "id": "moutarde",
+    "nom": "Moutarde",
+    "emoji": "🟡",
+    "categorie": "condiment",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 370,
+      "libelle": "pot de 370 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 180,
+    "synonymes": [
+      "moutarde dijon",
+      "moutarde forte"
+    ]
+  },
+  {
+    "id": "ketchup",
+    "nom": "Ketchup",
+    "emoji": "🍅",
+    "categorie": "condiment",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 560,
+      "libelle": "flacon de 560 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 180,
+    "synonymes": [
+      "ketchup tomate",
+      "ketch"
+    ]
+  },
+  {
+    "id": "mayonnaise",
+    "nom": "Mayonnaise",
+    "emoji": "🫙",
+    "categorie": "condiment",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 235,
+      "libelle": "flacon de 235 g"
+    },
+    "saisons": [],
+    "tags": [
+      "oeuf"
+    ],
+    "conservationJours": 60,
+    "synonymes": [
+      "mayo",
+      "mayonnaise dijon"
+    ]
+  },
+  {
+    "id": "concentre-tomate",
+    "nom": "Concentré de tomate",
+    "emoji": "🍅",
+    "categorie": "condiment",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 140,
+      "libelle": "boîte de 140 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 5,
+    "synonymes": [
+      "double concentre",
+      "concentre tomate",
+      "puree de tomate"
+    ]
+  },
+  {
+    "id": "coulis-tomate",
+    "nom": "Coulis de tomate",
+    "emoji": "🍅",
+    "categorie": "condiment",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "bocal de 500 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 5,
+    "synonymes": [
+      "passata",
+      "sauce tomate",
+      "coulis"
+    ]
+  },
+  {
+    "id": "tomates-concassees-boite",
+    "nom": "Tomates concassées (boîte)",
+    "emoji": "🥫",
+    "categorie": "legume",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 400,
+      "libelle": "boîte de 400 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "tomates concassees",
+      "tomates pelees",
+      "tom concass"
+    ]
+  },
+  {
+    "id": "pesto-basilic",
+    "nom": "Pesto au basilic",
+    "emoji": "🌿",
+    "categorie": "condiment",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 190,
+      "libelle": "pot de 190 g"
+    },
+    "saisons": [],
+    "tags": [
+      "fromage",
+      "fruits-a-coque",
+      "lactose"
+    ],
+    "conservationJours": 14,
+    "synonymes": [
+      "pesto",
+      "pesto vert",
+      "pesto genovese"
+    ]
+  },
+  {
+    "id": "sauce-pimentee",
+    "nom": "Sauce pimentée",
+    "emoji": "🌶️",
+    "categorie": "condiment",
+    "rayon": "epicerie-salee",
+    "uniteBase": "ml",
+    "formatVente": {
+      "quantite": 150,
+      "libelle": "flacon de 150 ml"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "sauce piquante",
+      "tabasco",
+      "sriracha"
+    ]
+  },
+  {
+    "id": "bouillon-cube",
+    "nom": "Bouillon cube",
+    "emoji": "🧊",
+    "categorie": "condiment",
+    "rayon": "epicerie-salee",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 10,
+      "libelle": "boîte de 10 cubes"
+    },
+    "poidsPieceG": 10,
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "cube bouillon",
+      "kub",
+      "bouillon de legumes"
+    ]
+  },
+  {
+    "id": "miel",
+    "nom": "Miel",
+    "emoji": "🍯",
+    "categorie": "sucre",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 500,
+      "libelle": "pot de 500 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 730,
+    "synonymes": [
+      "miel toutes fleurs",
+      "miel liquide"
+    ]
+  },
+  {
+    "id": "sel",
+    "nom": "Sel",
+    "emoji": "🧂",
+    "categorie": "condiment",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 1000,
+      "libelle": "paquet de 1 kg"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 1825,
+    "synonymes": [
+      "sel fin",
+      "sel de table",
+      "gros sel"
+    ]
+  },
+  {
+    "id": "poivre",
+    "nom": "Poivre",
+    "emoji": "🧂",
+    "categorie": "epice-herbe",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 50,
+      "libelle": "flacon de 50 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 730,
+    "synonymes": [
+      "poivre noir",
+      "poivre moulu"
+    ]
+  },
+  {
+    "id": "cornichons",
+    "nom": "Cornichons",
+    "emoji": "🥒",
+    "categorie": "condiment",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 190,
+      "libelle": "bocal de 190 g (égoutté)"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "cornichon",
+      "cornichons extra fins"
+    ]
+  },
+  {
+    "id": "olives",
+    "nom": "Olives",
+    "emoji": "🫒",
+    "categorie": "condiment",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 150,
+      "libelle": "bocal de 150 g (égoutté)"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "olives vertes",
+      "olives noires",
+      "olive"
+    ]
+  },
+  {
+    "id": "capres",
+    "nom": "Câpres",
+    "emoji": "🫙",
+    "categorie": "condiment",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 60,
+      "libelle": "bocal de 60 g (égoutté)"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "capres",
+      "câpre"
+    ]
+  },
+  {
+    "id": "harissa",
+    "nom": "Harissa",
+    "emoji": "🌶️",
+    "categorie": "condiment",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 70,
+      "libelle": "tube de 70 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 180,
+    "synonymes": [
+      "harrissa",
+      "pate de piment"
+    ]
+  },
+  {
+    "id": "cumin",
+    "nom": "Cumin",
+    "emoji": "🧂",
+    "categorie": "epice-herbe",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 40,
+      "libelle": "flacon de 40 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 730,
+    "synonymes": [
+      "cumin moulu",
+      "cumin poudre"
+    ]
+  },
+  {
+    "id": "paprika",
+    "nom": "Paprika",
+    "emoji": "🌶️",
+    "categorie": "epice-herbe",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 40,
+      "libelle": "flacon de 40 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 730,
+    "synonymes": [
+      "paprika doux",
+      "paprika fume"
+    ]
+  },
+  {
+    "id": "curry",
+    "nom": "Curry en poudre",
+    "emoji": "🍛",
+    "categorie": "epice-herbe",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 40,
+      "libelle": "flacon de 40 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 730,
+    "synonymes": [
+      "curry",
+      "cari",
+      "curry doux"
+    ]
+  },
+  {
+    "id": "curcuma",
+    "nom": "Curcuma",
+    "emoji": "🧂",
+    "categorie": "epice-herbe",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 40,
+      "libelle": "flacon de 40 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 730,
+    "synonymes": [
+      "curcuma moulu",
+      "turmeric"
+    ]
+  },
+  {
+    "id": "gingembre-frais",
+    "nom": "Gingembre frais",
+    "emoji": "🫚",
+    "categorie": "epice-herbe",
+    "rayon": "fruits-legumes",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 100,
+      "libelle": "morceau d'environ 100 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 21,
+    "synonymes": [
+      "gingembre",
+      "racine de gingembre"
+    ]
+  },
+  {
+    "id": "cannelle",
+    "nom": "Cannelle",
+    "emoji": "🧂",
+    "categorie": "epice-herbe",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 40,
+      "libelle": "flacon de 40 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 730,
+    "synonymes": [
+      "cannelle moulue",
+      "cannelle poudre"
+    ]
+  },
+  {
+    "id": "herbes-provence",
+    "nom": "Herbes de Provence",
+    "emoji": "🌿",
+    "categorie": "epice-herbe",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 20,
+      "libelle": "flacon de 20 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 730,
+    "synonymes": [
+      "herbes provence",
+      "herbes"
+    ]
+  },
+  {
+    "id": "persil",
+    "nom": "Persil (bouquet)",
+    "emoji": "🌿",
+    "categorie": "epice-herbe",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "le bouquet"
+    },
+    "poidsPieceG": 30,
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 5,
+    "synonymes": [
+      "persil plat",
+      "persil frise"
+    ]
+  },
+  {
+    "id": "coriandre",
+    "nom": "Coriandre (bouquet)",
+    "emoji": "🌿",
+    "categorie": "epice-herbe",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "le bouquet"
+    },
+    "poidsPieceG": 30,
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 4,
+    "synonymes": [
+      "coriandre fraiche",
+      "cilantro"
+    ]
+  },
+  {
+    "id": "basilic",
+    "nom": "Basilic (pot)",
+    "emoji": "🌿",
+    "categorie": "epice-herbe",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "le pot"
+    },
+    "poidsPieceG": 30,
+    "saisons": [
+      "ete"
+    ],
+    "tags": [],
+    "conservationJours": 7,
+    "synonymes": [
+      "basilic frais",
+      "pot basilic"
+    ]
+  },
+  {
+    "id": "ciboulette",
+    "nom": "Ciboulette (bouquet)",
+    "emoji": "🌿",
+    "categorie": "epice-herbe",
+    "rayon": "fruits-legumes",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 1,
+      "libelle": "le bouquet"
+    },
+    "poidsPieceG": 20,
+    "saisons": [
+      "printemps"
+    ],
+    "tags": [],
+    "conservationJours": 5,
+    "synonymes": [
+      "ciboulette fraiche",
+      "cive"
+    ]
+  },
+  {
+    "id": "piment-espelette",
+    "nom": "Piment d'Espelette",
+    "emoji": "🌶️",
+    "categorie": "epice-herbe",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 40,
+      "libelle": "pot de 40 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 730,
+    "synonymes": [
+      "espelette",
+      "piment poudre"
+    ]
+  },
+  {
+    "id": "ras-el-hanout",
+    "nom": "Ras el hanout",
+    "emoji": "🧂",
+    "categorie": "epice-herbe",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 40,
+      "libelle": "flacon de 40 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 730,
+    "synonymes": [
+      "ras el hanout",
+      "melange epices couscous"
+    ]
+  },
+  {
+    "id": "thym",
+    "nom": "Thym",
+    "emoji": "🌿",
+    "categorie": "epice-herbe",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 15,
+      "libelle": "flacon de 15 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 730,
+    "synonymes": [
+      "thym seche",
+      "farigoule"
+    ]
+  },
+  {
+    "id": "sucre",
+    "nom": "Sucre",
+    "emoji": "🍬",
+    "categorie": "sucre",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 1000,
+      "libelle": "paquet de 1 kg"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 1825,
+    "synonymes": [
+      "sucre en poudre",
+      "sucre semoule",
+      "sucre blanc"
+    ]
+  },
+  {
+    "id": "chocolat-noir",
+    "nom": "Chocolat noir 70 %",
+    "emoji": "🍫",
+    "categorie": "sucre",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 100,
+      "libelle": "tablette de 100 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "chocolat",
+      "choco noir",
+      "tablette chocolat"
+    ]
+  },
+  {
+    "id": "pate-a-tartiner",
+    "nom": "Pâte à tartiner",
+    "emoji": "🍫",
+    "categorie": "sucre",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 400,
+      "libelle": "pot de 400 g"
+    },
+    "saisons": [],
+    "tags": [
+      "lactose",
+      "fruits-a-coque"
+    ],
+    "conservationJours": 180,
+    "synonymes": [
+      "nutella",
+      "pate tartiner",
+      "choco noisette"
+    ]
+  },
+  {
+    "id": "confiture",
+    "nom": "Confiture",
+    "emoji": "🍓",
+    "categorie": "sucre",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 370,
+      "libelle": "pot de 370 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "confiture fraise",
+      "confiture abricot",
+      "conf"
+    ]
+  },
+  {
+    "id": "sirop-erable",
+    "nom": "Sirop d'érable",
+    "emoji": "🍁",
+    "categorie": "sucre",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "ml",
+    "formatVente": {
+      "quantite": 250,
+      "libelle": "bouteille de 25 cl"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "sirop erable",
+      "erable"
+    ]
+  },
+  {
+    "id": "levure-chimique",
+    "nom": "Levure chimique",
+    "emoji": "🧁",
+    "categorie": "autre",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 55,
+      "libelle": "sachet de 5 x 11 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "levure",
+      "poudre a lever"
+    ]
+  },
+  {
+    "id": "sucre-vanille",
+    "nom": "Sucre vanillé",
+    "emoji": "🍬",
+    "categorie": "sucre",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 75,
+      "libelle": "paquet de 10 sachets de 7,5 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 730,
+    "synonymes": [
+      "sucre vanille",
+      "vanille"
+    ]
+  },
+  {
+    "id": "amandes",
+    "nom": "Amandes",
+    "emoji": "🌰",
+    "categorie": "proteine-vegetale",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 200,
+      "libelle": "sachet de 200 g"
+    },
+    "saisons": [],
+    "tags": [
+      "fruits-a-coque"
+    ],
+    "conservationJours": 180,
+    "synonymes": [
+      "amande",
+      "amandes decortiquees"
+    ]
+  },
+  {
+    "id": "noix",
+    "nom": "Noix",
+    "emoji": "🌰",
+    "categorie": "proteine-vegetale",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 200,
+      "libelle": "sachet de 200 g (cerneaux)"
+    },
+    "saisons": [],
+    "tags": [
+      "fruits-a-coque"
+    ],
+    "conservationJours": 180,
+    "synonymes": [
+      "cerneaux de noix",
+      "noix"
+    ]
+  },
+  {
+    "id": "noisettes",
+    "nom": "Noisettes",
+    "emoji": "🌰",
+    "categorie": "proteine-vegetale",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 200,
+      "libelle": "sachet de 200 g"
+    },
+    "saisons": [],
+    "tags": [
+      "fruits-a-coque"
+    ],
+    "conservationJours": 180,
+    "synonymes": [
+      "noisette",
+      "noisettes decortiquees"
+    ]
+  },
+  {
+    "id": "graines-chia",
+    "nom": "Graines de chia",
+    "emoji": "🌱",
+    "categorie": "proteine-vegetale",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 250,
+      "libelle": "sachet de 250 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "chia",
+      "graines chia"
+    ]
+  },
+  {
+    "id": "graines-courge",
+    "nom": "Graines de courge",
+    "emoji": "🎃",
+    "categorie": "proteine-vegetale",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 200,
+      "libelle": "sachet de 200 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 180,
+    "synonymes": [
+      "graines courge",
+      "pepites de courge"
+    ]
+  },
+  {
+    "id": "sesame",
+    "nom": "Graines de sésame",
+    "emoji": "🌱",
+    "categorie": "condiment",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 100,
+      "libelle": "sachet de 100 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "sesame",
+      "graines sesame"
+    ]
+  },
+  {
+    "id": "cacahuetes",
+    "nom": "Cacahuètes",
+    "emoji": "🥜",
+    "categorie": "proteine-vegetale",
+    "rayon": "epicerie-salee",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 200,
+      "libelle": "sachet de 200 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 180,
+    "synonymes": [
+      "cacahuete",
+      "arachides",
+      "cacah grillees"
+    ]
+  },
+  {
+    "id": "epinards-surgeles",
+    "nom": "Épinards surgelés",
+    "emoji": "🥬",
+    "categorie": "legume",
+    "rayon": "surgeles",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 1000,
+      "libelle": "sachet de 1 kg"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 180,
+    "synonymes": [
+      "epinards hachees",
+      "epinards branches",
+      "epin surg"
+    ]
+  },
+  {
+    "id": "poelee-legumes-surgelee",
+    "nom": "Poêlée de légumes surgelée",
+    "emoji": "🥘",
+    "categorie": "legume",
+    "rayon": "surgeles",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 750,
+      "libelle": "sachet de 750 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 180,
+    "synonymes": [
+      "poelee legumes",
+      "legumes surgeles",
+      "poelee"
+    ]
+  },
+  {
+    "id": "petits-pois-surgeles",
+    "nom": "Petits pois surgelés",
+    "emoji": "🫛",
+    "categorie": "legume",
+    "rayon": "surgeles",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 1000,
+      "libelle": "sachet de 1 kg"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 180,
+    "synonymes": [
+      "petits pois",
+      "pois surg"
+    ]
+  },
+  {
+    "id": "haricots-verts-surgeles",
+    "nom": "Haricots verts surgelés",
+    "emoji": "🫛",
+    "categorie": "legume",
+    "rayon": "surgeles",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 1000,
+      "libelle": "sachet de 1 kg"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 180,
+    "synonymes": [
+      "haricots verts",
+      "har verts surg"
+    ]
+  },
+  {
+    "id": "brocoli-surgele",
+    "nom": "Brocoli surgelé",
+    "emoji": "🥦",
+    "categorie": "legume",
+    "rayon": "surgeles",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 1000,
+      "libelle": "sachet de 1 kg"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 180,
+    "synonymes": [
+      "brocolis surgeles",
+      "broco surg"
+    ]
+  },
+  {
+    "id": "wok-legumes-surgele",
+    "nom": "Légumes pour wok surgelés",
+    "emoji": "🥢",
+    "categorie": "legume",
+    "rayon": "surgeles",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 750,
+      "libelle": "sachet de 750 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 180,
+    "synonymes": [
+      "wok legumes",
+      "melange wok",
+      "legumes asiatiques"
+    ]
+  },
+  {
+    "id": "the",
+    "nom": "Thé (sachet)",
+    "emoji": "🍵",
+    "categorie": "boisson",
+    "rayon": "boissons",
+    "uniteBase": "piece",
+    "formatVente": {
+      "quantite": 25,
+      "libelle": "boîte de 25 sachets"
+    },
+    "poidsPieceG": 2,
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 730,
+    "synonymes": [
+      "the",
+      "thé noir",
+      "the vert",
+      "infusion"
+    ]
+  },
+  {
+    "id": "cafe",
+    "nom": "Café moulu",
+    "emoji": "☕",
+    "categorie": "boisson",
+    "rayon": "boissons",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 250,
+      "libelle": "paquet de 250 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 180,
+    "synonymes": [
+      "cafe",
+      "café moulu",
+      "cafe arabica"
+    ]
+  },
+  {
+    "id": "jus-orange",
+    "nom": "Jus d'orange 100 %",
+    "emoji": "🧃",
+    "categorie": "boisson",
+    "rayon": "boissons",
+    "uniteBase": "ml",
+    "formatVente": {
+      "quantite": 1000,
+      "libelle": "brique de 1 L"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 7,
+    "synonymes": [
+      "jus d'orange",
+      "pur jus",
+      "jus orange"
+    ]
+  },
+  {
+    "id": "cacao-non-sucre",
+    "nom": "Cacao en poudre non sucré",
+    "emoji": "🍫",
+    "categorie": "sucre",
+    "rayon": "epicerie-sucree",
+    "uniteBase": "g",
+    "formatVente": {
+      "quantite": 250,
+      "libelle": "boîte de 250 g"
+    },
+    "saisons": [],
+    "tags": [],
+    "conservationJours": 365,
+    "synonymes": [
+      "cacao",
+      "cacao pur",
+      "van houten"
+    ]
+  }
 ]

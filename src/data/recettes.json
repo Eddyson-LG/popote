@@ -1,3 +1,4918 @@
 [
-  { "id": "riz-saute-oeuf-carotte", "nom": "Riz sauté œuf-carotte", "emoji": "🍳", "types": ["diner", "gamelle", "dejeuner"], "tempsMinutes": 20, "portions": 2, "ingredients": [ { "alimentId": "riz-blanc", "quantite": 150, "unite": "g" }, { "alimentId": "oeuf", "quantite": 2, "unite": "piece" }, { "alimentId": "carotte", "quantite": 200, "unite": "g" } ], "etapes": ["Cuis le riz.", "Râpe les carottes et fais-les revenir 5 min.", "Ajoute le riz puis les œufs battus, mélange 2 min."], "equipement": ["plaques"], "gamelle": true, "batch": true, "peuSucre": true, "tags": ["rapide"], "source": "base" }
+  {
+    "id": "tartine-cacahuete-banane",
+    "nom": "Tartine beurre de cacahuète et banane",
+    "emoji": "🥜",
+    "types": [
+      "petit-dejeuner",
+      "gouter"
+    ],
+    "tempsMinutes": 3,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "pain-complet",
+        "quantite": 60,
+        "unite": "g"
+      },
+      {
+        "alimentId": "beurre-cacahuete",
+        "quantite": 20,
+        "unite": "g"
+      },
+      {
+        "alimentId": "banane",
+        "quantite": 1,
+        "unite": "piece"
+      }
+    ],
+    "etapes": [
+      "Toaste le pain si tu veux.",
+      "Étale le beurre de cacahuète.",
+      "Coupe la banane en rondelles et pose-les dessus."
+    ],
+    "equipement": [],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "fruits-a-coque",
+      "sans-cuisson",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "porridge-banane-cannelle",
+    "nom": "Porridge banane-cannelle",
+    "emoji": "🥣",
+    "types": [
+      "petit-dejeuner"
+    ],
+    "tempsMinutes": 6,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "flocons-avoine",
+        "quantite": 50,
+        "unite": "g"
+      },
+      {
+        "alimentId": "lait",
+        "quantite": 250,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "banane",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "cannelle",
+        "quantite": 1,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Mélange les flocons et le lait dans un grand bol.",
+      "Chauffe 2 min au micro-ondes, remue, puis 1 min de plus.",
+      "Ajoute la banane écrasée à la fourchette et la cannelle."
+    ],
+    "equipement": [
+      "micro-ondes"
+    ],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "porridge-cacao-banane",
+    "nom": "Porridge cacao-banane",
+    "emoji": "🍫",
+    "types": [
+      "petit-dejeuner",
+      "gouter"
+    ],
+    "tempsMinutes": 6,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "flocons-avoine",
+        "quantite": 50,
+        "unite": "g"
+      },
+      {
+        "alimentId": "lait",
+        "quantite": 250,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "cacao-non-sucre",
+        "quantite": 6,
+        "unite": "g"
+      },
+      {
+        "alimentId": "banane",
+        "quantite": 1,
+        "unite": "piece"
+      }
+    ],
+    "etapes": [
+      "Mélange les flocons, le lait et le cacao dans un grand bol.",
+      "Chauffe 3 min au micro-ondes en remuant à mi-cuisson.",
+      "Ajoute la banane en rondelles : elle sucre le tout."
+    ],
+    "equipement": [
+      "micro-ondes"
+    ],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "overnight-oats-pomme",
+    "nom": "Overnight oats pomme-cannelle",
+    "emoji": "🍎",
+    "types": [
+      "petit-dejeuner"
+    ],
+    "tempsMinutes": 5,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "flocons-avoine",
+        "quantite": 50,
+        "unite": "g"
+      },
+      {
+        "alimentId": "lait",
+        "quantite": 120,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "yaourt-nature",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "pomme",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "cannelle",
+        "quantite": 1,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "La veille, mélange les flocons, le lait et le yaourt dans un bocal.",
+      "Râpe la pomme dedans, ajoute la cannelle et ferme.",
+      "Laisse au frigo pour la nuit, mange froid le matin."
+    ],
+    "equipement": [],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "sans-cuisson",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "overnight-oats-chia-fruits-rouges",
+    "nom": "Overnight oats chia et fruits rouges",
+    "emoji": "🫐",
+    "types": [
+      "petit-dejeuner",
+      "gouter"
+    ],
+    "tempsMinutes": 5,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "flocons-avoine",
+        "quantite": 40,
+        "unite": "g"
+      },
+      {
+        "alimentId": "graines-chia",
+        "quantite": 10,
+        "unite": "g"
+      },
+      {
+        "alimentId": "lait",
+        "quantite": 180,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "fruits-rouges-surgeles",
+        "quantite": 80,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "La veille, mélange les flocons, le chia et le lait dans un bocal.",
+      "Ajoute les fruits rouges encore surgelés par-dessus.",
+      "Ferme et laisse au frigo pour la nuit."
+    ],
+    "equipement": [],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "sans-cuisson",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "yaourt-grec-flocons-fruits",
+    "nom": "Yaourt grec, flocons et fruits rouges",
+    "emoji": "🍓",
+    "types": [
+      "petit-dejeuner",
+      "gouter"
+    ],
+    "tempsMinutes": 3,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "yaourt-grec",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "flocons-avoine",
+        "quantite": 30,
+        "unite": "g"
+      },
+      {
+        "alimentId": "fruits-rouges-surgeles",
+        "quantite": 80,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Passe les fruits rouges 1 min au micro-ondes pour les décongeler, ou sors-les la veille.",
+      "Verse le yaourt dans un bol.",
+      "Ajoute les flocons et les fruits."
+    ],
+    "equipement": [],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "sans-cuisson",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "skyr-kiwi-muesli",
+    "nom": "Skyr, kiwi et muesli",
+    "emoji": "🥝",
+    "types": [
+      "petit-dejeuner",
+      "gouter"
+    ],
+    "tempsMinutes": 3,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "skyr",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "kiwi",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "muesli-sans-sucre",
+        "quantite": 30,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Épluche et coupe les kiwis en dés.",
+      "Verse le skyr dans un bol, ajoute les kiwis et le muesli."
+    ],
+    "equipement": [],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "sans-cuisson",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "muesli-lait-pomme",
+    "nom": "Muesli, lait et pomme râpée",
+    "emoji": "🥛",
+    "types": [
+      "petit-dejeuner"
+    ],
+    "tempsMinutes": 3,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "muesli-sans-sucre",
+        "quantite": 50,
+        "unite": "g"
+      },
+      {
+        "alimentId": "lait",
+        "quantite": 200,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "pomme",
+        "quantite": 1,
+        "unite": "piece"
+      }
+    ],
+    "etapes": [
+      "Râpe la pomme dans un bol.",
+      "Ajoute le muesli et le lait, mélange."
+    ],
+    "equipement": [],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "sans-cuisson",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "tartine-oeuf-brouille",
+    "nom": "Tartines de pain complet et œufs brouillés",
+    "emoji": "🍳",
+    "types": [
+      "petit-dejeuner",
+      "dejeuner"
+    ],
+    "tempsMinutes": 8,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "pain-complet",
+        "quantite": 60,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oeuf",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "beurre",
+        "quantite": 5,
+        "unite": "g"
+      },
+      {
+        "alimentId": "poivre",
+        "quantite": 1,
+        "unite": "g"
+      },
+      {
+        "alimentId": "ciboulette",
+        "quantite": 1,
+        "unite": "piece",
+        "optionnel": true
+      }
+    ],
+    "etapes": [
+      "Bats les œufs avec un peu de sel et de poivre.",
+      "Fais fondre le beurre à feu doux, verse les œufs et remue 2 min jusqu'à ce qu'ils soient crémeux.",
+      "Toaste le pain et pose les œufs dessus."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "oeuf",
+      "economique",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "tartine-avocat-oeuf",
+    "nom": "Tartine avocat et œuf au plat",
+    "emoji": "🥑",
+    "types": [
+      "petit-dejeuner",
+      "dejeuner"
+    ],
+    "tempsMinutes": 10,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "pain-complet",
+        "quantite": 60,
+        "unite": "g"
+      },
+      {
+        "alimentId": "avocat",
+        "quantite": 0.5,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "oeuf",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "citron",
+        "quantite": 0.25,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "piment-espelette",
+        "quantite": 1,
+        "unite": "g",
+        "optionnel": true
+      }
+    ],
+    "etapes": [
+      "Fais cuire l'œuf au plat 3 min dans une poêle légèrement huilée.",
+      "Écrase l'avocat à la fourchette avec le jus de citron et une pincée de sel.",
+      "Étale-le sur le pain toasté et pose l'œuf dessus."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "oeuf",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "banana-bread-poele",
+    "nom": "Banana bread express à la poêle",
+    "emoji": "🍌",
+    "types": [
+      "petit-dejeuner",
+      "gouter"
+    ],
+    "tempsMinutes": 12,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "banane",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "oeuf",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "flocons-avoine",
+        "quantite": 40,
+        "unite": "g"
+      },
+      {
+        "alimentId": "levure-chimique",
+        "quantite": 2,
+        "unite": "g"
+      },
+      {
+        "alimentId": "cannelle",
+        "quantite": 1,
+        "unite": "g"
+      },
+      {
+        "alimentId": "huile-tournesol",
+        "quantite": 5,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Écrase la banane à la fourchette.",
+      "Ajoute l'œuf, les flocons, la levure et la cannelle, mélange.",
+      "Verse dans une petite poêle huilée, couvre et cuis 4 min à feu doux.",
+      "Retourne et cuis encore 3 min."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "oeuf",
+      "economique",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "pancakes-avoine-banane",
+    "nom": "Pancakes avoine-banane sans sucre",
+    "emoji": "🥞",
+    "types": [
+      "petit-dejeuner",
+      "gouter"
+    ],
+    "tempsMinutes": 12,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "flocons-avoine",
+        "quantite": 50,
+        "unite": "g"
+      },
+      {
+        "alimentId": "banane",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "oeuf",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "lait",
+        "quantite": 50,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "huile-tournesol",
+        "quantite": 5,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Écrase la banane et mélange-la avec l'œuf, le lait et les flocons.",
+      "Chauffe une poêle huilée à feu moyen.",
+      "Verse de petites louches de pâte et cuis 2 min de chaque côté."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "oeuf",
+      "economique",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "mug-cake-cacao-banane",
+    "nom": "Mug cake cacao-banane",
+    "emoji": "☕",
+    "types": [
+      "gouter",
+      "petit-dejeuner"
+    ],
+    "tempsMinutes": 5,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "banane",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "oeuf",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "flocons-avoine",
+        "quantite": 30,
+        "unite": "g"
+      },
+      {
+        "alimentId": "cacao-non-sucre",
+        "quantite": 6,
+        "unite": "g"
+      },
+      {
+        "alimentId": "levure-chimique",
+        "quantite": 2,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Écrase la banane dans un grand mug.",
+      "Ajoute l'œuf, les flocons, le cacao et la levure, mélange bien.",
+      "Cuis 1 min 30 au micro-ondes et laisse tiédir 1 min."
+    ],
+    "equipement": [
+      "micro-ondes"
+    ],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "oeuf",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "smoothie-banane-avoine-cacahuete",
+    "nom": "Smoothie banane, avoine et cacahuète",
+    "emoji": "🥤",
+    "types": [
+      "petit-dejeuner",
+      "gouter"
+    ],
+    "tempsMinutes": 4,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "banane",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "lait",
+        "quantite": 200,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "flocons-avoine",
+        "quantite": 20,
+        "unite": "g"
+      },
+      {
+        "alimentId": "beurre-cacahuete",
+        "quantite": 10,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Mets tout dans le mixeur.",
+      "Mixe 1 min jusqu'à ce que ce soit lisse et bois tout de suite."
+    ],
+    "equipement": [
+      "mixeur"
+    ],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "fruits-a-coque",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "chia-pudding-fruits-rouges",
+    "nom": "Chia pudding aux fruits rouges",
+    "emoji": "🍇",
+    "types": [
+      "petit-dejeuner",
+      "gouter"
+    ],
+    "tempsMinutes": 5,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "graines-chia",
+        "quantite": 25,
+        "unite": "g"
+      },
+      {
+        "alimentId": "lait",
+        "quantite": 150,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "fruits-rouges-surgeles",
+        "quantite": 60,
+        "unite": "g"
+      },
+      {
+        "alimentId": "miel",
+        "quantite": 5,
+        "unite": "g",
+        "optionnel": true
+      }
+    ],
+    "etapes": [
+      "Mélange le chia et le lait dans un bocal, remue bien.",
+      "Remue de nouveau après 5 min pour éviter les grumeaux.",
+      "Laisse au frigo au moins 2 h (ou la nuit), puis ajoute les fruits rouges."
+    ],
+    "equipement": [],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "sans-cuisson",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "galettes-riz-cacahuete-pomme",
+    "nom": "Galettes de riz, cacahuète et pomme",
+    "emoji": "🍏",
+    "types": [
+      "gouter"
+    ],
+    "tempsMinutes": 3,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "galette-riz",
+        "quantite": 20,
+        "unite": "g"
+      },
+      {
+        "alimentId": "beurre-cacahuete",
+        "quantite": 15,
+        "unite": "g"
+      },
+      {
+        "alimentId": "pomme",
+        "quantite": 1,
+        "unite": "piece"
+      }
+    ],
+    "etapes": [
+      "Étale le beurre de cacahuète sur les galettes de riz.",
+      "Coupe la pomme en fines tranches et pose-les dessus."
+    ],
+    "equipement": [],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "fruits-a-coque",
+      "sans-cuisson",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "pomme-cacahuete",
+    "nom": "Quartiers de pomme et beurre de cacahuète",
+    "emoji": "🍎",
+    "types": [
+      "gouter"
+    ],
+    "tempsMinutes": 2,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "pomme",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "beurre-cacahuete",
+        "quantite": 15,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Coupe la pomme en quartiers.",
+      "Trempe-les dans le beurre de cacahuète."
+    ],
+    "equipement": [],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "fruits-a-coque",
+      "sans-cuisson",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "tartine-chocolat-noir",
+    "nom": "Tartine beurre et chocolat noir",
+    "emoji": "🍫",
+    "types": [
+      "gouter"
+    ],
+    "tempsMinutes": 3,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "pain-complet",
+        "quantite": 50,
+        "unite": "g"
+      },
+      {
+        "alimentId": "beurre",
+        "quantite": 5,
+        "unite": "g"
+      },
+      {
+        "alimentId": "chocolat-noir",
+        "quantite": 15,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Beurre légèrement le pain.",
+      "Pose les carrés de chocolat noir dessus : c'est le vrai goûter d'avant le Nutella."
+    ],
+    "equipement": [],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": false,
+    "tags": [
+      "vegetarien",
+      "sans-cuisson",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "yaourt-compote-noix",
+    "nom": "Yaourt, compote et noix",
+    "emoji": "🥄",
+    "types": [
+      "gouter"
+    ],
+    "tempsMinutes": 2,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "yaourt-nature",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "compote-sans-sucre",
+        "quantite": 100,
+        "unite": "g"
+      },
+      {
+        "alimentId": "noix",
+        "quantite": 15,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Verse la compote sur le yaourt.",
+      "Concasse les noix avec les doigts et ajoute-les."
+    ],
+    "equipement": [],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "fruits-a-coque",
+      "sans-cuisson",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "crumble-compote-micro-ondes",
+    "nom": "Crumble express compote-avoine",
+    "emoji": "🍂",
+    "types": [
+      "gouter"
+    ],
+    "tempsMinutes": 5,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "compote-sans-sucre",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "flocons-avoine",
+        "quantite": 25,
+        "unite": "g"
+      },
+      {
+        "alimentId": "amandes",
+        "quantite": 10,
+        "unite": "g"
+      },
+      {
+        "alimentId": "beurre",
+        "quantite": 5,
+        "unite": "g"
+      },
+      {
+        "alimentId": "cannelle",
+        "quantite": 1,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Verse la compote dans un bol.",
+      "Mélange les flocons, les amandes concassées, le beurre et la cannelle du bout des doigts.",
+      "Parsème sur la compote et chauffe 1 min 30 au micro-ondes."
+    ],
+    "equipement": [
+      "micro-ondes"
+    ],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "fruits-a-coque",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "amandes-clementines",
+    "nom": "Amandes et clémentines",
+    "emoji": "🍊",
+    "types": [
+      "gouter"
+    ],
+    "tempsMinutes": 1,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "amandes",
+        "quantite": 20,
+        "unite": "g"
+      },
+      {
+        "alimentId": "clementine",
+        "quantite": 2,
+        "unite": "piece"
+      }
+    ],
+    "etapes": [
+      "Épluche les clémentines et mange-les avec une poignée d'amandes."
+    ],
+    "equipement": [],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "fruits-a-coque",
+      "sans-cuisson",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "oeufs-durs-pain-complet",
+    "nom": "Œufs durs et pain complet",
+    "emoji": "🥚",
+    "types": [
+      "gouter",
+      "petit-dejeuner"
+    ],
+    "tempsMinutes": 12,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "oeuf",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "pain-complet",
+        "quantite": 40,
+        "unite": "g"
+      },
+      {
+        "alimentId": "sel",
+        "quantite": 1,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Plonge les œufs dans l'eau bouillante 9 min.",
+      "Refroidis-les sous l'eau froide et écale-les.",
+      "Mange-les avec le pain et une pincée de sel. Ils se gardent 3 jours au frigo."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "oeuf",
+      "economique",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "galettes-riz-houmous-concombre",
+    "nom": "Galettes de riz, houmous et concombre",
+    "emoji": "🥒",
+    "types": [
+      "gouter"
+    ],
+    "tempsMinutes": 3,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "galette-riz",
+        "quantite": 20,
+        "unite": "g"
+      },
+      {
+        "alimentId": "houmous",
+        "quantite": 40,
+        "unite": "g"
+      },
+      {
+        "alimentId": "concombre",
+        "quantite": 0.25,
+        "unite": "piece"
+      }
+    ],
+    "etapes": [
+      "Tartine les galettes de houmous.",
+      "Ajoute des rondelles de concombre."
+    ],
+    "equipement": [],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "sans-cuisson",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "pain-perdu-cannelle",
+    "nom": "Pain perdu à la cannelle",
+    "emoji": "🍞",
+    "types": [
+      "gouter",
+      "petit-dejeuner"
+    ],
+    "tempsMinutes": 10,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "pain-de-mie",
+        "quantite": 80,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oeuf",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "lait",
+        "quantite": 80,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "sucre",
+        "quantite": 10,
+        "unite": "g"
+      },
+      {
+        "alimentId": "cannelle",
+        "quantite": 1,
+        "unite": "g"
+      },
+      {
+        "alimentId": "beurre",
+        "quantite": 5,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Bats l'œuf avec le lait, le sucre et la cannelle.",
+      "Trempe les tranches de pain des deux côtés.",
+      "Dore-les 2 min par face dans le beurre chaud."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": false,
+    "tags": [
+      "vegetarien",
+      "oeuf",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "tartine-beurre-confiture",
+    "nom": "Tartine beurre-confiture",
+    "emoji": "🍓",
+    "types": [
+      "petit-dejeuner",
+      "gouter"
+    ],
+    "tempsMinutes": 2,
+    "portions": 1,
+    "ingredients": [
+      {
+        "alimentId": "baguette",
+        "quantite": 0.25,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "beurre",
+        "quantite": 10,
+        "unite": "g"
+      },
+      {
+        "alimentId": "confiture",
+        "quantite": 20,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Coupe le morceau de baguette en deux.",
+      "Beurre puis étale la confiture."
+    ],
+    "equipement": [],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": false,
+    "tags": [
+      "vegetarien",
+      "sans-cuisson",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "riz-saute-oeuf-carotte",
+    "nom": "Riz sauté œuf-carotte",
+    "emoji": "🍳",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 20,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "riz-blanc",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oeuf",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "carotte",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "sauce-soja",
+        "quantite": 20,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "huile-tournesol",
+        "quantite": 10,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Cuis le riz 12 min dans l'eau salée et égoutte.",
+      "Râpe les carottes, émince l'oignon et fais-les revenir 5 min dans l'huile.",
+      "Ajoute le riz et la sauce soja, puis les œufs battus, mélange 2 min."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "oeuf",
+      "economique",
+      "assiette-complete",
+      "batch"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "dahl-lentilles-corail",
+    "nom": "Dahl de lentilles corail au lait de coco",
+    "emoji": "🍛",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 25,
+    "portions": 4,
+    "ingredients": [
+      {
+        "alimentId": "lentilles-corail",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "lait-coco",
+        "quantite": 200,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "tomates-concassees-boite",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "ail",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "curry",
+        "quantite": 6,
+        "unite": "g"
+      },
+      {
+        "alimentId": "riz-basmati",
+        "quantite": 240,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Fais revenir l'oignon émincé et l'ail 3 min dans un peu d'huile.",
+      "Ajoute le curry, les lentilles rincées, les tomates, le lait de coco et 300 ml d'eau.",
+      "Laisse mijoter 18 min en remuant de temps en temps.",
+      "Pendant ce temps, cuis le riz. Le dahl se garde 4 jours au frigo."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "assiette-complete",
+      "batch"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "chili-sin-carne",
+    "nom": "Chili sin carne",
+    "emoji": "🌶️",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 30,
+    "portions": 4,
+    "ingredients": [
+      {
+        "alimentId": "haricots-rouges-boite",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "mais-doux",
+        "quantite": 140,
+        "unite": "g"
+      },
+      {
+        "alimentId": "tomates-concassees-boite",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "poivron-rouge",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "cumin",
+        "quantite": 3,
+        "unite": "g"
+      },
+      {
+        "alimentId": "paprika",
+        "quantite": 3,
+        "unite": "g"
+      },
+      {
+        "alimentId": "riz-blanc",
+        "quantite": 240,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Fais revenir l'oignon et le poivron en dés 5 min.",
+      "Ajoute le cumin, le paprika, les tomates, les haricots rincés et le maïs.",
+      "Laisse mijoter 20 min à feu doux.",
+      "Cuis le riz pendant ce temps. Se garde 4 jours au frigo et se congèle."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "assiette-complete",
+      "batch"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "chili-con-carne",
+    "nom": "Chili con carne",
+    "emoji": "🫘",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 30,
+    "portions": 4,
+    "ingredients": [
+      {
+        "alimentId": "boeuf-hache",
+        "quantite": 300,
+        "unite": "g"
+      },
+      {
+        "alimentId": "haricots-rouges-boite",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "tomates-concassees-boite",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "poivron-rouge",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "cumin",
+        "quantite": 3,
+        "unite": "g"
+      },
+      {
+        "alimentId": "paprika",
+        "quantite": 3,
+        "unite": "g"
+      },
+      {
+        "alimentId": "riz-blanc",
+        "quantite": 240,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Fais revenir l'oignon et le poivron 3 min, puis le bœuf 5 min en l'émiettant.",
+      "Ajoute les épices, les tomates et les haricots rincés.",
+      "Laisse mijoter 20 min.",
+      "Cuis le riz pendant ce temps."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "assiette-complete",
+      "batch"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "curry-pois-chiches-epinards",
+    "nom": "Curry de pois chiches aux épinards",
+    "emoji": "🥬",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 25,
+    "portions": 4,
+    "ingredients": [
+      {
+        "alimentId": "pois-chiches-boite",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "epinards-surgeles",
+        "quantite": 300,
+        "unite": "g"
+      },
+      {
+        "alimentId": "lait-coco",
+        "quantite": 200,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "ail",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "curry",
+        "quantite": 6,
+        "unite": "g"
+      },
+      {
+        "alimentId": "riz-basmati",
+        "quantite": 240,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Fais revenir l'oignon et l'ail 3 min.",
+      "Ajoute le curry, les épinards encore surgelés et laisse-les fondre 5 min.",
+      "Verse les pois chiches rincés et le lait de coco, mijote 10 min.",
+      "Sers avec le riz cuit pendant ce temps."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "assiette-complete",
+      "batch"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "poulet-curry-coco",
+    "nom": "Poulet curry-coco et poivron",
+    "emoji": "🥥",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 25,
+    "portions": 3,
+    "ingredients": [
+      {
+        "alimentId": "poulet-filet",
+        "quantite": 300,
+        "unite": "g"
+      },
+      {
+        "alimentId": "lait-coco",
+        "quantite": 200,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "poivron-rouge",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "curry",
+        "quantite": 6,
+        "unite": "g"
+      },
+      {
+        "alimentId": "riz-basmati",
+        "quantite": 180,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Coupe le poulet en dés et fais-le dorer 5 min.",
+      "Ajoute l'oignon et le poivron émincés, 3 min.",
+      "Saupoudre de curry, verse le lait de coco et mijote 10 min.",
+      "Sers avec le riz."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "assiette-complete",
+      "batch"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "curry-oeufs-tomate-coco",
+    "nom": "Curry d'œufs tomate-coco",
+    "emoji": "🥚",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 25,
+    "portions": 3,
+    "ingredients": [
+      {
+        "alimentId": "oeuf",
+        "quantite": 6,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "tomates-concassees-boite",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "lait-coco",
+        "quantite": 200,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "curry",
+        "quantite": 6,
+        "unite": "g"
+      },
+      {
+        "alimentId": "riz-basmati",
+        "quantite": 180,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Cuis les œufs 9 min dans l'eau bouillante, puis écale-les.",
+      "Fais revenir l'oignon 3 min, ajoute le curry, les tomates et le lait de coco, mijote 10 min.",
+      "Ajoute les œufs coupés en deux et réchauffe 2 min.",
+      "Sers avec le riz."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "oeuf",
+      "economique",
+      "assiette-complete",
+      "batch"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "bowl-thon-riz-mais",
+    "nom": "Bowl thon, riz, maïs et concombre",
+    "emoji": "🐟",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 15,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "riz-blanc",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "thon-boite",
+        "quantite": 140,
+        "unite": "g"
+      },
+      {
+        "alimentId": "mais-doux",
+        "quantite": 140,
+        "unite": "g"
+      },
+      {
+        "alimentId": "concombre",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "tomate",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "huile-olive",
+        "quantite": 15,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "vinaigre-cidre",
+        "quantite": 10,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Cuis le riz 12 min et rince-le à l'eau froide.",
+      "Coupe le concombre et les tomates en dés.",
+      "Mélange avec le thon émietté, le maïs, l'huile et le vinaigre."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "poisson",
+      "economique",
+      "assiette-complete",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "salade-lentilles-oeuf-carotte",
+    "nom": "Salade de lentilles, œufs et carottes",
+    "emoji": "🥗",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 25,
+    "portions": 4,
+    "ingredients": [
+      {
+        "alimentId": "lentilles-vertes",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oeuf",
+        "quantite": 4,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "carotte",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oignon-rouge",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "moutarde",
+        "quantite": 10,
+        "unite": "g"
+      },
+      {
+        "alimentId": "huile-olive",
+        "quantite": 30,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "vinaigre-cidre",
+        "quantite": 15,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Cuis les lentilles 20 min dans l'eau non salée, sale en fin de cuisson et égoutte.",
+      "En même temps, cuis les œufs 9 min.",
+      "Râpe les carottes, émince l'oignon rouge.",
+      "Mélange tout avec la moutarde, l'huile et le vinaigre. Se garde 3 jours."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "oeuf",
+      "economique",
+      "assiette-complete",
+      "batch"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "taboule-boulgour-pois-chiches",
+    "nom": "Taboulé de boulgour aux pois chiches",
+    "emoji": "🌿",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 15,
+    "portions": 3,
+    "ingredients": [
+      {
+        "alimentId": "boulgour",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "pois-chiches-boite",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "concombre",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "tomate",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "oignon-rouge",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "persil",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "citron",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "huile-olive",
+        "quantite": 30,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Cuis le boulgour 10 min dans l'eau salée, égoutte et laisse tiédir.",
+      "Coupe le concombre, les tomates et l'oignon en petits dés, cisèle le persil.",
+      "Mélange avec les pois chiches rincés, le jus du citron et l'huile."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "assiette-complete",
+      "batch",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "salade-pates-thon-tomates",
+    "nom": "Salade de pâtes au thon et tomates cerises",
+    "emoji": "🍝",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 15,
+    "portions": 3,
+    "ingredients": [
+      {
+        "alimentId": "pates",
+        "quantite": 250,
+        "unite": "g"
+      },
+      {
+        "alimentId": "thon-boite",
+        "quantite": 140,
+        "unite": "g"
+      },
+      {
+        "alimentId": "tomate-cerise",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "olives",
+        "quantite": 40,
+        "unite": "g"
+      },
+      {
+        "alimentId": "huile-olive",
+        "quantite": 20,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "basilic",
+        "quantite": 1,
+        "unite": "piece",
+        "optionnel": true
+      }
+    ],
+    "etapes": [
+      "Cuis les pâtes, rince-les à l'eau froide.",
+      "Coupe les tomates cerises en deux.",
+      "Mélange avec le thon, les olives et l'huile."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "poisson",
+      "economique",
+      "assiette-complete",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "wrap-poulet-crudites",
+    "nom": "Wraps poulet, carotte et sauce yaourt",
+    "emoji": "🌯",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 15,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "tortilla",
+        "quantite": 4,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "poulet-filet",
+        "quantite": 250,
+        "unite": "g"
+      },
+      {
+        "alimentId": "carotte",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "salade-verte",
+        "quantite": 0.5,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "yaourt-grec",
+        "quantite": 100,
+        "unite": "g"
+      },
+      {
+        "alimentId": "paprika",
+        "quantite": 2,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Coupe le poulet en lanières, saupoudre de paprika et fais-le dorer 6 min.",
+      "Râpe la carotte, lave quelques feuilles de salade.",
+      "Tartine les tortillas de yaourt salé-poivré, garnis et roule serré."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "assiette-complete",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "wrap-houmous-legumes",
+    "nom": "Wraps houmous et légumes croquants",
+    "emoji": "🥙",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 10,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "tortilla",
+        "quantite": 4,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "houmous",
+        "quantite": 120,
+        "unite": "g"
+      },
+      {
+        "alimentId": "carotte",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "concombre",
+        "quantite": 0.5,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "chou-rouge",
+        "quantite": 0.25,
+        "unite": "piece"
+      }
+    ],
+    "etapes": [
+      "Râpe la carotte et émince finement le chou rouge.",
+      "Coupe le concombre en bâtonnets.",
+      "Tartine les tortillas de houmous, garnis et roule serré."
+    ],
+    "equipement": [],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "sans-cuisson",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "wrap-omelette-epinards",
+    "nom": "Wraps omelette-épinards",
+    "emoji": "🌯",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 12,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "tortilla",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "oeuf",
+        "quantite": 4,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "epinards-frais",
+        "quantite": 100,
+        "unite": "g"
+      },
+      {
+        "alimentId": "huile-olive",
+        "quantite": 5,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Fais tomber les épinards 2 min dans la poêle huilée.",
+      "Verse 2 œufs battus dessus, cuis 2 min, glisse sur une tortilla.",
+      "Recommence pour la deuxième, puis roule les wraps."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "oeuf",
+      "economique",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "tortilla-espagnole",
+    "nom": "Tortilla de pommes de terre",
+    "emoji": "🥔",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 30,
+    "portions": 3,
+    "ingredients": [
+      {
+        "alimentId": "pomme-de-terre",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oeuf",
+        "quantite": 6,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "huile-olive",
+        "quantite": 30,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Coupe les pommes de terre en fines tranches et l'oignon en lamelles.",
+      "Fais-les cuire 15 min à couvert dans l'huile à feu moyen, en remuant.",
+      "Verse les œufs battus salés, cuis 5 min à couvert à feu doux.",
+      "Retourne à l'aide d'une assiette et cuis 3 min. Bonne froide le lendemain."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "oeuf",
+      "economique",
+      "batch"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "omelette-champignons",
+    "nom": "Omelette aux champignons et pain complet",
+    "emoji": "🍄",
+    "types": [
+      "diner",
+      "dejeuner"
+    ],
+    "tempsMinutes": 12,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "oeuf",
+        "quantite": 5,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "champignon-paris",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "persil",
+        "quantite": 0.5,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "beurre",
+        "quantite": 10,
+        "unite": "g"
+      },
+      {
+        "alimentId": "pain-complet",
+        "quantite": 100,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Émince les champignons et fais-les revenir 5 min dans le beurre.",
+      "Verse les œufs battus salés, cuis 3 min à feu moyen.",
+      "Parsème de persil et sers avec le pain."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "oeuf",
+      "economique",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "shakshuka",
+    "nom": "Shakshuka œufs-poivron-tomate",
+    "emoji": "🍅",
+    "types": [
+      "diner",
+      "dejeuner"
+    ],
+    "tempsMinutes": 25,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "oeuf",
+        "quantite": 4,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "tomates-concassees-boite",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "poivron-rouge",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "cumin",
+        "quantite": 2,
+        "unite": "g"
+      },
+      {
+        "alimentId": "pain-complet",
+        "quantite": 120,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Fais revenir l'oignon et le poivron émincés 5 min.",
+      "Ajoute le cumin et les tomates, laisse réduire 10 min.",
+      "Creuse 4 puits, casse un œuf dans chacun, couvre et cuis 6 min.",
+      "Sers avec le pain."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "oeuf",
+      "economique",
+      "assiette-complete"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "frittata-legumes-four",
+    "nom": "Frittata aux légumes au four",
+    "emoji": "🥚",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 30,
+    "portions": 3,
+    "ingredients": [
+      {
+        "alimentId": "oeuf",
+        "quantite": 6,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "poelee-legumes-surgelee",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "lait",
+        "quantite": 50,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "herbes-provence",
+        "quantite": 2,
+        "unite": "g"
+      },
+      {
+        "alimentId": "pain-complet",
+        "quantite": 120,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Préchauffe le four à 200 °C.",
+      "Fais revenir la poêlée de légumes 5 min pour évaporer l'eau.",
+      "Bats les œufs avec le lait et les herbes, mélange avec les légumes dans un plat huilé.",
+      "Enfourne 20 min. Se mange froide avec le pain."
+    ],
+    "equipement": [
+      "four",
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "oeuf",
+      "economique",
+      "batch"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "nouilles-sautees-poulet-wok",
+    "nom": "Nouilles sautées au poulet et légumes",
+    "emoji": "🍜",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 15,
+    "portions": 3,
+    "ingredients": [
+      {
+        "alimentId": "nouilles-asiatiques",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "poulet-filet",
+        "quantite": 250,
+        "unite": "g"
+      },
+      {
+        "alimentId": "wok-legumes-surgele",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "sauce-soja",
+        "quantite": 30,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "ail",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "huile-sesame",
+        "quantite": 10,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Cuis les nouilles selon le paquet et égoutte.",
+      "Fais dorer le poulet en lanières 5 min avec l'ail.",
+      "Ajoute les légumes surgelés, 5 min à feu vif.",
+      "Ajoute les nouilles, la sauce soja et l'huile de sésame, mélange 1 min."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "assiette-complete",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "tofu-saute-brocoli-riz",
+    "nom": "Tofu sauté au brocoli et gingembre",
+    "emoji": "🥦",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 25,
+    "portions": 3,
+    "ingredients": [
+      {
+        "alimentId": "tofu",
+        "quantite": 300,
+        "unite": "g"
+      },
+      {
+        "alimentId": "brocoli-surgele",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "sauce-soja",
+        "quantite": 30,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "gingembre-frais",
+        "quantite": 10,
+        "unite": "g"
+      },
+      {
+        "alimentId": "riz-blanc",
+        "quantite": 180,
+        "unite": "g"
+      },
+      {
+        "alimentId": "sesame",
+        "quantite": 10,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Cuis le riz.",
+      "Coupe le tofu en cubes et fais-le dorer 8 min dans un peu d'huile.",
+      "Ajoute le brocoli et le gingembre râpé, 6 min à couvert.",
+      "Arrose de sauce soja et parsème de sésame."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "assiette-complete",
+      "batch"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "nouilles-chou-oeuf",
+    "nom": "Nouilles sautées au chou et à l'œuf",
+    "emoji": "🥬",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 15,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "nouilles-asiatiques",
+        "quantite": 160,
+        "unite": "g"
+      },
+      {
+        "alimentId": "chou-blanc",
+        "quantite": 0.25,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "carotte",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oeuf",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "sauce-soja",
+        "quantite": 30,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "huile-tournesol",
+        "quantite": 10,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Cuis les nouilles et égoutte.",
+      "Émince le chou et râpe la carotte, fais-les sauter 6 min dans l'huile.",
+      "Pousse les légumes, brouille les œufs à côté.",
+      "Ajoute les nouilles et la sauce soja, mélange 1 min."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "oeuf",
+      "economique",
+      "assiette-complete",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "tofu-fume-chou-rouge-nouilles",
+    "nom": "Nouilles au tofu fumé et chou rouge",
+    "emoji": "🟣",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 15,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "nouilles-asiatiques",
+        "quantite": 160,
+        "unite": "g"
+      },
+      {
+        "alimentId": "tofu-fume",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "chou-rouge",
+        "quantite": 0.25,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "sauce-soja",
+        "quantite": 30,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "huile-sesame",
+        "quantite": 10,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Cuis les nouilles et égoutte.",
+      "Fais dorer le tofu fumé en dés 4 min.",
+      "Ajoute le chou rouge émincé, 4 min.",
+      "Mélange avec les nouilles, la sauce soja et l'huile de sésame."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "assiette-complete",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "nouilles-cacahuete-legumes",
+    "nom": "Nouilles sauce cacahuète",
+    "emoji": "🥜",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 15,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "nouilles-asiatiques",
+        "quantite": 160,
+        "unite": "g"
+      },
+      {
+        "alimentId": "beurre-cacahuete",
+        "quantite": 40,
+        "unite": "g"
+      },
+      {
+        "alimentId": "sauce-soja",
+        "quantite": 30,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "wok-legumes-surgele",
+        "quantite": 300,
+        "unite": "g"
+      },
+      {
+        "alimentId": "citron",
+        "quantite": 0.5,
+        "unite": "piece"
+      }
+    ],
+    "etapes": [
+      "Cuis les nouilles et garde un peu d'eau de cuisson.",
+      "Fais sauter les légumes 6 min à feu vif.",
+      "Délaye le beurre de cacahuète avec la sauce soja, le jus de citron et 3 c. d'eau de cuisson.",
+      "Mélange tout. Bon chaud ou froid."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "fruits-a-coque",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "pates-thon-tomate",
+    "nom": "Pâtes thon-tomate",
+    "emoji": "🍝",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 15,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "pates",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "thon-boite",
+        "quantite": 140,
+        "unite": "g"
+      },
+      {
+        "alimentId": "coulis-tomate",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "herbes-provence",
+        "quantite": 2,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Cuis les pâtes.",
+      "Fais revenir l'oignon 3 min, ajoute le coulis et les herbes, 5 min.",
+      "Ajoute le thon émietté et mélange avec les pâtes."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "poisson",
+      "economique",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "pates-bolo-lentilles",
+    "nom": "Pâtes bolognaise aux lentilles corail",
+    "emoji": "🍝",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 25,
+    "portions": 4,
+    "ingredients": [
+      {
+        "alimentId": "pates",
+        "quantite": 320,
+        "unite": "g"
+      },
+      {
+        "alimentId": "lentilles-corail",
+        "quantite": 120,
+        "unite": "g"
+      },
+      {
+        "alimentId": "coulis-tomate",
+        "quantite": 500,
+        "unite": "g"
+      },
+      {
+        "alimentId": "carotte",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "ail",
+        "quantite": 1,
+        "unite": "piece"
+      }
+    ],
+    "etapes": [
+      "Fais revenir l'oignon, l'ail et la carotte râpée 4 min.",
+      "Ajoute les lentilles rincées, le coulis et 250 ml d'eau, mijote 15 min.",
+      "Cuis les pâtes pendant ce temps et mélange."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "assiette-complete",
+      "batch"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "spaghetti-bolognaise",
+    "nom": "Spaghetti bolognaise",
+    "emoji": "🍝",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 25,
+    "portions": 4,
+    "ingredients": [
+      {
+        "alimentId": "spaghetti",
+        "quantite": 320,
+        "unite": "g"
+      },
+      {
+        "alimentId": "boeuf-hache",
+        "quantite": 250,
+        "unite": "g"
+      },
+      {
+        "alimentId": "coulis-tomate",
+        "quantite": 500,
+        "unite": "g"
+      },
+      {
+        "alimentId": "carotte",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "herbes-provence",
+        "quantite": 2,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Fais revenir l'oignon et la carotte râpée 3 min.",
+      "Ajoute le bœuf et émiette-le 5 min.",
+      "Verse le coulis et les herbes, mijote 12 min.",
+      "Cuis les spaghetti pendant ce temps."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "assiette-complete",
+      "batch"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "pates-basilic-haricots-verts",
+    "nom": "Pâtes ail-basilic et haricots verts",
+    "emoji": "🌱",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 15,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "pates",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "huile-olive",
+        "quantite": 30,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "basilic",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "ail",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "haricots-verts-surgeles",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "tomate-cerise",
+        "quantite": 100,
+        "unite": "g",
+        "optionnel": true
+      }
+    ],
+    "etapes": [
+      "Cuis les pâtes et ajoute les haricots verts dans la même eau 6 min avant la fin.",
+      "Hache le basilic et l'ail, mélange-les avec l'huile et une pincée de sel.",
+      "Égoutte, mélange avec l'huile au basilic et les tomates cerises coupées. Bon froid."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "pates-brocoli-ail",
+    "nom": "Pâtes complètes brocoli et ail",
+    "emoji": "🥦",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 15,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "pates-completes",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "brocoli",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "ail",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "huile-olive",
+        "quantite": 20,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "piment-espelette",
+        "quantite": 1,
+        "unite": "g",
+        "optionnel": true
+      }
+    ],
+    "etapes": [
+      "Détaille le brocoli en petits bouquets.",
+      "Cuis-le avec les pâtes, dans la même eau.",
+      "Fais dorer l'ail émincé 1 min dans l'huile et mélange avec les pâtes égouttées."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "spaghetti-carbonara-sans-creme",
+    "nom": "Spaghetti carbonara",
+    "emoji": "🥓",
+    "types": [
+      "diner",
+      "dejeuner"
+    ],
+    "tempsMinutes": 15,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "spaghetti",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "lardons",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oeuf",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "poivre",
+        "quantite": 1,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Cuis les spaghetti et garde une louche d'eau de cuisson.",
+      "Fais dorer les lardons 5 min sans matière grasse.",
+      "Hors du feu, mélange les pâtes, les lardons, les œufs battus et un peu d'eau de cuisson : ça doit rester crémeux.",
+      "Poivre généreusement."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "porc",
+      "oeuf",
+      "economique",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "pates-jambon-petits-pois",
+    "nom": "Pâtes jambon, petits pois et crème",
+    "emoji": "🫛",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 15,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "pates",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "jambon-blanc",
+        "quantite": 100,
+        "unite": "g"
+      },
+      {
+        "alimentId": "petits-pois-surgeles",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "creme-fraiche",
+        "quantite": 50,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Cuis les pâtes et ajoute les petits pois 5 min avant la fin.",
+      "Coupe le jambon en lanières.",
+      "Égoutte, mélange avec le jambon et la crème."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "porc",
+      "economique",
+      "assiette-complete",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "spaghetti-sardines-tomate",
+    "nom": "Spaghetti sardines, tomate et câpres",
+    "emoji": "🐟",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 15,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "spaghetti",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "sardine-boite",
+        "quantite": 135,
+        "unite": "g"
+      },
+      {
+        "alimentId": "coulis-tomate",
+        "quantite": 300,
+        "unite": "g"
+      },
+      {
+        "alimentId": "ail",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "capres",
+        "quantite": 10,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Cuis les spaghetti.",
+      "Fais revenir l'ail 1 min, ajoute le coulis et les câpres, 5 min.",
+      "Ajoute les sardines en morceaux, réchauffe 2 min et mélange aux pâtes."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "poisson",
+      "economique",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "couscous-express-merguez",
+    "nom": "Couscous express merguez-légumes",
+    "emoji": "🫓",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 25,
+    "portions": 3,
+    "ingredients": [
+      {
+        "alimentId": "semoule",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "merguez",
+        "quantite": 300,
+        "unite": "g"
+      },
+      {
+        "alimentId": "courgette",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "carotte",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "pois-chiches-boite",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "ras-el-hanout",
+        "quantite": 3,
+        "unite": "g"
+      },
+      {
+        "alimentId": "bouillon-cube",
+        "quantite": 1,
+        "unite": "piece"
+      }
+    ],
+    "etapes": [
+      "Fais dorer les merguez 8 min et réserve.",
+      "Dans la même casserole, fais revenir la courgette et la carotte en dés 3 min.",
+      "Ajoute le ras el hanout, les pois chiches, le cube et 300 ml d'eau, mijote 10 min.",
+      "Verse de l'eau bouillante sur la semoule à hauteur, couvre 5 min et égrène."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "assiette-complete",
+      "batch"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "boulgour-poulet-poivron",
+    "nom": "Poêlée de boulgour au poulet et poivron",
+    "emoji": "🫑",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 25,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "boulgour",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "poulet-filet",
+        "quantite": 250,
+        "unite": "g"
+      },
+      {
+        "alimentId": "poivron-rouge",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "paprika",
+        "quantite": 3,
+        "unite": "g"
+      },
+      {
+        "alimentId": "bouillon-cube",
+        "quantite": 1,
+        "unite": "piece"
+      }
+    ],
+    "etapes": [
+      "Fais dorer le poulet en dés 5 min avec l'oignon et le poivron.",
+      "Ajoute le paprika et le boulgour, mélange 1 min.",
+      "Verse 350 ml d'eau avec le cube, couvre et cuis 12 min à feu doux."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "assiette-complete"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "poelee-pdt-saucisse-haricots",
+    "nom": "Poêlée pommes de terre, saucisse et haricots verts",
+    "emoji": "🌭",
+    "types": [
+      "diner",
+      "dejeuner"
+    ],
+    "tempsMinutes": 30,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "pomme-de-terre",
+        "quantite": 500,
+        "unite": "g"
+      },
+      {
+        "alimentId": "saucisse-toulouse",
+        "quantite": 250,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "haricots-verts-surgeles",
+        "quantite": 300,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Coupe les pommes de terre en petits cubes de 1 cm.",
+      "Fais dorer la saucisse en tronçons 5 min, puis ajoute les pommes de terre et l'oignon.",
+      "Couvre et cuis 15 min en remuant.",
+      "Ajoute les haricots verts, 7 min de plus."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "porc",
+      "assiette-complete"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "patate-douce-pois-chiches-four",
+    "nom": "Patate douce et pois chiches rôtis",
+    "emoji": "🍠",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 30,
+    "portions": 3,
+    "ingredients": [
+      {
+        "alimentId": "patate-douce",
+        "quantite": 500,
+        "unite": "g"
+      },
+      {
+        "alimentId": "pois-chiches-boite",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oignon-rouge",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "huile-olive",
+        "quantite": 20,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "cumin",
+        "quantite": 3,
+        "unite": "g"
+      },
+      {
+        "alimentId": "yaourt-grec",
+        "quantite": 100,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Préchauffe le four à 220 °C.",
+      "Coupe la patate douce en cubes, l'oignon en quartiers.",
+      "Mélange avec les pois chiches égouttés, l'huile et le cumin sur une plaque.",
+      "Enfourne 22 min et sers avec le yaourt salé."
+    ],
+    "equipement": [
+      "four"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "assiette-complete",
+      "batch"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "plaque-poulet-pdt-carottes",
+    "nom": "Poulet, pommes de terre et carottes au four",
+    "emoji": "🍗",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 30,
+    "portions": 3,
+    "ingredients": [
+      {
+        "alimentId": "poulet-filet",
+        "quantite": 300,
+        "unite": "g"
+      },
+      {
+        "alimentId": "pomme-de-terre",
+        "quantite": 500,
+        "unite": "g"
+      },
+      {
+        "alimentId": "carotte",
+        "quantite": 250,
+        "unite": "g"
+      },
+      {
+        "alimentId": "huile-olive",
+        "quantite": 20,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "herbes-provence",
+        "quantite": 3,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Préchauffe le four à 220 °C.",
+      "Coupe les pommes de terre et les carottes en petits cubes, le poulet en gros dés.",
+      "Mélange tout avec l'huile, les herbes et du sel sur une plaque.",
+      "Enfourne 25 min en remuant à mi-cuisson."
+    ],
+    "equipement": [
+      "four"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "assiette-complete",
+      "batch"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "saumon-riz-brocoli",
+    "nom": "Saumon, riz et brocoli au citron",
+    "emoji": "🍣",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 20,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "saumon-filet",
+        "quantite": 250,
+        "unite": "g"
+      },
+      {
+        "alimentId": "riz-blanc",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "brocoli-surgele",
+        "quantite": 300,
+        "unite": "g"
+      },
+      {
+        "alimentId": "citron",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "sauce-soja",
+        "quantite": 15,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Cuis le riz, ajoute le brocoli dans l'eau 6 min avant la fin.",
+      "Saisis le saumon 4 min côté peau puis 2 min de l'autre côté.",
+      "Arrose de jus de citron et de sauce soja."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "poisson",
+      "assiette-complete"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "colin-papillote-courgette",
+    "nom": "Colin en papillote micro-ondes et riz",
+    "emoji": "🐠",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 20,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "colin-surgele",
+        "quantite": 300,
+        "unite": "g"
+      },
+      {
+        "alimentId": "courgette",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "tomate-cerise",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "citron",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "riz-blanc",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "herbes-provence",
+        "quantite": 1,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Cuis le riz.",
+      "Dans un plat, mets la courgette en rondelles, les tomates cerises et le colin.",
+      "Arrose de citron, sale, ajoute les herbes, couvre et cuis 7 min au micro-ondes."
+    ],
+    "equipement": [
+      "micro-ondes",
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "poisson",
+      "assiette-complete"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "tartines-sardines-salade",
+    "nom": "Tartines de sardines et salade",
+    "emoji": "🥖",
+    "types": [
+      "diner",
+      "dejeuner"
+    ],
+    "tempsMinutes": 10,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "baguette",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "sardine-boite",
+        "quantite": 270,
+        "unite": "g"
+      },
+      {
+        "alimentId": "tomate",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "salade-verte",
+        "quantite": 0.5,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "citron",
+        "quantite": 0.5,
+        "unite": "piece"
+      }
+    ],
+    "etapes": [
+      "Coupe la baguette en tartines.",
+      "Écrase les sardines à la fourchette avec le jus de citron et du poivre.",
+      "Tartine, ajoute des rondelles de tomate et sers avec la salade."
+    ],
+    "equipement": [],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "poisson",
+      "economique",
+      "sans-cuisson",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "salade-pdt-maquereau",
+    "nom": "Salade tiède pommes de terre et maquereau",
+    "emoji": "🥔",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 25,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "pomme-de-terre",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "maquereau-boite",
+        "quantite": 250,
+        "unite": "g"
+      },
+      {
+        "alimentId": "salade-verte",
+        "quantite": 0.5,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "moutarde",
+        "quantite": 10,
+        "unite": "g"
+      },
+      {
+        "alimentId": "huile-olive",
+        "quantite": 20,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "vinaigre-cidre",
+        "quantite": 10,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Cuis les pommes de terre en morceaux 15 min dans l'eau salée.",
+      "Prépare la vinaigrette moutarde, huile, vinaigre.",
+      "Mélange les pommes de terre tièdes, le maquereau et la vinaigrette, sers sur la salade."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "poisson",
+      "economique",
+      "assiette-complete"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "salade-riz-surimi",
+    "nom": "Salade de riz, surimi et concombre",
+    "emoji": "🦀",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 15,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "riz-blanc",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "surimi",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "concombre",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "mais-doux",
+        "quantite": 140,
+        "unite": "g"
+      },
+      {
+        "alimentId": "mayonnaise",
+        "quantite": 30,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Cuis le riz et rince-le à l'eau froide.",
+      "Coupe le surimi et le concombre en rondelles.",
+      "Mélange tout avec la mayonnaise."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "poisson",
+      "economique",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "salade-nicoise-express",
+    "nom": "Salade pommes de terre, thon et haricots verts",
+    "emoji": "🥗",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 25,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "pomme-de-terre",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oeuf",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "thon-boite",
+        "quantite": 140,
+        "unite": "g"
+      },
+      {
+        "alimentId": "haricots-verts-surgeles",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "tomate",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "olives",
+        "quantite": 30,
+        "unite": "g"
+      },
+      {
+        "alimentId": "huile-olive",
+        "quantite": 20,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "vinaigre-cidre",
+        "quantite": 10,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Cuis les pommes de terre en morceaux 15 min, avec les œufs, et ajoute les haricots verts les 7 dernières minutes.",
+      "Écale les œufs, coupe les tomates.",
+      "Mélange tout avec le thon, les olives, l'huile et le vinaigre."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "poisson",
+      "oeuf",
+      "assiette-complete"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "bowl-quinoa-haricots-avocat",
+    "nom": "Bowl quinoa, haricots rouges et avocat",
+    "emoji": "🥑",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 20,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "quinoa",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "haricots-rouges-boite",
+        "quantite": 250,
+        "unite": "g"
+      },
+      {
+        "alimentId": "avocat",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "mais-doux",
+        "quantite": 140,
+        "unite": "g"
+      },
+      {
+        "alimentId": "tomate",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "citron",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "cumin",
+        "quantite": 2,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Rince le quinoa et cuis-le 12 min, égoutte.",
+      "Coupe l'avocat et la tomate en dés, arrose de citron.",
+      "Mélange avec les haricots rincés, le maïs et le cumin."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "assiette-complete"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "bowl-poulet-soja-miel",
+    "nom": "Bowl poulet soja-miel, carottes et edamame",
+    "emoji": "🍱",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 20,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "poulet-filet",
+        "quantite": 250,
+        "unite": "g"
+      },
+      {
+        "alimentId": "sauce-soja",
+        "quantite": 30,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "miel",
+        "quantite": 10,
+        "unite": "g"
+      },
+      {
+        "alimentId": "riz-blanc",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "carotte",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "edamame-surgele",
+        "quantite": 150,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Cuis le riz et ajoute les edamame 4 min avant la fin.",
+      "Fais dorer le poulet en dés 6 min.",
+      "Ajoute la sauce soja et le miel, laisse caraméliser 1 min.",
+      "Sers avec la carotte râpée."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "assiette-complete"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "dinde-moutarde-haricots-verts",
+    "nom": "Dinde à la moutarde, haricots verts et pâtes",
+    "emoji": "🦃",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 20,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "dinde-escalope",
+        "quantite": 250,
+        "unite": "g"
+      },
+      {
+        "alimentId": "creme-fraiche",
+        "quantite": 50,
+        "unite": "g"
+      },
+      {
+        "alimentId": "moutarde",
+        "quantite": 15,
+        "unite": "g"
+      },
+      {
+        "alimentId": "haricots-verts-surgeles",
+        "quantite": 300,
+        "unite": "g"
+      },
+      {
+        "alimentId": "pates",
+        "quantite": 160,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Cuis les pâtes et les haricots verts ensemble.",
+      "Fais dorer la dinde en lanières 5 min.",
+      "Ajoute la crème et la moutarde, 2 min à feu doux.",
+      "Sers avec les pâtes et les haricots."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "assiette-complete"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "boeuf-saute-poivrons",
+    "nom": "Bœuf sauté aux poivrons",
+    "emoji": "🥩",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 20,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "boeuf-emince",
+        "quantite": 250,
+        "unite": "g"
+      },
+      {
+        "alimentId": "poivron-rouge",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "poivron-vert",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "sauce-soja",
+        "quantite": 30,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "riz-blanc",
+        "quantite": 150,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Cuis le riz.",
+      "Saisis le bœuf 2 min à feu vif et réserve.",
+      "Fais sauter les poivrons et l'oignon émincés 6 min.",
+      "Remets le bœuf, ajoute la sauce soja, 1 min."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "assiette-complete"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "riz-chorizo-poivron-petits-pois",
+    "nom": "Riz façon paëlla au chorizo",
+    "emoji": "🥘",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 25,
+    "portions": 3,
+    "ingredients": [
+      {
+        "alimentId": "riz-blanc",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "chorizo",
+        "quantite": 80,
+        "unite": "g"
+      },
+      {
+        "alimentId": "poivron-rouge",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "petits-pois-surgeles",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "curcuma",
+        "quantite": 2,
+        "unite": "g"
+      },
+      {
+        "alimentId": "bouillon-cube",
+        "quantite": 1,
+        "unite": "piece"
+      }
+    ],
+    "etapes": [
+      "Fais revenir le chorizo en rondelles, l'oignon et le poivron 4 min.",
+      "Ajoute le riz et le curcuma, nacre 1 min.",
+      "Verse 500 ml d'eau avec le cube, cuis 15 min à couvert.",
+      "Ajoute les petits pois 5 min avant la fin."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "porc",
+      "assiette-complete",
+      "batch"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "lentilles-saucisse-carottes",
+    "nom": "Lentilles, saucisse et carottes",
+    "emoji": "🌭",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 30,
+    "portions": 3,
+    "ingredients": [
+      {
+        "alimentId": "lentilles-vertes",
+        "quantite": 250,
+        "unite": "g"
+      },
+      {
+        "alimentId": "saucisse-toulouse",
+        "quantite": 300,
+        "unite": "g"
+      },
+      {
+        "alimentId": "carotte",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "bouillon-cube",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "thym",
+        "quantite": 1,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Fais dorer la saucisse en tronçons 5 min, ajoute l'oignon.",
+      "Ajoute les lentilles rincées, les carottes en rondelles, le cube, le thym et 750 ml d'eau.",
+      "Laisse cuire 22 min à petits bouillons, jusqu'à ce que l'eau soit absorbée."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "porc",
+      "economique",
+      "assiette-complete",
+      "batch"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "gnocchis-epinards-tomates",
+    "nom": "Gnocchis poêlés aux épinards et tomates cerises",
+    "emoji": "🍅",
+    "types": [
+      "diner",
+      "dejeuner"
+    ],
+    "tempsMinutes": 15,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "gnocchis",
+        "quantite": 500,
+        "unite": "g"
+      },
+      {
+        "alimentId": "epinards-frais",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "tomate-cerise",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "ail",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "huile-olive",
+        "quantite": 15,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Fais dorer les gnocchis 6 min dans l'huile, sans les cuire avant.",
+      "Ajoute l'ail et les tomates cerises, 2 min.",
+      "Ajoute les épinards et laisse-les tomber 2 min."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "courgettes-oeufs-semoule",
+    "nom": "Courgettes sautées, œufs au plat et semoule",
+    "emoji": "🍳",
+    "types": [
+      "diner",
+      "dejeuner"
+    ],
+    "tempsMinutes": 15,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "courgette",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "oeuf",
+        "quantite": 4,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "semoule",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "ail",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "herbes-provence",
+        "quantite": 2,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Couvre la semoule d'eau bouillante salée, laisse gonfler 5 min.",
+      "Fais sauter les courgettes en dés avec l'ail 6 min.",
+      "Fais cuire les œufs au plat à côté et sers le tout."
+    ],
+    "equipement": [
+      "plaques",
+      "bouilloire"
+    ],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "oeuf",
+      "economique",
+      "assiette-complete",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "ratatouille-pois-chiches",
+    "nom": "Ratatouille express aux pois chiches",
+    "emoji": "🍆",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 30,
+    "portions": 4,
+    "ingredients": [
+      {
+        "alimentId": "courgette",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "aubergine",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "poivron-rouge",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "tomates-concassees-boite",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "pois-chiches-boite",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "semoule",
+        "quantite": 240,
+        "unite": "g"
+      },
+      {
+        "alimentId": "herbes-provence",
+        "quantite": 2,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Coupe tous les légumes en petits dés.",
+      "Fais revenir l'oignon et l'aubergine 5 min, puis la courgette et le poivron 5 min.",
+      "Ajoute les tomates, les herbes et les pois chiches, mijote 15 min.",
+      "Prépare la semoule à l'eau bouillante. Se garde 4 jours."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "assiette-complete",
+      "batch"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "chou-saute-lardons-pdt",
+    "nom": "Chou sauté aux lardons et pommes de terre",
+    "emoji": "🥬",
+    "types": [
+      "diner",
+      "gamelle"
+    ],
+    "tempsMinutes": 30,
+    "portions": 3,
+    "ingredients": [
+      {
+        "alimentId": "chou-blanc",
+        "quantite": 0.5,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "lardons",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "pomme-de-terre",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 1,
+        "unite": "piece"
+      }
+    ],
+    "etapes": [
+      "Coupe les pommes de terre en petits cubes et fais-les cuire 15 min à couvert dans un peu d'huile.",
+      "À côté, fais dorer les lardons et l'oignon 4 min.",
+      "Ajoute le chou émincé aux lardons, couvre et cuis 10 min.",
+      "Mélange tout."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "porc",
+      "economique",
+      "assiette-complete"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "coleslaw-poulet-pita",
+    "nom": "Pitas poulet et salade de chou",
+    "emoji": "🥙",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 20,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "chou-blanc",
+        "quantite": 0.25,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "carotte",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "poulet-filet",
+        "quantite": 250,
+        "unite": "g"
+      },
+      {
+        "alimentId": "yaourt-grec",
+        "quantite": 100,
+        "unite": "g"
+      },
+      {
+        "alimentId": "moutarde",
+        "quantite": 10,
+        "unite": "g"
+      },
+      {
+        "alimentId": "pain-pita",
+        "quantite": 2,
+        "unite": "piece"
+      }
+    ],
+    "etapes": [
+      "Émince finement le chou, râpe la carotte.",
+      "Mélange-les avec le yaourt, la moutarde, sel et poivre.",
+      "Fais dorer le poulet en lanières 6 min.",
+      "Garnis les pitas de salade de chou et de poulet."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "assiette-complete"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "pitas-pois-chiches-ecrases",
+    "nom": "Pitas aux pois chiches écrasés au cumin",
+    "emoji": "🫓",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 10,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "pain-pita",
+        "quantite": 4,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "pois-chiches-boite",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "citron",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "cumin",
+        "quantite": 2,
+        "unite": "g"
+      },
+      {
+        "alimentId": "tomate",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "salade-verte",
+        "quantite": 0.5,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "huile-olive",
+        "quantite": 15,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Écrase grossièrement les pois chiches à la fourchette avec le citron, le cumin, l'huile et du sel.",
+      "Coupe les tomates en rondelles.",
+      "Garnis les pitas de pois chiches, de tomate et de salade."
+    ],
+    "equipement": [],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "assiette-complete",
+      "sans-cuisson",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "oeufs-tomate-riz",
+    "nom": "Œufs brouillés à la tomate et riz",
+    "emoji": "🍅",
+    "types": [
+      "diner",
+      "dejeuner"
+    ],
+    "tempsMinutes": 15,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "oeuf",
+        "quantite": 4,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "tomate",
+        "quantite": 3,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "riz-blanc",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "sauce-soja",
+        "quantite": 15,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "sucre",
+        "quantite": 3,
+        "unite": "g"
+      },
+      {
+        "alimentId": "huile-tournesol",
+        "quantite": 10,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Cuis le riz.",
+      "Brouille les œufs dans l'huile chaude 1 min et réserve.",
+      "Fais fondre les tomates en quartiers 4 min avec le sucre et la sauce soja.",
+      "Remets les œufs, mélange et sers sur le riz."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "oeuf",
+      "economique",
+      "assiette-complete",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "haricots-blancs-tomate-oeufs",
+    "nom": "Haricots blancs à la tomate et œufs",
+    "emoji": "🫘",
+    "types": [
+      "diner",
+      "dejeuner"
+    ],
+    "tempsMinutes": 20,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "haricots-blancs-boite",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "tomates-concassees-boite",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "paprika",
+        "quantite": 3,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oeuf",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "pain-complet",
+        "quantite": 100,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Fais revenir l'oignon 3 min, ajoute le paprika et les tomates, 5 min.",
+      "Ajoute les haricots rincés, mijote 5 min.",
+      "Casse les œufs dessus, couvre et cuis 5 min.",
+      "Sers avec le pain."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": false,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "oeuf",
+      "economique",
+      "assiette-complete"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "riz-cantonais",
+    "nom": "Riz cantonais jambon-petits pois",
+    "emoji": "🍚",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 15,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "riz-blanc",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "jambon-blanc",
+        "quantite": 100,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oeuf",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "petits-pois-surgeles",
+        "quantite": 100,
+        "unite": "g"
+      },
+      {
+        "alimentId": "sauce-soja",
+        "quantite": 20,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "huile-tournesol",
+        "quantite": 10,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Cuis le riz, idéalement la veille.",
+      "Fais sauter les petits pois 3 min, puis brouille les œufs à côté.",
+      "Ajoute le riz, le jambon en dés et la sauce soja, mélange 3 min à feu vif."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "porc",
+      "oeuf",
+      "economique",
+      "assiette-complete",
+      "rapide"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "crevettes-ail-courgette-riz",
+    "nom": "Crevettes à l'ail, courgette et riz",
+    "emoji": "🦐",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 20,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "crevettes",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "alimentId": "riz-blanc",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "ail",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "courgette",
+        "quantite": 1,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "citron",
+        "quantite": 0.5,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "persil",
+        "quantite": 0.5,
+        "unite": "piece"
+      }
+    ],
+    "etapes": [
+      "Cuis le riz.",
+      "Fais sauter la courgette en dés 5 min.",
+      "Ajoute les crevettes et l'ail, 3 min.",
+      "Arrose de citron et parsème de persil."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "poisson",
+      "assiette-complete"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "riz-lentilles-oignons",
+    "nom": "Riz aux lentilles et oignons dorés",
+    "emoji": "🧅",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 30,
+    "portions": 3,
+    "ingredients": [
+      {
+        "alimentId": "lentilles-vertes",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "riz-basmati",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oignon",
+        "quantite": 2,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "cumin",
+        "quantite": 3,
+        "unite": "g"
+      },
+      {
+        "alimentId": "huile-olive",
+        "quantite": 30,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "yaourt-grec",
+        "quantite": 100,
+        "unite": "g",
+        "optionnel": true
+      }
+    ],
+    "etapes": [
+      "Cuis les lentilles 10 min dans beaucoup d'eau.",
+      "Ajoute le riz et le cumin, cuis encore 12 min et égoutte.",
+      "Pendant ce temps, fais dorer les oignons émincés 12 min dans l'huile.",
+      "Sers le riz-lentilles couvert d'oignons, avec le yaourt."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": true,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "batch"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "salade-lentilles-betterave-noix",
+    "nom": "Salade lentilles, betterave et noix",
+    "emoji": "🥗",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 25,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "lentilles-vertes",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "betterave-cuite",
+        "quantite": 250,
+        "unite": "g"
+      },
+      {
+        "alimentId": "oignon-rouge",
+        "quantite": 0.5,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "noix",
+        "quantite": 30,
+        "unite": "g"
+      },
+      {
+        "alimentId": "vinaigre-balsamique",
+        "quantite": 15,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "huile-olive",
+        "quantite": 20,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Cuis les lentilles 20 min et égoutte.",
+      "Coupe la betterave en dés et émince l'oignon.",
+      "Mélange avec les noix, l'huile et le vinaigre."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "economique",
+      "fruits-a-coque"
+    ],
+    "source": "base"
+  },
+  {
+    "id": "bowl-quinoa-chou-rouge-pois-chiches",
+    "nom": "Bowl quinoa, chou rouge et pois chiches",
+    "emoji": "🥣",
+    "types": [
+      "diner",
+      "dejeuner",
+      "gamelle"
+    ],
+    "tempsMinutes": 20,
+    "portions": 2,
+    "ingredients": [
+      {
+        "alimentId": "quinoa",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "chou-rouge",
+        "quantite": 0.25,
+        "unite": "piece"
+      },
+      {
+        "alimentId": "pois-chiches-boite",
+        "quantite": 250,
+        "unite": "g"
+      },
+      {
+        "alimentId": "carotte",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "alimentId": "sauce-soja",
+        "quantite": 20,
+        "unite": "ml"
+      },
+      {
+        "alimentId": "huile-sesame",
+        "quantite": 10,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Rince le quinoa et cuis-le 12 min, égoutte.",
+      "Émince le chou rouge et râpe la carotte.",
+      "Mélange avec les pois chiches, la sauce soja et l'huile de sésame."
+    ],
+    "equipement": [
+      "plaques"
+    ],
+    "gamelle": true,
+    "batch": false,
+    "peuSucre": true,
+    "tags": [
+      "vegetarien",
+      "assiette-complete"
+    ],
+    "source": "base"
+  }
 ]

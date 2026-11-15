@@ -1,5 +1,866 @@
-{ "dateReference": "2026-11-01", "source": "Données provisoires (seront remplacées)", "prix": [
-  { "alimentId": "riz-blanc", "prixUnitaire": 1.6, "unitePrix": "kg" },
-  { "alimentId": "oeuf", "prixUnitaire": 0.3, "unitePrix": "piece" },
-  { "alimentId": "carotte", "prixUnitaire": 1.3, "unitePrix": "kg" }
-] }
+{
+  "dateReference": "2026-11-15",
+  "source": "Estimation indicative (ordres de grandeur grande surface, premiers prix et marques distributeur), à remplacer par des prix constatés",
+  "prix": [
+    {
+      "alimentId": "carotte",
+      "prixUnitaire": 1.39,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "oignon",
+      "prixUnitaire": 0.2,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "oignon-rouge",
+      "prixUnitaire": 0.3,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "ail",
+      "prixUnitaire": 0.08,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "echalote",
+      "prixUnitaire": 0.15,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "pomme-de-terre",
+      "prixUnitaire": 1.29,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "patate-douce",
+      "prixUnitaire": 2.99,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "courgette",
+      "prixUnitaire": 0.7,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "aubergine",
+      "prixUnitaire": 1.1,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "poivron-rouge",
+      "prixUnitaire": 0.99,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "poivron-vert",
+      "prixUnitaire": 0.79,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "tomate",
+      "prixUnitaire": 0.4,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "tomate-cerise",
+      "prixUnitaire": 5.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "concombre",
+      "prixUnitaire": 0.89,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "salade-verte",
+      "prixUnitaire": 0.99,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "epinards-frais",
+      "prixUnitaire": 6.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "chou-fleur",
+      "prixUnitaire": 2.29,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "brocoli",
+      "prixUnitaire": 1.69,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "chou-blanc",
+      "prixUnitaire": 1.99,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "chou-rouge",
+      "prixUnitaire": 1.89,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "poireau",
+      "prixUnitaire": 0.6,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "champignon-paris",
+      "prixUnitaire": 4.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "haricot-vert",
+      "prixUnitaire": 5.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "petits-pois-frais",
+      "prixUnitaire": 6.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "potiron",
+      "prixUnitaire": 1.99,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "courge-butternut",
+      "prixUnitaire": 1.99,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "betterave-cuite",
+      "prixUnitaire": 2.8,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "radis",
+      "prixUnitaire": 1.29,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "celeri-branche",
+      "prixUnitaire": 1.49,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "fenouil",
+      "prixUnitaire": 0.9,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "navet",
+      "prixUnitaire": 2.2,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "mais-doux",
+      "prixUnitaire": 3.6,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "avocat",
+      "prixUnitaire": 0.89,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "endive",
+      "prixUnitaire": 0.3,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "banane",
+      "prixUnitaire": 0.25,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "pomme",
+      "prixUnitaire": 0.35,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "poire",
+      "prixUnitaire": 0.4,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "orange",
+      "prixUnitaire": 0.35,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "clementine",
+      "prixUnitaire": 0.2,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "citron",
+      "prixUnitaire": 0.4,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "kiwi",
+      "prixUnitaire": 0.3,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "fraise",
+      "prixUnitaire": 8.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "raisin",
+      "prixUnitaire": 3.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "peche",
+      "prixUnitaire": 0.5,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "abricot",
+      "prixUnitaire": 3.9,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "melon",
+      "prixUnitaire": 1.99,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "pasteque",
+      "prixUnitaire": 4.5,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "ananas",
+      "prixUnitaire": 1.99,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "mangue",
+      "prixUnitaire": 1.49,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "prune",
+      "prixUnitaire": 3.2,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "fruits-rouges-surgeles",
+      "prixUnitaire": 7.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "compote-sans-sucre",
+      "prixUnitaire": 3.2,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "raisins-secs",
+      "prixUnitaire": 6.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "dattes",
+      "prixUnitaire": 8.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "riz-blanc",
+      "prixUnitaire": 1.7,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "riz-basmati",
+      "prixUnitaire": 3.2,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "riz-complet",
+      "prixUnitaire": 2.8,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "pates",
+      "prixUnitaire": 1.4,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "pates-completes",
+      "prixUnitaire": 2.2,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "spaghetti",
+      "prixUnitaire": 1.4,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "nouilles-asiatiques",
+      "prixUnitaire": 5.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "semoule",
+      "prixUnitaire": 1.8,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "boulgour",
+      "prixUnitaire": 2.8,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "quinoa",
+      "prixUnitaire": 8.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "lentilles-vertes",
+      "prixUnitaire": 3.2,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "lentilles-corail",
+      "prixUnitaire": 3.8,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "pois-chiches-boite",
+      "prixUnitaire": 2.2,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "haricots-rouges-boite",
+      "prixUnitaire": 2.4,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "haricots-blancs-boite",
+      "prixUnitaire": 2.4,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "flocons-avoine",
+      "prixUnitaire": 2.2,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "pain-complet",
+      "prixUnitaire": 4.8,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "baguette",
+      "prixUnitaire": 0.95,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "pain-de-mie",
+      "prixUnitaire": 3.2,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "tortilla",
+      "prixUnitaire": 0.25,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "galette-riz",
+      "prixUnitaire": 8.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "farine",
+      "prixUnitaire": 1.1,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "gnocchis",
+      "prixUnitaire": 3.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "muesli-sans-sucre",
+      "prixUnitaire": 5.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "pain-pita",
+      "prixUnitaire": 0.35,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "oeuf",
+      "prixUnitaire": 0.3,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "poulet-filet",
+      "prixUnitaire": 11.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "poulet-cuisse",
+      "prixUnitaire": 5.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "dinde-escalope",
+      "prixUnitaire": 11.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "boeuf-hache",
+      "prixUnitaire": 12.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "boeuf-emince",
+      "prixUnitaire": 18.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "porc-filet-mignon",
+      "prixUnitaire": 14.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "lardons",
+      "prixUnitaire": 10.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "jambon-blanc",
+      "prixUnitaire": 12.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "chorizo",
+      "prixUnitaire": 14.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "saucisse-toulouse",
+      "prixUnitaire": 8.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "merguez",
+      "prixUnitaire": 9.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "thon-boite",
+      "prixUnitaire": 14.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "sardine-boite",
+      "prixUnitaire": 11.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "maquereau-boite",
+      "prixUnitaire": 10.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "saumon-filet",
+      "prixUnitaire": 22.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "colin-surgele",
+      "prixUnitaire": 11.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "crevettes",
+      "prixUnitaire": 17.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "surimi",
+      "prixUnitaire": 7.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "tofu",
+      "prixUnitaire": 7.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "tofu-fume",
+      "prixUnitaire": 10.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "edamame-surgele",
+      "prixUnitaire": 8.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "beurre-cacahuete",
+      "prixUnitaire": 7.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "houmous",
+      "prixUnitaire": 8.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "lait",
+      "prixUnitaire": 1.05,
+      "unitePrix": "l"
+    },
+    {
+      "alimentId": "yaourt-nature",
+      "prixUnitaire": 0.2,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "yaourt-grec",
+      "prixUnitaire": 3.2,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "skyr",
+      "prixUnitaire": 4.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "creme-fraiche",
+      "prixUnitaire": 4.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "creme-liquide",
+      "prixUnitaire": 3.8,
+      "unitePrix": "l"
+    },
+    {
+      "alimentId": "beurre",
+      "prixUnitaire": 9.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "lait-coco",
+      "prixUnitaire": 4.5,
+      "unitePrix": "l"
+    },
+    {
+      "alimentId": "boisson-avoine",
+      "prixUnitaire": 1.6,
+      "unitePrix": "l"
+    },
+    {
+      "alimentId": "huile-olive",
+      "prixUnitaire": 9.5,
+      "unitePrix": "l"
+    },
+    {
+      "alimentId": "huile-tournesol",
+      "prixUnitaire": 2.4,
+      "unitePrix": "l"
+    },
+    {
+      "alimentId": "huile-sesame",
+      "prixUnitaire": 14.0,
+      "unitePrix": "l"
+    },
+    {
+      "alimentId": "sauce-soja",
+      "prixUnitaire": 6.0,
+      "unitePrix": "l"
+    },
+    {
+      "alimentId": "vinaigre-balsamique",
+      "prixUnitaire": 4.5,
+      "unitePrix": "l"
+    },
+    {
+      "alimentId": "vinaigre-cidre",
+      "prixUnitaire": 2.2,
+      "unitePrix": "l"
+    },
+    {
+      "alimentId": "moutarde",
+      "prixUnitaire": 3.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "ketchup",
+      "prixUnitaire": 3.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "mayonnaise",
+      "prixUnitaire": 5.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "concentre-tomate",
+      "prixUnitaire": 4.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "coulis-tomate",
+      "prixUnitaire": 1.6,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "tomates-concassees-boite",
+      "prixUnitaire": 1.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "pesto-basilic",
+      "prixUnitaire": 10.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "sauce-pimentee",
+      "prixUnitaire": 12.0,
+      "unitePrix": "l"
+    },
+    {
+      "alimentId": "bouillon-cube",
+      "prixUnitaire": 0.1,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "miel",
+      "prixUnitaire": 10.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "sel",
+      "prixUnitaire": 0.6,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "poivre",
+      "prixUnitaire": 30.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "cornichons",
+      "prixUnitaire": 5.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "olives",
+      "prixUnitaire": 8.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "capres",
+      "prixUnitaire": 14.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "harissa",
+      "prixUnitaire": 10.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "cumin",
+      "prixUnitaire": 40.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "paprika",
+      "prixUnitaire": 35.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "curry",
+      "prixUnitaire": 30.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "curcuma",
+      "prixUnitaire": 35.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "gingembre-frais",
+      "prixUnitaire": 9.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "cannelle",
+      "prixUnitaire": 40.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "herbes-provence",
+      "prixUnitaire": 35.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "persil",
+      "prixUnitaire": 0.99,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "coriandre",
+      "prixUnitaire": 0.99,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "basilic",
+      "prixUnitaire": 1.99,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "ciboulette",
+      "prixUnitaire": 0.99,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "piment-espelette",
+      "prixUnitaire": 300.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "ras-el-hanout",
+      "prixUnitaire": 40.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "thym",
+      "prixUnitaire": 40.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "sucre",
+      "prixUnitaire": 1.2,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "chocolat-noir",
+      "prixUnitaire": 11.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "pate-a-tartiner",
+      "prixUnitaire": 5.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "confiture",
+      "prixUnitaire": 4.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "sirop-erable",
+      "prixUnitaire": 25.0,
+      "unitePrix": "l"
+    },
+    {
+      "alimentId": "levure-chimique",
+      "prixUnitaire": 12.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "sucre-vanille",
+      "prixUnitaire": 10.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "amandes",
+      "prixUnitaire": 15.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "noix",
+      "prixUnitaire": 14.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "noisettes",
+      "prixUnitaire": 16.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "graines-chia",
+      "prixUnitaire": 12.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "graines-courge",
+      "prixUnitaire": 14.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "sesame",
+      "prixUnitaire": 8.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "cacahuetes",
+      "prixUnitaire": 6.5,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "epinards-surgeles",
+      "prixUnitaire": 2.2,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "poelee-legumes-surgelee",
+      "prixUnitaire": 3.2,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "petits-pois-surgeles",
+      "prixUnitaire": 2.6,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "haricots-verts-surgeles",
+      "prixUnitaire": 2.6,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "brocoli-surgele",
+      "prixUnitaire": 3.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "wok-legumes-surgele",
+      "prixUnitaire": 3.8,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "the",
+      "prixUnitaire": 0.05,
+      "unitePrix": "piece"
+    },
+    {
+      "alimentId": "cafe",
+      "prixUnitaire": 9.0,
+      "unitePrix": "kg"
+    },
+    {
+      "alimentId": "jus-orange",
+      "prixUnitaire": 1.9,
+      "unitePrix": "l"
+    },
+    {
+      "alimentId": "cacao-non-sucre",
+      "prixUnitaire": 12.0,
+      "unitePrix": "kg"
+    }
+  ]
+}

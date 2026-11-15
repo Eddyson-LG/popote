@@ -334,6 +334,11 @@ export interface ItemListe {
   datePrix: string
   magasinId?: string
   raison: RaisonItem
+  /**
+   * Produit de placard (huile, sel, épices, condiments) : probablement déjà à la maison.
+   * Affiché à part (« vérifie si tu en as ») et compté hors du total principal.
+   */
+  placard?: boolean
   coche: boolean
   /** Prix réellement payé (facultatif, saisi en cochant). */
   prixPaye?: number

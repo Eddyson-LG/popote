@@ -19,7 +19,7 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       // Le manifest est écrit ici ; les icônes sont dans /public/icons.
-      includeAssets: ['icons/*.png', 'icons/*.svg', 'splash/*.png'],
+      includeAssets: ['icons/*.png', 'icons/*.svg'],
       manifest: {
         name: 'Popote',
         short_name: 'Popote',
@@ -33,6 +33,7 @@ export default defineConfig({
         theme_color: '#FFF8F1',
         icons: [
           { src: 'icons/logo.svg', sizes: 'any', type: 'image/svg+xml' },
+          { src: 'icons/favicon-32.png', sizes: '32x32', type: 'image/png' },
           { src: 'icons/icon-192.png', sizes: '192x192', type: 'image/png' },
           { src: 'icons/icon-512.png', sizes: '512x512', type: 'image/png' },
           { src: 'icons/icon-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
@@ -41,6 +42,8 @@ export default defineConfig({
       workbox: {
         // Tout le shell + les polices + les données JSON sont en cache : l'appli marche hors ligne.
         globPatterns: ['**/*.{js,css,html,svg,png,woff2,json,webmanifest}'],
+        // Les écrans de lancement ne servent qu'à l'installation : inutile de les mettre en cache.
+        globIgnores: ['**/splash/**'],
         maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
         navigateFallback: 'index.html',
         runtimeCaching: [

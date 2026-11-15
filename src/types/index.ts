@@ -234,6 +234,11 @@ export interface PrixObservation {
   source: SourcePrix
   /** Date ISO complète. */
   date: string
+  /**
+   * 'national' : médiane de prix constatés ailleurs en France (Open Prices), utilisée comme estimation
+   * quand aucun prix local n'existe. Absent = prix local constaté.
+   */
+  portee?: 'local' | 'national'
 }
 
 export interface Promo {
@@ -258,8 +263,10 @@ export interface PrixAffiche {
   /** Date ISO à laquelle le prix a été constaté (sert à afficher l'âge). */
   date: string
   magasinId?: string
-  /** true si c'est une estimation (table de référence) et non un prix constaté. */
+  /** true si c'est une estimation (table de référence ou médiane nationale) et non un prix constaté localement. */
   estime: boolean
+  /** Précision affichée à côté de la source (« médiane France »…). */
+  detail?: string
 }
 
 /** Référence de produit passée aux fournisseurs de prix. */

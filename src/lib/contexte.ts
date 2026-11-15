@@ -37,7 +37,8 @@ export async function chargerResolveurPrix(): Promise<ResolveurPrix> {
     if (!a || o.quantite <= 0) continue
     const p = versPrixAffiche(o.prix, o.quantite, o.unite, a)
     if (!p) continue
-    const affiche: PrixAffiche = { ...p, source: o.source, date: o.date, magasinId: o.magasinId, estime: false }
+    const national = o.portee === 'national'
+    const affiche: PrixAffiche = { ...p, source: o.source, date: o.date, magasinId: o.magasinId, estime: national, detail: national ? 'médiane France' : undefined }
     ajouter(o.alimentId, affiche)
     if (o.magasinId) ajouter(`${o.alimentId}@${o.magasinId}`, affiche)
   }

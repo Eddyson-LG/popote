@@ -3,6 +3,7 @@ import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { initialiserBase } from '@/lib/seed'
 import { useReglages } from '@/lib/hooks'
 import { TabBar } from './TabBar'
+import { demarrerRafraichissement } from '@/features/prix/rafraichir'
 
 // Chaque écran est chargé à la demande (démarrage plus rapide sur iPhone).
 const Accueil = lazy(() => import('@/features/accueil/Accueil'))
@@ -14,6 +15,7 @@ const FicheRecette = lazy(() => import('@/features/recettes/FicheRecette'))
 const MesGouts = lazy(() => import('@/features/gouts/MesGouts'))
 const Stock = lazy(() => import('@/features/stock/Stock'))
 const Tickets = lazy(() => import('@/features/tickets/Tickets'))
+const Prix = lazy(() => import('@/features/prix/Prix'))
 const Onboarding = lazy(() => import('@/features/onboarding/Onboarding'))
 
 function Chargement() {
@@ -46,6 +48,7 @@ function Routeur() {
         <Route path="/plus/gouts" element={<MesGouts />} />
         <Route path="/plus/stock" element={<Stock />} />
         <Route path="/plus/tickets" element={<Tickets />} />
+        <Route path="/plus/prix" element={<Prix />} />
         <Route path="/plus/*" element={<Plus />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
@@ -60,7 +63,11 @@ export function App() {
 
   useEffect(() => {
     initialiserBase()
-      .then(() => setPret(true))
+      .then(() => {
+        setPret(true)
+        // Prix : rafraîchis à l'ouverture si le réseau est là, puis périodiquement.
+        demarrerRafraichissement()
+      })
       .catch((e: unknown) => setErreur(e instanceof Error ? e.message : String(e)))
   }, [])
 

@@ -3,17 +3,22 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
+import mkcert from 'vite-plugin-mkcert'
 import { fileURLToPath, URL } from 'node:url'
 
 // Chemin de base : "/popote/" sur GitHub Pages, "/" en local.
 const base = process.env.VITE_BASE || '/'
+// `npm run dev:iphone` : HTTPS local (certificat mkcert) pour tester caméra et installation sur l'iPhone.
+const httpsLocal = process.env.POPOTE_HTTPS === '1'
 
 export default defineConfig({
   base,
   resolve: {
     alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
   },
+  server: httpsLocal ? { host: true } : undefined,
   plugins: [
+    ...(httpsLocal ? [mkcert()] : []),
     react(),
     tailwindcss(),
     VitePWA({

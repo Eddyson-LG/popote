@@ -19,3 +19,5 @@ Chaque décision non couverte par le cahier des charges, avec l'option la plus s
 | 13 | Notifications | Notifications locales à l'ouverture (PWA installée, iOS 16.4+) + alertes sur l'accueil | Le Web Push nécessite un serveur (clés VAPID) : incompatible avec une appli 100 % locale et gratuite. |
 | 14 | Open Prices dans le Var | Prix locaux dans un rayon de 30 km, sinon médiane nationale récente (≥ 3 prix) affichée « médiane France » et traitée comme estimation | La couverture locale est quasi nulle (35 prix à 40 km, cf. docs/API.md §2.5). |
 | 15 | Économies | (prix d'un repas dehors − coût de la portion maison) × déjeuners/dîners/gamelles cuisinés | Simple et parlant ; les petits-déj et goûters ne remplacent pas un achat dehors. |
+| 16 | Synchronisation | Reportée (documentée dans LIMITES.md) ; export/import JSON + AirDrop à la place | Un seul utilisateur, pas de compte ni de serveur à gérer en V1. |
+| 17 | HTTPS local | `npm run dev:iphone` (vite-plugin-mkcert) activé seulement par ce script | Le `npm run dev` classique reste simple ; la caméra iPhone exige HTTPS. |

@@ -91,7 +91,7 @@ export default function Swipe() {
   useEffect(() => {
     const touche = (e: KeyboardEvent) => {
       const v: Record<string, Verdict> = { ArrowRight: 'aime', ArrowLeft: 'pas-aime', ArrowUp: 'adore', ArrowDown: 'jamais' }
-      if (v[e.key] && !(e.target instanceof HTMLInputElement)) {
+      if (v[e.key] && !e.repeat && !(e.target instanceof HTMLInputElement)) {
         e.preventDefault()
         voter(v[e.key])
       }

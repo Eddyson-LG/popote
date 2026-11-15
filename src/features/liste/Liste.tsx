@@ -42,7 +42,8 @@ export default function Liste() {
       </Page>
     )
 
-  const t = totaux(liste.items.filter((i) => !i.coche))
+  // Toute la liste compte, cochée ou non : les articles cochés n'en sortent qu'à la validation (ils passent alors dans « déjà payé »).
+  const t = totaux(liste.items)
   const engage = Math.round((paye + t.total) * 100) / 100
   const depasse = engage > reglages.budgetHebdo
   const valider = async () => {
@@ -69,7 +70,7 @@ export default function Liste() {
           {!depasse && <Pastille ton="vert">{prix(reglages.budgetHebdo - engage)} de marge</Pastille>}
         </div>
         <Jauge valeur={engage} max={reglages.budgetHebdo} libelle="Budget de la semaine" />
-        {t.placard > 0 && <p className="mt-2 text-xs text-encre-2">Dont {prix(t.placard)} de placard : touche « J’en ai » sur ce que t’as déjà.</p>}
+        {t.placard > 0 && <p className="mt-2 text-xs text-encre-2">Dont {prix(t.placard)} de placard : touche « J’en ai déjà » sur ce que t’as.</p>}
         {magasins && magasins.length > 1 && (
           <label className="mt-3 flex items-center gap-2 text-sm">
             <span className="text-encre-2">Prix pour</span>
@@ -319,7 +320,7 @@ function ModeMagasin({ items, semaine, onQuitter, onValider }: { items: ItemList
   const restants = items.filter((i) => !i.coche)
   const t = totaux(items)
   return (
-    <main className="pt-safe mx-auto max-w-xl px-4 pb-32">
+    <main className="pt-safe mx-auto max-w-xl px-4 pb-52">
       <header className="sticky top-0 z-10 -mx-4 flex items-center justify-between bg-fond/95 px-4 py-3 backdrop-blur">
         <div>
           <h1 className="text-2xl font-extrabold">🏪 En magasin</h1>
@@ -362,7 +363,8 @@ function ModeMagasin({ items, semaine, onQuitter, onValider }: { items: ItemList
         </section>
       ))}
       {items.some((i) => i.coche) && (
-        <div className="pb-safe fixed inset-x-0 bottom-0 z-20 bg-fond/95 px-4 pt-3 backdrop-blur">
+        // Juste au-dessus de la barre d’onglets (≈ 3,5 rem + zone de la barre home).
+        <div className="fixed inset-x-0 bottom-[calc(3.75rem+env(safe-area-inset-bottom))] z-20 bg-fond/95 px-4 pt-3 backdrop-blur">
           <div className="mx-auto max-w-xl pb-2">
             <Bouton grand variante="orange" onClick={onValider}>
               Valider les courses ({items.filter((i) => i.coche).length} · {prix(t.coche)})

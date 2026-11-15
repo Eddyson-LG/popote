@@ -162,8 +162,10 @@ export async function planifierSemaine(semaine = semaineActive(), seed = Date.no
   const { plan } = respecterBudget(generes, ctx, Math.max(0, budget - dejaPaye), totalDe)
 
   await db.transaction('rw', db.repas, async () => {
-    await db.repas.where('semaine').equals(semaine).delete()
-    await db.repas.bulkPut(plan)
+    // En milieu de semaine, les jours passés restent tels quels (historique) : on ne remplace que les jours à venir.
+    const debut = ctx.jourDebut ?? 0
+    await db.repas.where('semaine').equals(semaine).filter((r) => r.jour >= debut).delete()
+    await db.repas.bulkPut(plan.filter((r) => r.jour >= debut))
   })
   await regenererListe(semaine)
   return plan

@@ -7,3 +7,5 @@ dev-dist
 .DS_Store
 coverage
 .claude/
+tsconfig.tsbuildinfo
+*.tsbuildinfo

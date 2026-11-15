@@ -109,7 +109,16 @@ export async function enregistrerTicket(t: TicketAEnregistrer): Promise<{ montan
       achetes.push(a.id)
       nbPrix++
     }
-    if (montant > 0) await db.depenses.add({ date, montant, magasinId: t.magasinId, origine: 'ticket' })
+    if (montant > 0) {
+      // Même passage en caisse qu'une liste déjà validée (même jour, même magasin) : le ticket remplace
+      // cette dépense, qui était une estimation, au lieu de compter les courses deux fois.
+      const jour = date.slice(0, 10)
+      const doublon = (await db.depenses.where('date').startsWith(jour).toArray()).find(
+        (d) => d.origine === 'liste' && (!d.magasinId || !t.magasinId || d.magasinId === t.magasinId),
+      )
+      if (doublon?.id !== undefined) await db.depenses.update(doublon.id, { montant, magasinId: t.magasinId ?? doublon.magasinId, origine: 'ticket' })
+      else await db.depenses.add({ date, montant, magasinId: t.magasinId, origine: 'ticket' })
+    }
 
     // On retient les associations choisies à la main pour les prochains tickets.
     const corrections = t.lignes.filter((l) => l.alimentManuel && l.alimentId && cleLibelle(l.libelle))

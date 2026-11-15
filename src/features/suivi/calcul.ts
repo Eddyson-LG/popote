@@ -2,7 +2,7 @@
  * Calculs du suivi des économies (fonctions pures, testées). Aucun chiffre nutritionnel.
  */
 import type { Depense, Repas, RepasDehors } from '@/types'
-import { isoJour, semaineActive } from '@/lib/dates'
+import { isoJour, lundiDe, semaineActive } from '@/lib/dates'
 
 export interface Bilan {
   depenseSemaine: number
@@ -37,7 +37,8 @@ export function bilan(
   return {
     depenseSemaine: r2(somme(ctx.depenses.filter((d) => semaine(d.date)), (d) => d.montant)),
     depenseMois: r2(somme(ctx.depenses.filter((d) => mois(d.date)), (d) => d.montant)),
-    dehorsSemaine: r2(somme(ctx.dehors.filter((d) => semaine(d.date)), (d) => d.montant)),
+    // Un repas pris dehors compte pour la semaine civile où il a été mangé.
+    dehorsSemaine: r2(somme(ctx.dehors.filter((d) => lundiDe(new Date(d.date)) === lundiDe(maintenant)), (d) => d.montant)),
     dehorsMois: r2(somme(ctx.dehors.filter((d) => mois(d.date)), (d) => d.montant)),
     gamellesMois: maison.filter((r) => r.type === 'gamelle').length,
     repasMaisonMois: maison.length,
@@ -49,7 +50,7 @@ export function bilan(
 export function messageMotivant(b: Bilan, prixRepasDehors: number): string {
   void prixRepasDehors
   const euros = Math.round(b.economieMois)
-  if (b.gamellesMois > 0) return `${b.gamellesMois} gamelle${b.gamellesMois > 1 ? 's' : ''} et ${b.repasMaisonMois} repas maison ce mois = ${euros} € économisés 🔥`
+  if (b.gamellesMois > 0) return `${b.repasMaisonMois} repas maison ce mois, dont ${b.gamellesMois} gamelle${b.gamellesMois > 1 ? 's' : ''} = ${euros} € économisés 🔥`
   if (b.repasMaisonMois > 0) return `${b.repasMaisonMois} repas maison ce mois, ${euros} € gardés dans ta poche 💪`
   return 'Ta première gamelle t’attend. 5 balles d’économisées à la clé 🔥'
 }

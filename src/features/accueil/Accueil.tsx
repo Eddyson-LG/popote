@@ -55,7 +55,7 @@ export default function Accueil() {
   }, [semaine, active])
 
   if (!reglages || !d) return null
-  const items = d.liste?.items.filter((i) => !i.coche) ?? []
+  const items = d.liste?.items ?? []
   const total = Math.round((d.paye + totaux(items).total) * 100) / 100
   const estimes = items.filter((i) => i.sourcePrix === 'estimation' || i.detailPrix).length
 
@@ -87,7 +87,7 @@ export default function Accueil() {
       {d.duJour.length === 0 ? (
         <Carte className="mb-6">
           <p className="text-encre-2">Rien de prévu.</p>
-          <Link to="/semaine" className="mt-2 inline-block font-semibold text-orange-texte">Préparer ma semaine →</Link>
+          <Link to="/semaine" className="mt-1 inline-flex min-h-11 items-center font-semibold text-orange-texte">Préparer ma semaine →</Link>
         </Carte>
       ) : (
         <div className="mb-6 flex snap-x gap-3 overflow-x-auto pb-2">
@@ -120,7 +120,7 @@ export default function Accueil() {
           {d.liste && (
             <p className="mt-2 text-xs text-encre-3">
               {d.paye > 0 && `${prix(d.paye)} déjà payés · `}
-              {items.length - estimes} prix constatés, {estimes} estimés · liste du {age(d.liste.majLe)}
+              {items.length - estimes} prix constatés, {estimes} estimés · liste mise à jour {age(d.liste.majLe)}
             </p>
           )}
         </Carte>

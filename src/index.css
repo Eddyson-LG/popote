@@ -13,7 +13,7 @@
   --c-surface-2: #fdeee0;
   --c-encre: #1c1917;
   --c-encre-2: #57534e;
-  --c-encre-3: #78716c;
+  --c-encre-3: #6b645f;
   --c-trait: #f1e4d6;
   --c-orange: #ff6b1a;
   /* Orange pour du TEXTE (contraste ≥ 4,5:1 sur crème) ; --c-orange reste la couleur de marque des fonds. */
@@ -21,7 +21,7 @@
   --c-sur-orange: #1c1917;
   --c-sur-vert: #ffffff;
   --c-orange-doux: #ffe3d1;
-  --c-vert: #15803d;
+  --c-vert: #166534;
   --c-vert-doux: #dcfce7;
   --c-rouge: #b42318;
   --c-rouge-doux: #ffe4e4;
@@ -37,7 +37,7 @@
     --c-surface-2: #2c241e;
     --c-encre: #faf5f0;
     --c-encre-2: #c9bfb6;
-    --c-encre-3: #8a7f76;
+    --c-encre-3: #9a8f86;
     --c-trait: #3a302a;
     --c-orange: #ff7a2e;
     --c-orange-texte: #ff9a5c;

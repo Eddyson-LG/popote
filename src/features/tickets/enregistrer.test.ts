@@ -39,4 +39,11 @@ describe('enregistrerTicket (IndexedDB simulée)', () => {
     const r = await enregistrerTicket({ lignes: [{ libelle: 'A', prix: 1.2 }, { libelle: 'B', prix: 0.8 }] })
     expect(r.montant).toBe(2)
   })
+  it('remplace la dépense d’une liste validée le même jour dans le même magasin (pas de double comptage)', async () => {
+    await db.depenses.add({ date: new Date().toISOString(), montant: 30, magasinId: 'lidl', origine: 'liste' })
+    await enregistrerTicket({ magasinId: 'lidl', lignes: [{ libelle: 'A', prix: 20 }, { libelle: 'B', prix: 8.5 }] })
+    const d = await db.depenses.toArray()
+    expect(d).toHaveLength(1)
+    expect(d[0]).toMatchObject({ montant: 28.5, origine: 'ticket' })
+  })
 })

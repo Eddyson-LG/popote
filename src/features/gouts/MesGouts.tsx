@@ -12,11 +12,11 @@ const GROUPES: { verdicts: Verdict[]; titre: string }[] = [
   { verdicts: ['pas-souvent', 'pas-aime'], titre: '🤏 Pas souvent' },
   { verdicts: ['jamais'], titre: '🚫 Jamais' },
 ]
-const OPTIONS: { v: Verdict; label: string }[] = [
-  { v: 'adore', label: '😍' },
-  { v: 'aime', label: '👍' },
-  { v: 'pas-souvent', label: '🤏' },
-  { v: 'jamais', label: '🚫' },
+const OPTIONS: { v: Verdict; label: string; nom: string }[] = [
+  { v: 'adore', label: '😍', nom: 'J’adore' },
+  { v: 'aime', label: '👍', nom: 'J’aime' },
+  { v: 'pas-souvent', label: '🤏', nom: 'Pas souvent' },
+  { v: 'jamais', label: '🚫', nom: 'Jamais' },
 ]
 
 export default function MesGouts() {
@@ -62,11 +62,11 @@ export default function MesGouts() {
                           {ouvert === g.id ? (
                             <span className="inline-flex items-center gap-1 rounded-full bg-surface p-1 shadow-carte">
                               {OPTIONS.map((o) => (
-                                <button key={o.v} type="button" aria-label={o.v} aria-pressed={g.verdict === o.v} className={`h-10 w-10 rounded-full ${g.verdict === o.v ? 'bg-orange-doux' : ''}`} onClick={() => changer(g, o.v)}>
+                                <button key={o.v} type="button" aria-label={o.nom} aria-pressed={g.verdict === o.v} className={`h-11 w-11 rounded-full ${g.verdict === o.v ? 'bg-orange-doux' : ''}`} onClick={() => changer(g, o.v)}>
                                   {o.label}
                                 </button>
                               ))}
-                              <button type="button" className="h-10 rounded-full px-3 text-sm text-encre-2" onClick={() => changer(g, null)}>
+                              <button type="button" className="h-11 rounded-full px-3 text-sm text-encre-2" onClick={() => changer(g, null)}>
                                 Oublier
                               </button>
                             </span>

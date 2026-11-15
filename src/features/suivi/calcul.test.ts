@@ -31,6 +31,6 @@ describe('suivi des économies', () => {
     expect(b.economieMois).toBe(10.5)
   })
   it('formule un message motivant', () => {
-    expect(messageMotivant(b, 5)).toBe('2 gamelles et 3 repas maison ce mois = 11 € économisés 🔥')
+    expect(messageMotivant(b, 5)).toBe('3 repas maison ce mois, dont 2 gamelles = 11 € économisés 🔥')
   })
 })

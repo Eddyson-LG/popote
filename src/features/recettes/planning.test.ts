@@ -64,4 +64,9 @@ describe('planning sans IA', () => {
     const plan = genererPlanning(ctx({ gouts }))
     expect(plan.some((r) => r.recetteId === 'omelette')).toBe(false)
   })
+  it('applique une consigne (tags favorisés, aliments évités) sans laisser de créneau vide', () => {
+    const plan = genererPlanning(ctx({ reglages: reglages({ tempsMaxMinutes: 5 }), preferences: { tags: ['rapide'], eviter: ['thon-boite'] } }))
+    expect(plan).toHaveLength(creneauxDeLaSemaine(reglages()).length)
+    expect(plan.some((r) => r.recetteId === 'pates-thon')).toBe(false)
+  })
 })

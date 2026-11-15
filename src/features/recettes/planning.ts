@@ -26,6 +26,8 @@ export interface ContextePlanning {
   aleatoire: () => number
   /** Date du jour (tests). */
   aujourdhui?: Date
+  /** Consigne ponctuelle de la semaine (« j'ai la flemme »…). */
+  preferences?: { tags: string[]; eviter: string[] }
 }
 
 /** Ordre des créneaux dans une journée. */
@@ -120,7 +122,9 @@ export function scoreCandidat(
   })
 
   const repetitions = etat.dejaCetteSemaine.get(r.id) ?? 0
+  const bonusConsigne = ctx.preferences?.tags.some((t) => r.tags.includes(t) || (t === 'batch' && r.batch) || (t === 'gamelle' && r.gamelle)) ? 0.45 : 0
   return (
+    bonusConsigne +
     1.0 * gout -
     1.1 * prixNorm +
     0.35 * reutilise +
@@ -156,8 +160,13 @@ function tirer<T>(cands: { item: T; score: number; poids: number }[], aleatoire:
 
 /** Recettes candidates pour un créneau, avant scoring. */
 export function candidats(ctx: ContextePlanning, type: TypeRepas): Recette[] {
+  const eviter = new Set(ctx.preferences?.eviter ?? [])
   return ctx.recettes.filter(
-    (r) => convient(r, type) && recetteFaisable(r, ctx.reglages) && !recetteExclue(r, ctx.alimentsParId, ctx.reglages, ctx.gouts),
+    (r) =>
+      convient(r, type) &&
+      recetteFaisable(r, ctx.reglages) &&
+      !recetteExclue(r, ctx.alimentsParId, ctx.reglages, ctx.gouts) &&
+      !r.ingredients.some((i) => !i.optionnel && eviter.has(i.alimentId)),
   )
 }
 
@@ -183,7 +192,13 @@ export function genererPlanning(ctx: ContextePlanning): Repas[] {
   }
   gardes.forEach(enregistrer)
 
-  const parType = new Map<TypeRepas, Recette[]>(TYPES_REPAS.map((t) => [t, candidats(ctx, t)]))
+  // Si une consigne (temps réduit) ne laisse aucune recette pour un créneau, on relâche le temps pour ce créneau.
+  const parType = new Map<TypeRepas, Recette[]>(
+    TYPES_REPAS.map((t) => {
+      const c = candidats(ctx, t)
+      return [t, c.length ? c : candidats({ ...ctx, reglages: { ...ctx.reglages, tempsMaxMinutes: 30 } }, t)]
+    }),
+  )
   const medianes = new Map<TypeRepas, number>(
     TYPES_REPAS.map((t) => [t, mediane((parType.get(t) ?? []).map((r) => coutPortion(r, ctx)))]),
   )

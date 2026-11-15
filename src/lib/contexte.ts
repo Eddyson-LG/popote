@@ -130,13 +130,25 @@ async function contextePlanning(semaine: string, aleatoire: () => number): Promi
  * Génère le planning de la semaine, puis vérifie le budget : tant que la liste dépasse,
  * on remplace le plat le plus cher par une alternative (au plus 12 essais).
  */
-export async function planifierSemaine(semaine = semaineActive(), seed = Date.now()): Promise<Repas[]> {
+export interface OptionsPlanning {
+  tempsMax?: number
+  preferer?: string[]
+  eviter?: string[]
+  budgetDelta?: number
+}
+
+export async function planifierSemaine(semaine = semaineActive(), seed = Date.now(), options: OptionsPlanning = {}): Promise<Repas[]> {
   const aleatoire = graine(seed)
-  const ctx = await contextePlanning(semaine, aleatoire)
+  const base = await contextePlanning(semaine, aleatoire)
+  const ctx: ContextePlanning = {
+    ...base,
+    reglages: { ...base.reglages, tempsMaxMinutes: options.tempsMax ? Math.min(options.tempsMax, base.reglages.tempsMaxMinutes) : base.reglages.tempsMaxMinutes },
+    preferences: { tags: options.preferer ?? [], eviter: options.eviter ?? [] },
+  }
   let plan = normaliserRestes(genererPlanning(ctx))
 
   const recettes = new Map(ctx.recettes.map((r) => [r.id, r]))
-  const budget = ctx.reglages.budgetHebdo
+  const budget = Math.max(15, ctx.reglages.budgetHebdo + (options.budgetDelta ?? 0))
   const totalDe = (p: Repas[]) =>
     totaux(
       genererListe({ repas: p, recettes, alimentsParId: ctx.alimentsParId, stock: ctx.stock, achats: [], prix: ctx.prix, gouts: ctx.gouts, reglages: ctx.reglages }),

@@ -2,7 +2,7 @@
  * Calculs du suivi des économies (fonctions pures, testées). Aucun chiffre nutritionnel.
  */
 import type { Depense, Repas, RepasDehors } from '@/types'
-import { ajouterJours, isoJour, lundiDe } from '@/lib/dates'
+import { isoJour, semaineActive } from '@/lib/dates'
 
 export interface Bilan {
   depenseSemaine: number
@@ -22,10 +22,11 @@ export function bilan(
   ctx: { depenses: Depense[]; dehors: RepasDehors[]; repas: Repas[]; coutPortion: (recetteId: string) => number; prixRepasDehors: number },
   maintenant = new Date(),
 ): Bilan {
-  const lundi = lundiDe(maintenant)
+  // Une course faite le dimanche compte pour la semaine qu'elle prépare (même règle que le planning).
+  const active = semaineActive(maintenant)
   const debutMois = isoJour(new Date(maintenant.getFullYear(), maintenant.getMonth(), 1))
   const jour = (iso: string) => iso.slice(0, 10)
-  const semaine = (iso: string) => jour(iso) >= lundi && jour(iso) < ajouterJours(lundi, 7)
+  const semaine = (iso: string) => semaineActive(new Date(iso)) === active
   const mois = (iso: string) => jour(iso) >= debutMois
 
   const somme = <T,>(t: T[], f: (x: T) => number) => t.reduce((s, x) => s + f(x), 0)
@@ -46,8 +47,9 @@ export function bilan(
 
 /** Message motivant, ton de pote, jamais moralisateur. */
 export function messageMotivant(b: Bilan, prixRepasDehors: number): string {
-  if (b.gamellesMois > 0)
-    return `${b.gamellesMois} gamelle${b.gamellesMois > 1 ? 's' : ''} ce mois = ${Math.round(b.gamellesMois * prixRepasDehors)} € de sandwichs évités 🔥`
-  if (b.repasMaisonMois > 0) return `${b.repasMaisonMois} repas maison ce mois, ${Math.round(b.economieMois)} € gardés dans ta poche 💪`
+  void prixRepasDehors
+  const euros = Math.round(b.economieMois)
+  if (b.gamellesMois > 0) return `${b.gamellesMois} gamelle${b.gamellesMois > 1 ? 's' : ''} et ${b.repasMaisonMois} repas maison ce mois = ${euros} € économisés 🔥`
+  if (b.repasMaisonMois > 0) return `${b.repasMaisonMois} repas maison ce mois, ${euros} € gardés dans ta poche 💪`
   return 'Ta première gamelle t’attend. 5 balles d’économisées à la clé 🔥'
 }

@@ -4,7 +4,8 @@ import type { Gout } from '@/types'
 import { db } from '@/lib/db'
 import { ajouterJours, isoJour, jourDe, lundiDe, semaineActive } from '@/lib/dates'
 import { prix } from '@/lib/format'
-import { enregistrerGout } from '@/lib/contexte'
+import { depenseValideeSemaine, enregistrerGout } from '@/lib/contexte'
+import { age } from '@/lib/dates'
 import { totaux } from '@/features/liste/generer'
 import { LIBELLE_REPAS } from '@/features/recettes/Semaine'
 import { Bouton, Carte, Jauge, Page, Pastille } from '@/ui'
@@ -49,11 +50,14 @@ export default function Accueil() {
     const aNoter = repas
       .filter((x) => x.cuisine && !x.restes && x.cuisineLe && x.cuisineLe.slice(0, 10) < aujourdhui && !g.get(`recette:${x.recetteId}`)?.note)
       .slice(0, 1)
-    return { duJour, demain, liste, bientot, promosAimees, aNoter, r, a }
+    const paye = await depenseValideeSemaine(active)
+    return { paye, duJour, demain, liste, bientot, promosAimees, aNoter, r, a }
   }, [semaine, active])
 
   if (!reglages || !d) return null
-  const total = d.liste ? totaux(d.liste.items).principal : 0
+  const items = d.liste?.items.filter((i) => !i.coche) ?? []
+  const total = Math.round((d.paye + totaux(items).total) * 100) / 100
+  const estimes = items.filter((i) => i.sourcePrix === 'estimation' || i.detailPrix).length
 
   return (
     <Page titre={salutation()} sousTitre={new Date().toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' })}>
@@ -68,7 +72,7 @@ export default function Accueil() {
                   key={n}
                   type="button"
                   aria-label={`${n} étoile${n > 1 ? 's' : ''}`}
-                  className="h-11 w-11 rounded-full bg-surface-2 text-xl text-orange"
+                  className="h-11 w-11 rounded-full bg-surface-2 text-xl text-orange-texte"
                   onClick={() => enregistrerGout('recette', x.recetteId, { note: n as Gout['note'] })}
                 >
                   ★
@@ -83,7 +87,7 @@ export default function Accueil() {
       {d.duJour.length === 0 ? (
         <Carte className="mb-6">
           <p className="text-encre-2">Rien de prévu.</p>
-          <Link to="/semaine" className="mt-2 inline-block font-semibold text-orange">Préparer ma semaine →</Link>
+          <Link to="/semaine" className="mt-2 inline-block font-semibold text-orange-texte">Préparer ma semaine →</Link>
         </Carte>
       ) : (
         <div className="mb-6 flex snap-x gap-3 overflow-x-auto pb-2">
@@ -108,11 +112,17 @@ export default function Accueil() {
           <div className="mb-2 flex items-end justify-between">
             <div>
               <div className="text-sm text-encre-2">Courses de la semaine</div>
-              <div className={`titre text-3xl font-extrabold ${total > reglages.budgetHebdo ? 'text-rouge' : 'text-orange'}`}>{prix(total)}</div>
+              <div className={`titre text-3xl font-extrabold ${total > reglages.budgetHebdo ? 'text-rouge' : 'text-orange-texte'}`}>{prix(total)}</div>
             </div>
             <div className="text-sm text-encre-2">/ {prix(reglages.budgetHebdo)}</div>
           </div>
           <Jauge valeur={total} max={reglages.budgetHebdo} libelle="Budget de la semaine" />
+          {d.liste && (
+            <p className="mt-2 text-xs text-encre-3">
+              {d.paye > 0 && `${prix(d.paye)} déjà payés · `}
+              {items.length - estimes} prix constatés, {estimes} estimés · liste du {age(d.liste.majLe)}
+            </p>
+          )}
         </Carte>
       </Link>
 

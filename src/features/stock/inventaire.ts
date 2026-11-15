@@ -98,8 +98,26 @@ export function itemDepuisAliment(a: Aliment, aujourdhui: string = isoJour()): S
 }
 
 /** Ligne de stock pour un produit scanné. */
+/**
+ * Quantité d'un produit exprimée dans l'unité de base de l'aliment correspondant,
+ * pour que le stock soit bien déduit de la liste et décrémenté à la cuisson.
+ * Fonction pure (testée).
+ */
+export function quantiteEnUniteBase(p: Produit, aliment?: Aliment): { quantite: number; unite: Unite } {
+  const q = p.quantiteNormalisee
+  if (!aliment) return q ?? { quantite: 1, unite: 'piece' }
+  const base = aliment.uniteBase
+  if (q && q.unite === base) return q
+  // g ↔ ml : on assimile 1 ml à 1 g.
+  if (q && q.unite !== 'piece' && base !== 'piece') return { quantite: q.quantite, unite: base }
+  // Poids → pièces (ex. 1 kg de pommes → 6 pièces) grâce au poids moyen d'une pièce.
+  if (q && q.unite !== 'piece' && base === 'piece' && aliment.poidsPieceG) return { quantite: Math.max(1, Math.round(q.quantite / aliment.poidsPieceG)), unite: 'piece' }
+  // Contenance inconnue : on suppose le format de vente habituel.
+  return { quantite: aliment.formatVente.quantite, unite: base }
+}
+
 export function itemDepuisProduit(p: Produit, aliment?: Aliment, aujourdhui: string = isoJour()): StockItem {
-  const q: { quantite: number; unite: Unite } = p.quantiteNormalisee ?? { quantite: 1, unite: 'piece' }
+  const q = quantiteEnUniteBase(p, aliment)
   const item: StockItem = {
     codeBarres: p.codeBarres,
     nom: p.marque ? `${p.nom} (${p.marque})` : p.nom,

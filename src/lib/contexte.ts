@@ -5,10 +5,11 @@
 import prixRef from '@/data/prix-reference.json'
 import type { Aliment, CibleGout, FichierPrixReference, Gout, ListeCourses, PrixAffiche, Repas, Verdict } from '@/types'
 import { db } from './db'
-import { ajouterJours, isoJour, semaineActive } from './dates'
-import { meilleurPrix, type ResolveurPrix } from './prix'
+import { ajouterJours, isoJour, jourDe, lundiDe, semaineActive } from './dates'
+import { cout, meilleurPrix, type ResolveurPrix } from './prix'
 import { calculerScore, cleGout, type CarteGouts } from './scoring'
-import { autreIdee, coutPortion, genererPlanning, graine, normaliserRestes, type ContextePlanning } from '@/features/recettes/planning'
+import { respecterBudget } from '@/features/recettes/budget'
+import { autreIdee, genererPlanning, graine, normaliserRestes, type ContextePlanning } from '@/features/recettes/planning'
 import { genererListe, totaux } from '@/features/liste/generer'
 
 const REF = prixRef as FichierPrixReference
@@ -52,6 +53,8 @@ export async function chargerResolveurPrix(): Promise<ResolveurPrix> {
     if (!p || !ref) continue
     const affiche: PrixAffiche = { ...p, source: 'promo', date: pr.ajouteLe, magasinId: pr.magasinId, estime: false }
     ajouter(`${a.id}@${pr.magasinId}`, affiche)
+    // « Tous magasins » : la promo compte aussi (on ira la chercher là-bas).
+    ajouter(a.id, affiche)
   }
 
   return (alimentId, magasinId) => {
@@ -123,6 +126,8 @@ async function contextePlanning(semaine: string, aleatoire: () => number): Promi
     existants,
     recentes: new Set(precedents.map((r) => r.recetteId)),
     aleatoire,
+    // Semaine en cours : on ne planifie pas les jours déjà passés.
+    jourDebut: semaine === lundiDe() ? jourDe() : 0,
   }
 }
 
@@ -145,31 +150,16 @@ export async function planifierSemaine(semaine = semaineActive(), seed = Date.no
     reglages: { ...base.reglages, tempsMaxMinutes: options.tempsMax ? Math.min(options.tempsMax, base.reglages.tempsMaxMinutes) : base.reglages.tempsMaxMinutes },
     preferences: { tags: options.preferer ?? [], eviter: options.eviter ?? [] },
   }
-  let plan = normaliserRestes(genererPlanning(ctx))
+  const generes = normaliserRestes(genererPlanning(ctx))
 
   const recettes = new Map(ctx.recettes.map((r) => [r.id, r]))
   const budget = Math.max(15, ctx.reglages.budgetHebdo + (options.budgetDelta ?? 0))
+  const achats = await db.achats.toArray()
+  // Budget = ce que coûte vraiment la course (placard compris), moins ce qui est déjà payé cette semaine.
+  const dejaPaye = await depenseValideeSemaine(semaine)
   const totalDe = (p: Repas[]) =>
-    totaux(
-      genererListe({ repas: p, recettes, alimentsParId: ctx.alimentsParId, stock: ctx.stock, achats: [], prix: ctx.prix, gouts: ctx.gouts, reglages: ctx.reglages }),
-    ).principal
-
-  let total = totalDe(plan)
-  for (let essai = 0; essai < 12 && total > budget; essai++) {
-    const modifiables = plan.filter((r) => !r.verrouille && !r.cuisine && !r.restes)
-    const plusCher = modifiables
-      .map((r) => ({ r, c: (recettes.has(r.recetteId) ? coutPortion(recettes.get(r.recetteId)!, ctx) : 0) * r.portions }))
-      .sort((a, b) => b.c - a.c)[essai % Math.max(1, modifiables.length)]
-    if (!plusCher) break
-    const alt = autreIdee({ ...ctx, aleatoire }, plan, plusCher.r)
-    if (!alt) continue
-    const candidat = normaliserRestes(plan.map((r) => (r.id === alt.id ? alt : r)))
-    const t = totalDe(candidat)
-    if (t < total) {
-      plan = candidat
-      total = t
-    }
-  }
+    totaux(genererListe({ repas: aVenir(p, semaine), recettes, alimentsParId: ctx.alimentsParId, stock: ctx.stock, achats, prix: ctx.prix, gouts: ctx.gouts, reglages: ctx.reglages })).total
+  const { plan } = respecterBudget(generes, ctx, Math.max(0, budget - dejaPaye), totalDe)
 
   await db.transaction('rw', db.repas, async () => {
     await db.repas.where('semaine').equals(semaine).delete()
@@ -177,6 +167,19 @@ export async function planifierSemaine(semaine = semaineActive(), seed = Date.no
   })
   await regenererListe(semaine)
   return plan
+}
+
+/** Repas qui restent à faire : en semaine en cours, on ignore les jours passés. */
+export function aVenir(repas: Repas[], semaine: string): Repas[] {
+  if (semaine !== lundiDe()) return repas
+  const j = jourDe()
+  return repas.filter((r) => r.jour >= j)
+}
+
+/** Courses déjà payées pour une semaine (listes validées et tickets), rattachées par semaineActive(date). */
+export async function depenseValideeSemaine(semaine: string): Promise<number> {
+  const depenses = await db.depenses.where('date').aboveOrEqual(ajouterJours(semaine, -2)).toArray()
+  return Math.round(depenses.filter((d) => semaineActive(new Date(d.date)) === semaine).reduce((s, d) => s + d.montant, 0) * 100) / 100
 }
 
 /** Remplace un repas par une autre idée (et remet les restes d'aplomb). */
@@ -217,7 +220,7 @@ export async function regenererListe(semaine = semaineActive(), magasinId?: stri
   if (!reglages) throw new Error('Réglages absents')
   const magasin = magasinId ?? existante?.magasinId
   const items = genererListe({
-    repas,
+    repas: aVenir(repas, semaine),
     recettes: new Map(recettes.map((r) => [r.id, r])),
     alimentsParId: new Map(aliments.map((a) => [a.id, a])),
     stock,
@@ -291,7 +294,6 @@ export async function ajouterArticle(semaine: string, alimentId: string): Promis
   if (l.items.some((i) => i.id === a.id)) return
   const resolveur = await chargerResolveurPrix()
   const p = resolveur(a.id, l.magasinId)
-  const { cout } = await import('./prix')
   await db.listes.update(semaine, {
     items: [
       ...l.items,
@@ -329,7 +331,7 @@ export async function validerCourses(semaine: string): Promise<{ montant: number
       montant += paye
       await db.stock.add({
         alimentId: i.alimentId, codeBarres: i.codeBarres, nom: i.nom, quantite: q, unite: i.unite,
-        emplacement: a?.rayon === 'surgeles' ? 'congelateur' : a && ['frais', 'boucherie-poisson'].includes(a.rayon) ? 'frigo' : a?.categorie === 'legume' || a?.categorie === 'fruit' ? 'frigo' : 'placard',
+        emplacement: a?.rayon === 'surgeles' ? 'congelateur' : a && ['frais', 'boucherie-poisson'].includes(a.rayon) ? 'frigo' : a?.categorie === 'legume' ? 'frigo' : 'placard',
         peremption: a?.conservationJours ? ajouterJours(isoJour(), a.conservationJours) : undefined,
         ajouteLe: maintenant,
       })
@@ -342,4 +344,18 @@ export async function validerCourses(semaine: string): Promise<{ montant: number
   })
   for (const i of coches) if (i.alimentId) await enregistrerGout('aliment', i.alimentId, { achat: true })
   return { montant: Math.round(montant * 100) / 100, articles: coches.length }
+}
+
+/** « J'en ai déjà » : un article de placard part dans le stock et sort de la liste. */
+export async function jEnAiDeja(semaine: string, item: import('@/types').ItemListe): Promise<void> {
+  const a = item.alimentId ? await db.aliments.get(item.alimentId) : undefined
+  await db.stock.add({
+    alimentId: item.alimentId,
+    nom: item.nom,
+    quantite: a ? a.formatVente.quantite : item.quantiteBesoin,
+    unite: item.unite,
+    emplacement: 'placard',
+    ajouteLe: new Date().toISOString(),
+  })
+  await regenererListe(semaine)
 }

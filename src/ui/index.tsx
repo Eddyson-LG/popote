@@ -2,13 +2,13 @@
  * Composants d'interface partagés (design system Popote).
  * Les modules les réutilisent plutôt que de recréer leurs propres boutons ou cartes.
  */
-import type { ButtonHTMLAttributes, ReactNode } from 'react'
+import { useEffect, useState, type ButtonHTMLAttributes, type ReactNode } from 'react'
 
 type Variante = 'cta' | 'orange' | 'doux' | 'fantome' | 'danger'
 
 const VARIANTES: Record<Variante, string> = {
   cta: 'bg-cta text-cta-texte',
-  orange: 'bg-orange text-white',
+  orange: 'bg-orange text-sur-orange',
   doux: 'bg-surface-2 text-encre',
   fantome: 'bg-transparent text-encre underline-offset-4 hover:underline',
   danger: 'bg-rouge-doux text-rouge',
@@ -64,7 +64,7 @@ export function Page({
 export function Pastille({ children, ton = 'neutre' }: { children: ReactNode; ton?: 'neutre' | 'orange' | 'vert' | 'rouge' }) {
   const tons = {
     neutre: 'bg-surface-2 text-encre-2',
-    orange: 'bg-orange-doux text-orange',
+    orange: 'bg-orange-doux text-orange-texte',
     vert: 'bg-vert-doux text-vert',
     rouge: 'bg-rouge-doux text-rouge',
   }
@@ -94,5 +94,47 @@ export function Vide({ emoji, titre, texte, action }: { emoji: string; titre: st
       {texte && <p className="max-w-xs text-encre-2">{texte}</p>}
       {action}
     </div>
+  )
+}
+
+/**
+ * Champ numérique : on tape librement, la valeur n'est bornée (min/max) et enregistrée
+ * qu'à la sortie du champ ou sur Entrée. Évite le piège du champ contrôlé corrigé à chaque frappe.
+ */
+export function ChampNombre({
+  valeur,
+  onValider,
+  min,
+  max,
+  pas = 1,
+  libelle,
+  className = '',
+}: {
+  valeur: number
+  onValider: (v: number) => void
+  min: number
+  max: number
+  pas?: number
+  libelle: string
+  className?: string
+}) {
+  const [texte, setTexte] = useState(String(valeur))
+  useEffect(() => setTexte(String(valeur)), [valeur])
+  const valider = () => {
+    const n = Number(texte.replace(',', '.'))
+    const borne = Number.isFinite(n) && texte.trim() !== '' ? Math.min(max, Math.max(min, Math.round(n / pas) * pas)) : valeur
+    setTexte(String(borne))
+    if (borne !== valeur) onValider(borne)
+  }
+  return (
+    <input
+      inputMode="decimal"
+      value={texte}
+      onChange={(e) => setTexte(e.target.value)}
+      onBlur={valider}
+      onKeyDown={(e) => e.key === 'Enter' && (e.currentTarget as HTMLInputElement).blur()}
+      aria-label={libelle}
+      className={`min-h-11 w-20 rounded-xl bg-surface-2 px-3 text-right ${className}`}
+    />
   )
 }

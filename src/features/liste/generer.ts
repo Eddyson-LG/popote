@@ -10,6 +10,7 @@ import { CATEGORIES_PLACARD } from '@/features/recettes/planning'
 import type { CarteGouts } from '@/lib/scoring'
 import { alimentExclu } from '@/lib/scoring'
 import type { Reglages } from '@/types'
+import { isoJour } from '@/lib/dates'
 
 export interface ContexteListe {
   repas: Repas[]
@@ -43,10 +44,12 @@ export function besoinsDuPlanning(ctx: Pick<ContexteListe, 'repas' | 'recettes'>
 }
 
 /** Quantité en stock par aliment (même unité de base). */
-export function quantitesEnStock(stock: StockItem[], alimentsParId: Map<string, Aliment>): Map<string, number> {
+export function quantitesEnStock(stock: StockItem[], alimentsParId: Map<string, Aliment>, aujourdhui?: string): Map<string, number> {
   const q = new Map<string, number>()
   for (const s of stock) {
     if (!s.alimentId) continue
+    // Un produit périmé ne compte plus comme disponible.
+    if (aujourdhui && s.peremption && s.peremption < aujourdhui) continue
     const a = alimentsParId.get(s.alimentId)
     if (!a || a.uniteBase !== s.unite) continue
     q.set(s.alimentId, (q.get(s.alimentId) ?? 0) + s.quantite)
@@ -100,6 +103,7 @@ function item(a: Aliment, besoin: number, raison: ItemListe['raison'], ctx: Cont
     prixEstime: Math.round(cout(quantiteAchetee, a, p) * 100) / 100,
     sourcePrix: p?.source ?? 'estimation',
     datePrix: p?.date ?? new Date(0).toISOString(),
+    detailPrix: p?.detail,
     magasinId: ctx.magasinId,
     raison,
     placard: CATEGORIES_PLACARD.has(a.categorie) || undefined,
@@ -127,7 +131,7 @@ export function genererListe(ctx: ContexteListe): ItemListe[] {
     besoins.delete(de)
     besoins.set(vers, (besoins.get(vers) ?? 0) + q)
   }
-  const stock = quantitesEnStock(ctx.stock, ctx.alimentsParId)
+  const stock = quantitesEnStock(ctx.stock, ctx.alimentsParId, isoJour(ctx.maintenant ?? new Date()))
   const items = new Map<string, ItemListe>()
 
   // 1. Planning, moins le stock.
@@ -159,7 +163,11 @@ export function genererListe(ctx: ContexteListe): ItemListe[] {
 }
 
 /** Totaux : principal (hors placard) et placard. */
-export function totaux(items: ItemListe[]): { principal: number; placard: number; coche: number } {
+/**
+ * Totaux de la liste : `total` = tout ce qu'il reste à acheter (placard compris : c'est ce que coûte vraiment la course),
+ * avec le détail principal / placard.
+ */
+export function totaux(items: ItemListe[]): { total: number; principal: number; placard: number; coche: number } {
   let principal = 0
   let placard = 0
   let coche = 0
@@ -170,7 +178,7 @@ export function totaux(items: ItemListe[]): { principal: number; placard: number
     if (i.coche) coche += montant
   }
   const r = (n: number) => Math.round(n * 100) / 100
-  return { principal: r(principal), placard: r(placard), coche: r(coche) }
+  return { total: r(principal + placard), principal: r(principal), placard: r(placard), coche: r(coche) }
 }
 
 /**

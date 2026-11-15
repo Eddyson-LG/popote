@@ -208,6 +208,10 @@ export default function Tickets() {
           Astuce : pose le ticket bien à plat, avec de la lumière, et cadre-le en entier. Avec une clé API, l’IA le lit ; sinon je le lis directement sur ton téléphone,
           même hors ligne.
         </p>
+        <p className="mt-2 text-xs text-encre-3">
+          🔒 Avec l’IA, la photo du ticket est envoyée à Anthropic pour être lue. Si ta carte de fidélité ou la fin de ta carte bancaire y figurent,
+          cache-les, ou désactive l’IA dans les réglages.
+        </p>
       </Page>
     )
   }
@@ -295,7 +299,7 @@ export default function Tickets() {
             aria-label="Total payé en euros"
           />
         </label>
-        <p className={`mt-2 text-sm ${ecart ? 'text-orange' : 'text-encre-2'}`}>
+        <p className={`mt-2 text-sm ${ecart ? 'text-orange-texte' : 'text-encre-2'}`}>
           Somme des lignes : {formatPrix(somme)}
           {ecart && ' — ça ne colle pas au total, il manque peut-être une ligne.'}
         </p>
@@ -406,7 +410,7 @@ function LigneCorrection({
               {ligne.confiance && !ligne.manuel && <Pastille ton={TON_CONFIANCE[ligne.confiance].ton}>{TON_CONFIANCE[ligne.confiance].texte}</Pastille>}
             </>
           ) : (
-            <span className="text-orange underline underline-offset-4">Associer un aliment</span>
+            <span className="text-orange-texte underline underline-offset-4">Associer un aliment</span>
           )}
         </button>
         <label className="flex items-center gap-1 text-sm text-encre-2">

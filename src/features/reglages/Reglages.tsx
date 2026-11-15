@@ -16,7 +16,7 @@ import { chargerDemo } from '@/lib/demo'
 import { regenererListe } from '@/lib/contexte'
 import { demanderPermission, notificationsDisponibles } from '@/features/suivi/notifications'
 import { SauvegardeDonnees } from '@/features/export'
-import { Bouton, Carte, Page } from '@/ui'
+import { Bouton, Carte, ChampNombre, Page } from '@/ui'
 
 const REPAS: { type: TypeRepas; label: string }[] = [
   { type: 'petit-dejeuner', label: 'Petits-déj' },
@@ -88,19 +88,19 @@ export default function Reglages() {
         <label className="flex items-center justify-between gap-3">
           <span>Budget courses / semaine</span>
           <span className="flex items-center gap-2">
-            <input type="number" inputMode="numeric" min={10} max={300} value={r.budgetHebdo} onChange={(e) => maj({ budgetHebdo: Math.max(10, Number(e.target.value) || 50) })} className="min-h-11 w-20 rounded-xl bg-surface-2 px-3 text-right" aria-label="Budget hebdomadaire en euros" /> €
+            <ChampNombre valeur={r.budgetHebdo} min={10} max={300} onValider={(v) => maj({ budgetHebdo: v })} libelle="Budget hebdomadaire en euros" /> €
           </span>
         </label>
         <label className="mt-3 flex items-center justify-between gap-3">
           <span>Prix d’un repas dehors</span>
           <span className="flex items-center gap-2">
-            <input type="number" inputMode="decimal" min={1} step={0.5} value={r.prixRepasDehors} onChange={(e) => maj({ prixRepasDehors: Math.max(1, Number(e.target.value) || 5) })} className="min-h-11 w-20 rounded-xl bg-surface-2 px-3 text-right" aria-label="Prix d'un repas dehors" /> €
+            <ChampNombre valeur={r.prixRepasDehors} min={1} max={30} pas={0.5} onValider={(v) => maj({ prixRepasDehors: v })} libelle="Prix d'un repas dehors" /> €
           </span>
         </label>
         <label className="mt-3 flex items-center justify-between gap-3">
           <span>Répartir entre 2 magasins si ça économise au moins</span>
           <span className="flex items-center gap-2">
-            <input type="number" inputMode="decimal" min={0} value={r.seuilRepartition} onChange={(e) => maj({ seuilRepartition: Math.max(0, Number(e.target.value) || 0) })} className="min-h-11 w-20 rounded-xl bg-surface-2 px-3 text-right" aria-label="Seuil de répartition" /> €
+            <ChampNombre valeur={r.seuilRepartition} min={0} max={50} pas={0.5} onValider={(v) => maj({ seuilRepartition: v })} libelle="Seuil de répartition" /> €
           </span>
         </label>
       </Section>
@@ -115,7 +115,7 @@ export default function Reglages() {
                 const jours = actif ? r.creneaux[type].filter((x) => x !== i) : ([...r.creneaux[type], i].sort() as Jour[])
                 return (
                   <button key={j} type="button" aria-pressed={actif} aria-label={`${label} ${j}`} onClick={() => maj({ creneaux: { ...r.creneaux, [type]: jours } })}
-                    className={`min-h-11 rounded-xl text-xs font-semibold ${actif ? 'bg-orange text-white' : 'bg-surface-2 text-encre-2'}`}>
+                    className={`min-h-11 rounded-xl text-xs font-semibold ${actif ? 'bg-orange text-sur-orange' : 'bg-surface-2 text-encre-2'}`}>
                     {j}
                   </button>
                 )
@@ -134,7 +134,7 @@ export default function Reglages() {
           </select>
         </label>
         <div className="mt-3 text-sm font-semibold">Équipement</div>
-        <div className="mt-1"><Puces options={EQUIP} valeurs={r.equipement} onChange={(v) => maj({ equipement: v })} libelle={(e) => e.replace('-', ' ')} /></div>
+        <div className="mt-1"><Puces options={EQUIP} valeurs={r.equipement} onChange={(v) => maj({ equipement: v })} libelle={(e) => e} /></div>
         <p className="mt-3 text-xs text-encre-3">Les changements s’appliquent à la prochaine génération de la semaine.</p>
       </Section>
 
@@ -157,9 +157,9 @@ export default function Reglages() {
         </ul>
         <label className="mt-3 flex items-center justify-between gap-2">
           <span>Fréquence</span>
-          <select value={r.frequenceCourses} onChange={(e) => maj({ frequenceCourses: e.target.value as typeof r.frequenceCourses })} className="min-h-11 rounded-xl bg-surface-2 px-3" aria-label="Fréquence des courses">
+          <select value={r.frequenceCourses} onChange={(e) => maj({ frequenceCourses: e.target.value as typeof r.frequenceCourses })} className="min-h-11 min-w-0 flex-1 rounded-xl bg-surface-2 px-3" aria-label="Fréquence des courses">
             <option value="hebdo">Chaque semaine</option>
-            <option value="mensuel-plus-hebdo">Grosse course mensuelle + complément</option>
+            <option value="mensuel-plus-hebdo">Mensuel + complément</option>
           </select>
         </label>
         <label className="mt-3 flex items-center justify-between gap-2">
@@ -213,7 +213,7 @@ export default function Reglages() {
       <Section titre="Tester et repartir de zéro">
         {confirmer ? (
           <div className="rounded-2xl bg-rouge-doux p-3">
-            <p className="font-semibold text-rouge">{confirmer === 'demo' ? 'Charger la démo remplace toutes tes données.' : 'Tout effacer ? Goûts, stock, prix, plannings…'} C’est définitif (sauf si t’as une sauvegarde).</p>
+            <p className="font-semibold text-rouge">{confirmer === 'demo' ? 'Charger la démo remplace toutes tes données.' : 'Tout effacer ? Goûts, stock, prix, plannings, et ta clé API…'} C’est définitif (sauf si t’as une sauvegarde).</p>
             <div className="mt-2 flex gap-2">
               <Bouton variante="danger" disabled={occupe} onClick={async () => {
                 setOccupe(true)

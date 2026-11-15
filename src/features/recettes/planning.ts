@@ -26,6 +26,8 @@ export interface ContextePlanning {
   aleatoire: () => number
   /** Date du jour (tests). */
   aujourdhui?: Date
+  /** Premier jour à planifier (0 = lundi) : en milieu de semaine, les jours passés sont ignorés. */
+  jourDebut?: number
   /** Consigne ponctuelle de la semaine (« j'ai la flemme »…). */
   preferences?: { tags: string[]; eviter: string[] }
 }
@@ -205,7 +207,7 @@ export function genererPlanning(ctx: ContextePlanning): Repas[] {
 
   for (const { jour, type } of creneaux) {
     const cle = `${jour}:${type}`
-    if (resultat.has(cle)) continue
+    if (resultat.has(cle) || jour < (ctx.jourDebut ?? 0)) continue
     const liste = parType.get(type) ?? []
     const choix = tirer(
       liste.map((r) => ({

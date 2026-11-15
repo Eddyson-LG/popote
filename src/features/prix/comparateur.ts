@@ -11,12 +11,14 @@ export interface TotalMagasin {
   total: number
   /** Part des articles dont le prix vient vraiment de ce magasin (0 à 1). */
   couverture: number
+  /** Date du plus ancien prix constaté dans ce magasin parmi ceux utilisés (âge affiché). */
+  datePlusAncienne?: string
 }
 
-function coutItem(i: ItemListe, a: Aliment | undefined, prix: ResolveurPrix, magasinId: string): { montant: number; local: boolean } {
+function coutItem(i: ItemListe, a: Aliment | undefined, prix: ResolveurPrix, magasinId: string): { montant: number; local: boolean; date?: string } {
   if (!a || !i.alimentId) return { montant: i.prixEstime, local: false }
   const p = prix(i.alimentId, magasinId)
-  return { montant: cout(i.nbFormats * a.formatVente.quantite, a, p), local: p?.magasinId === magasinId }
+  return { montant: cout(i.nbFormats * a.formatVente.quantite, a, p), local: p?.magasinId === magasinId, date: p?.date }
 }
 
 export function comparerMagasins(items: ItemListe[], magasins: Magasin[], alimentsParId: Map<string, Aliment>, prix: ResolveurPrix): TotalMagasin[] {
@@ -25,12 +27,16 @@ export function comparerMagasins(items: ItemListe[], magasins: Magasin[], alimen
     .map((m) => {
       let total = 0
       let locaux = 0
+      let datePlusAncienne: string | undefined
       for (const i of principaux) {
         const c = coutItem(i, i.alimentId ? alimentsParId.get(i.alimentId) : undefined, prix, m.id)
         total += c.montant
-        if (c.local) locaux++
+        if (c.local) {
+          locaux++
+          if (c.date && (!datePlusAncienne || c.date < datePlusAncienne)) datePlusAncienne = c.date
+        }
       }
-      return { magasin: m, total: Math.round(total * 100) / 100, couverture: principaux.length ? locaux / principaux.length : 0 }
+      return { magasin: m, total: Math.round(total * 100) / 100, couverture: principaux.length ? locaux / principaux.length : 0, datePlusAncienne }
     })
     .sort((a, b) => a.total - b.total)
 }

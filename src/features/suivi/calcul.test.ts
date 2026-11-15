@@ -5,7 +5,7 @@ import { bilan, messageMotivant } from './calcul'
 const repas = (type: Repas['type'], cuisineLe: string): Repas => ({ id: cuisineLe + type, semaine: '2026-11-09', jour: 0, type, recetteId: 'r', portions: 1, verrouille: false, cuisine: true, cuisineLe })
 
 describe('suivi des économies', () => {
-  const now = new Date('2026-11-15T12:00:00')
+  const now = new Date('2026-11-13T12:00:00') // un vendredi
   const b = bilan(
     {
       depenses: [{ date: '2026-11-10T10:00:00Z', montant: 38.4, origine: 'liste' }, { date: '2026-10-28T10:00:00Z', montant: 40, origine: 'ticket' }],
@@ -16,6 +16,10 @@ describe('suivi des économies', () => {
     },
     now,
   )
+  it('compte une course du dimanche dans la semaine qui suit', () => {
+    const dimanche = bilan({ depenses: [{ date: '2026-11-15T10:00:00', montant: 20, origine: 'liste' }], dehors: [], repas: [], coutPortion: () => 0, prixRepasDehors: 5 }, new Date('2026-11-16T12:00:00'))
+    expect(dimanche.depenseSemaine).toBe(20)
+  })
   it('sépare semaine et mois', () => {
     expect(b.depenseSemaine).toBe(38.4)
     expect(b.depenseMois).toBe(38.4)
@@ -27,6 +31,6 @@ describe('suivi des économies', () => {
     expect(b.economieMois).toBe(10.5)
   })
   it('formule un message motivant', () => {
-    expect(messageMotivant(b, 5)).toBe('2 gamelles ce mois = 10 € de sandwichs évités 🔥')
+    expect(messageMotivant(b, 5)).toBe('2 gamelles et 3 repas maison ce mois = 11 € économisés 🔥')
   })
 })

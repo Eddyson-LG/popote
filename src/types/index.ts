@@ -339,6 +339,8 @@ export interface ItemListe {
   sourcePrix: SourcePrix
   /** Date ISO du prix utilisé (âge affiché). */
   datePrix: string
+  /** Précision sur la source (« médiane France »). */
+  detailPrix?: string
   magasinId?: string
   raison: RaisonItem
   /**

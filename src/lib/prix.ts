@@ -54,7 +54,10 @@ export function meilleurPrix(candidats: (PrixAffiche | null | undefined)[], main
   if (promo) return promo
   const constates = liste.filter((c) => !c.estime)
   const frais = constates.filter((c) => maintenant.getTime() - new Date(c.date).getTime() < 90 * 86_400_000)
-  const pool = frais.length ? frais : constates.length ? constates : liste
+  // Estimations « vivantes » (médiane nationale Open Prices) avant la table de référence, quelle que soit sa date.
+  const medianes = liste.filter((c) => c.estime && c.source !== 'estimation')
+  const reference = liste.filter((c) => c.source === 'estimation')
+  const pool = frais.length ? frais : constates.length ? constates : medianes.length ? medianes : reference
   return [...pool].sort((a, b) => {
     const d = new Date(b.date).getTime() - new Date(a.date).getTime()
     // Même jour : on départage par la fiabilité de la source.
@@ -74,3 +77,8 @@ export const LIBELLE_SOURCE: Record<PrixAffiche['source'], string> = {
 
 /** Fonction qui donne le prix d'un aliment (synchrone : les prix sont résolus à l'avance). */
 export type ResolveurPrix = (alimentId: string, magasinId?: string) => PrixAffiche | null
+
+/** « estimé · il y a 3 j », « Open Prices (médiane France) · hier » : source + âge, partout pareil. */
+export function sourceEtAge(source: PrixAffiche['source'], date: string, detail?: string, ageDe: (d: string) => string = (d) => d): string {
+  return `${LIBELLE_SOURCE[source]}${detail ? ` (${detail})` : ''} · ${ageDe(date)}`
+}

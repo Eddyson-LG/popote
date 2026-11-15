@@ -35,6 +35,11 @@ describe('meilleur prix', () => {
   it('préfère un prix constaté récent à une estimation', () => {
     expect(meilleurPrix([p({}), p({ source: 'ticket', estime: false, prixUnitaire: 2, date: '2026-11-10' })], new Date('2026-11-15'))?.source).toBe('ticket')
   })
+  it('garde la table de référence en dernier recours, même plus récente', () => {
+    const ref = p({ date: '2026-11-15' })
+    const mediane = p({ source: 'open-prices', estime: true, detail: 'médiane France', date: '2026-10-01', prixUnitaire: 3 })
+    expect(meilleurPrix([ref, mediane], new Date('2026-11-15'))?.source).toBe('open-prices')
+  })
   it('préfère une promo', () => {
     expect(meilleurPrix([p({ source: 'ticket', estime: false }), p({ source: 'promo', estime: false })])?.source).toBe('promo')
   })

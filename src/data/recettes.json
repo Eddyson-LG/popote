@@ -290,8 +290,8 @@
     "source": "base"
   },
   {
-    "id": "skyr-kiwi-muesli",
-    "nom": "Skyr, kiwi et muesli",
+    "id": "yaourt-grec-kiwi-muesli",
+    "nom": "Yaourt grec, kiwi et muesli",
     "emoji": "🥝",
     "types": [
       "petit-dejeuner",
@@ -301,7 +301,7 @@
     "portions": 1,
     "ingredients": [
       {
-        "alimentId": "skyr",
+        "alimentId": "yaourt-grec",
         "quantite": 150,
         "unite": "g"
       },
@@ -318,7 +318,7 @@
     ],
     "etapes": [
       "Épluche et coupe les kiwis en dés.",
-      "Verse le skyr dans un bol, ajoute les kiwis et le muesli."
+      "Verse le yaourt grec dans un bol, ajoute les kiwis et le muesli."
     ],
     "equipement": [],
     "gamelle": false,
@@ -4120,8 +4120,8 @@
     "source": "base"
   },
   {
-    "id": "gnocchis-epinards-tomates",
-    "nom": "Gnocchis poêlés aux épinards et tomates cerises",
+    "id": "pates-epinards-tomates-cerises",
+    "nom": "Pâtes poêlées aux épinards et tomates cerises",
     "emoji": "🍅",
     "types": [
       "diner",
@@ -4131,8 +4131,8 @@
     "portions": 2,
     "ingredients": [
       {
-        "alimentId": "gnocchis",
-        "quantite": 500,
+        "alimentId": "pates",
+        "quantite": 200,
         "unite": "g"
       },
       {
@@ -4157,9 +4157,10 @@
       }
     ],
     "etapes": [
-      "Fais dorer les gnocchis 6 min dans l'huile, sans les cuire avant.",
-      "Ajoute l'ail et les tomates cerises, 2 min.",
-      "Ajoute les épinards et laisse-les tomber 2 min."
+      "Fais cuire les pâtes dans l'eau salée bouillante, égoutte-les.",
+      "Pendant ce temps, fais revenir l'ail dans l'huile 1 min, ajoute les tomates cerises, 2 min.",
+      "Ajoute les épinards et laisse-les tomber 2 min.",
+      "Mélange avec les pâtes et fais dorer 2 min à feu vif."
     ],
     "equipement": [
       "plaques"

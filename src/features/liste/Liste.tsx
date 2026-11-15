@@ -11,8 +11,8 @@ import { RAYONS, RAYON_LIBELLES } from '@/types'
 import { db } from '@/lib/db'
 import { semaineActive, age } from '@/lib/dates'
 import { formatAchat, prix, quantite } from '@/lib/format'
-import { LIBELLE_SOURCE } from '@/lib/prix'
-import { ajouterArticle, chargerGouts, chargerResolveurPrix, majArticle, regenererListe, substituer, validerCourses } from '@/lib/contexte'
+import { sourceEtAge } from '@/lib/prix'
+import { ajouterArticle, chargerGouts, chargerResolveurPrix, depenseValideeSemaine, jEnAiDeja, majArticle, regenererListe, substituer, validerCourses } from '@/lib/contexte'
 import { substitutions, totaux } from './generer'
 import { Bouton, Carte, Jauge, Page, Pastille, Vide } from '@/ui'
 import { useReglages } from '@/lib/hooks'
@@ -26,6 +26,8 @@ export default function Liste() {
   const magasins = useLiveQuery(() => db.magasins.filter((m) => m.actif).toArray(), [])
   const [magasin, setMagasin] = useState(false)
   const [message, setMessage] = useState('')
+  // Déjà payé cette semaine (listes validées, tickets) : compte dans la jauge.
+  const paye = useLiveQuery(() => depenseValideeSemaine(semaine), [semaine]) ?? 0
 
   useEffect(() => {
     // Liste absente alors qu'un planning existe : on la génère.
@@ -40,10 +42,15 @@ export default function Liste() {
       </Page>
     )
 
-  const t = totaux(liste.items)
-  const depasse = t.principal > reglages.budgetHebdo
+  const t = totaux(liste.items.filter((i) => !i.coche))
+  const engage = Math.round((paye + t.total) * 100) / 100
+  const depasse = engage > reglages.budgetHebdo
+  const valider = async () => {
+    const r = await validerCourses(semaine)
+    setMessage(`Courses validées : ${r.articles} articles, ${prix(r.montant)}. Tout est rangé dans ton stock 🧺`)
+  }
 
-  if (magasin) return <ModeMagasin items={liste.items} semaine={semaine} onQuitter={() => setMagasin(false)} />
+  if (magasin) return <ModeMagasin items={liste.items} semaine={semaine} onQuitter={() => setMagasin(false)} onValider={async () => (await valider(), setMagasin(false))} />
 
   return (
     <Page
@@ -54,13 +61,15 @@ export default function Liste() {
       <Carte className="mb-4">
         <div className="mb-2 flex items-end justify-between">
           <div>
-            <div className={`titre text-4xl font-extrabold ${depasse ? 'text-rouge' : 'text-orange'}`}>{prix(t.principal)}</div>
-            <div className="text-sm text-encre-2">sur {prix(reglages.budgetHebdo)} de budget</div>
+            <div className={`titre text-4xl font-extrabold ${depasse ? 'text-rouge' : 'text-orange-texte'}`}>{prix(engage)}</div>
+            <div className="text-sm text-encre-2">
+              sur {prix(reglages.budgetHebdo)} de budget{paye > 0 && ` · dont ${prix(paye)} déjà payés`}
+            </div>
           </div>
-          {!depasse && <Pastille ton="vert">{prix(reglages.budgetHebdo - t.principal)} de marge</Pastille>}
+          {!depasse && <Pastille ton="vert">{prix(reglages.budgetHebdo - engage)} de marge</Pastille>}
         </div>
-        <Jauge valeur={t.principal} max={reglages.budgetHebdo} libelle="Budget de la semaine" />
-        {t.placard > 0 && <p className="mt-2 text-xs text-encre-3">+ {prix(t.placard)} de placard si tu dois tout racheter (non compté).</p>}
+        <Jauge valeur={engage} max={reglages.budgetHebdo} libelle="Budget de la semaine" />
+        {t.placard > 0 && <p className="mt-2 text-xs text-encre-2">Dont {prix(t.placard)} de placard : touche « J’en ai » sur ce que t’as déjà.</p>}
         {magasins && magasins.length > 1 && (
           <label className="mt-3 flex items-center gap-2 text-sm">
             <span className="text-encre-2">Prix pour</span>
@@ -92,10 +101,7 @@ export default function Liste() {
           <Bouton
             grand
             variante="orange"
-            onClick={async () => {
-              const r = await validerCourses(semaine)
-              setMessage(`Courses validées : ${r.articles} articles, ${prix(r.montant)}. Tout est rangé dans ton stock 🧺`)
-            }}
+            onClick={valider}
           >
             Valider les courses ({liste.items.filter((i) => i.coche).length})
           </Bouton>
@@ -145,7 +151,7 @@ function Coche({ coche, grand = false }: { coche: boolean; grand?: boolean }) {
       aria-hidden
       animate={coche && !reduit ? { scale: [1, 1.25, 1] } : { scale: 1 }}
       transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
-      className={`flex ${taille} shrink-0 items-center justify-center rounded-full border-2 ${coche ? 'border-vert bg-vert text-white' : 'border-encre-3'}`}
+      className={`flex ${taille} shrink-0 items-center justify-center rounded-full border-2 ${coche ? 'border-vert bg-vert text-sur-vert' : 'border-encre-3'}`}
     >
       {coche && (
         <svg viewBox="0 0 24 24" className="h-2/3 w-2/3" fill="none" stroke="currentColor" strokeWidth={3.5} strokeLinecap="round" strokeLinejoin="round">
@@ -184,13 +190,22 @@ function LigneArticle({ item: i, semaine }: { item: ItemListe; semaine: string }
             </span>
           </span>
         </button>
-        <div className="text-right">
+        <button
+          type="button"
+          className="min-h-11 text-right"
+          onClick={() => i.coche && setPrixOuvert(true)}
+          aria-label={i.coche ? `Saisir le prix payé pour ${i.nom}` : undefined}
+          disabled={!i.coche}
+        >
           <div className="font-bold">{prix(i.prixPaye ?? i.prixEstime)}</div>
-          <div className="text-[11px] text-encre-3">
-            {i.prixPaye !== undefined ? 'payé' : `${LIBELLE_SOURCE[i.sourcePrix]} · ${age(i.datePrix)}`}
-          </div>
-        </div>
+          <div className="text-xs text-encre-3">{i.prixPaye !== undefined ? 'payé' : sourceEtAge(i.sourcePrix, i.datePrix, i.detailPrix, age)}</div>
+        </button>
       </div>
+      {i.placard && !i.coche && (
+        <button type="button" onClick={() => jEnAiDeja(semaine, i)} className="mt-2 min-h-11 w-full rounded-full bg-surface-2 text-sm font-semibold">
+          J’en ai déjà (−{prix(i.prixEstime)})
+        </button>
+      )}
       {prixOuvert && i.coche && (
         <form
           className="mt-2 flex items-center gap-2"
@@ -283,7 +298,7 @@ function AjoutArticle({ semaine }: { semaine: string }) {
 }
 
 /** Mode magasin : gros boutons, écran qui reste allumé, 100 % hors ligne (tout est local). */
-function ModeMagasin({ items, semaine, onQuitter }: { items: ItemListe[]; semaine: string; onQuitter: () => void }) {
+function ModeMagasin({ items, semaine, onQuitter, onValider }: { items: ItemListe[]; semaine: string; onQuitter: () => void; onValider: () => void }) {
   useEffect(() => {
     let verrou: WakeLockSentinel | null = null
     const demander = async () => {
@@ -336,13 +351,25 @@ function ModeMagasin({ items, semaine, onQuitter }: { items: ItemListe[]; semain
                       {formatAchat(i.nbFormats, i.libelleFormat)}
                     </span>
                   </span>
-                  <span className="font-semibold">{prix(i.prixPaye ?? i.prixEstime)}</span>
+                  <span className="text-right">
+                    <span className="block font-semibold">{prix(i.prixPaye ?? i.prixEstime)}</span>
+                    <span className="block text-xs text-encre-3">{sourceEtAge(i.sourcePrix, i.datePrix, i.detailPrix, age)}</span>
+                  </span>
                 </button>
               </li>
             ))}
           </ul>
         </section>
       ))}
+      {items.some((i) => i.coche) && (
+        <div className="pb-safe fixed inset-x-0 bottom-0 z-20 bg-fond/95 px-4 pt-3 backdrop-blur">
+          <div className="mx-auto max-w-xl pb-2">
+            <Bouton grand variante="orange" onClick={onValider}>
+              Valider les courses ({items.filter((i) => i.coche).length} · {prix(t.coche)})
+            </Bouton>
+          </div>
+        </div>
+      )}
     </main>
   )
 }

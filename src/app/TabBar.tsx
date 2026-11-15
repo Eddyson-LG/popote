@@ -23,7 +23,7 @@ export function TabBar() {
               end={o.to === '/'}
               className={({ isActive }) =>
                 `flex min-h-12 flex-col items-center justify-center gap-0.5 rounded-2xl text-[11px] font-semibold ${
-                  isActive ? 'text-orange' : 'text-encre-3'
+                  isActive ? 'text-orange-texte' : 'text-encre-3'
                 }`
               }
             >

@@ -3,7 +3,8 @@ import { useLiveQuery } from 'dexie-react-hooks'
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { db } from '@/lib/db'
 import { chargerResolveurPrix } from '@/lib/contexte'
-import { cout } from '@/lib/prix'
+import { cout, sourceEtAge } from '@/lib/prix'
+import { age } from '@/lib/dates'
 import { assietteComplete } from '@/lib/assiette'
 import { prix, quantite } from '@/lib/format'
 import { Bouton, Carte, Page, Pastille, Vide } from '@/ui'
@@ -47,7 +48,7 @@ export default function FicheRecette() {
       <Carte className="mb-4">
         <div className="flex items-center justify-between">
           <div>
-            <div className="titre text-2xl font-extrabold text-orange">{prix(total)}</div>
+            <div className="titre text-2xl font-extrabold text-orange-texte">{prix(total)}</div>
             <div className="text-sm text-encre-2">
               soit {prix(total / portions)} la portion {estime && '· prix en partie estimés'}
             </div>
@@ -67,7 +68,14 @@ export default function FicheRecette() {
             <li key={i.alimentId} className="flex items-center gap-2 rounded-xl bg-surface px-3 py-2">
               <span aria-hidden>{al?.emoji}</span>
               <span className="flex-1">{al?.nom ?? i.alimentId}{i.optionnel && <span className="text-encre-3"> (facultatif)</span>}</span>
-              <span className="font-semibold">{quantite(i.quantite * f, i.unite)}</span>
+              <span className="text-right">
+                <span className="block font-semibold">{quantite(i.quantite * f, i.unite)}</span>
+                {al && resolveur(al.id) && (
+                  <span className="block text-xs text-encre-3">
+                    {prix(cout(i.quantite * f, al, resolveur(al.id)))} · {sourceEtAge(resolveur(al.id)!.source, resolveur(al.id)!.date, resolveur(al.id)!.detail, age)}
+                  </span>
+                )}
+              </span>
             </li>
           )
         })}

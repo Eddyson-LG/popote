@@ -87,6 +87,19 @@ export default function Swipe() {
     setIndex((i) => i + 1)
   }
 
+  // Clavier : mêmes gestes que le doigt (→ j'aime, ← j'aime pas, ↑ j'adore, ↓ jamais).
+  useEffect(() => {
+    const touche = (e: KeyboardEvent) => {
+      const v: Record<string, Verdict> = { ArrowRight: 'aime', ArrowLeft: 'pas-aime', ArrowUp: 'adore', ArrowDown: 'jamais' }
+      if (v[e.key] && !(e.target instanceof HTMLInputElement)) {
+        e.preventDefault()
+        voter(v[e.key])
+      }
+    }
+    window.addEventListener('keydown', touche)
+    return () => window.removeEventListener('keydown', touche)
+  })
+
   async function terminer() {
     if (premier) {
       setPlanification(true)
@@ -153,7 +166,7 @@ function BoutonVote({ label, emoji, onClick, ton }: { label: string; emoji: stri
       onClick={onClick}
       aria-label={label}
       className={`flex min-h-16 flex-col items-center justify-center rounded-2xl text-[11px] font-semibold shadow-carte transition-transform duration-100 active:scale-95 ${
-        ton === 'rouge' ? 'bg-rouge-doux text-rouge' : ton === 'orange' ? 'bg-orange text-white' : 'bg-surface text-encre'
+        ton === 'rouge' ? 'bg-rouge-doux text-rouge' : ton === 'orange' ? 'bg-orange text-sur-orange' : 'bg-surface text-encre'
       }`}
     >
       <span aria-hidden className="text-2xl">
@@ -196,7 +209,7 @@ function CarteDraggable({ carte, onVote }: { carte: CarteSwipe; onVote: (v: Verd
     () => [
       { o: aime, t: "J'AIME", c: 'text-vert border-vert left-6 top-6 -rotate-12' },
       { o: aimePas, t: 'BOF', c: 'text-encre-2 border-encre-2 right-6 top-6 rotate-12' },
-      { o: adore, t: "J'ADORE", c: 'text-orange border-orange left-1/2 -translate-x-1/2 bottom-8' },
+      { o: adore, t: "J'ADORE", c: 'text-orange-texte border-orange left-1/2 -translate-x-1/2 bottom-8' },
       { o: jamais, t: 'JAMAIS', c: 'text-rouge border-rouge left-1/2 -translate-x-1/2 top-8' },
     ],
     [aime, aimePas, adore, jamais],

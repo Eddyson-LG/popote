@@ -22,3 +22,7 @@ Chaque décision non couverte par le cahier des charges, avec l'option la plus s
 | 16 | Synchronisation | Reportée (documentée dans LIMITES.md) ; export/import JSON + AirDrop à la place | Un seul utilisateur, pas de compte ni de serveur à gérer en V1. |
 | 17 | HTTPS local | `npm run dev:iphone` (vite-plugin-mkcert) activé seulement par ce script | Le `npm run dev` classique reste simple ; la caméra iPhone exige HTTPS. |
 | 18 | OCR hors ligne | Le cœur WebAssembly de Tesseract (≈ 4 Mo) est précaché ; les données de langue (≈ 1,5 Mo) sont téléchargées à la 1ʳᵉ lecture puis gardées en local | Lire un ticket sans réseau après la première fois ; précache total ≈ 5,7 Mo, acceptable pour une PWA. |
+| 19 | Gnocchis et skyr | Gnocchis tagués « purée » (pâte de purée de pomme de terre), skyr tagué « fromage » (fromage frais au sens strict) ; les 2 recettes concernées passent aux pâtes et au yaourt grec | Lecture stricte du critère « aucune recette avec fromage ou purée », suite à la relecture. |
+| 20 | Budget et placard | Le total affiché et le contrôle du planning incluent le placard ; bouton « J’en ai déjà » pour retirer ce qu’on a | Le total doit être ce que coûte vraiment la course (relecture). |
+| 21 | Contraste | Orange de marque pour les fonds, orange foncé `#B93D0B` pour le texte, texte sombre sur les boutons orange | Tous les textes ≥ 4,5:1 (WCAG AA). |
+| 22 | Barre d’état iOS | `default` conservé | `black-translucent` donne un texte blanc, illisible sur le fond crème du mode clair. |

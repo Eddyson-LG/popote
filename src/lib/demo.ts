@@ -21,7 +21,10 @@ const GOUTS: [string, Verdict][] = [
 const FACTEUR: Record<string, number> = { lidl: 0.9, leclerc: 0.97, carrefour: 1.08 }
 
 export async function chargerDemo(): Promise<void> {
+  // La démo remplace les données, mais garde la clé API de l'utilisateur.
+  const avant = await db.reglages.get('moi')
   await reinitialiser()
+  if (avant?.cleApi) await db.reglages.update('moi', { cleApi: avant.cleApi, iaActive: avant.iaActive })
   const maintenant = new Date().toISOString()
   const aujourdhui = isoJour()
   const aliments = await db.aliments.toArray()

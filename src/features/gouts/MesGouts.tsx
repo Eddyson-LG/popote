@@ -73,7 +73,7 @@ export default function MesGouts() {
                           ) : (
                             <button type="button" onClick={() => setOuvert(g.id)} className="min-h-11 rounded-full bg-surface px-3 font-medium shadow-carte">
                               <span aria-hidden>{n?.emoji}</span> {n?.nom ?? g.refId}
-                              {g.note && <span className="ml-1 text-orange">{'★'.repeat(g.note)}</span>}
+                              {g.note && <span className="ml-1 text-orange-texte">{'★'.repeat(g.note)}</span>}
                             </button>
                           )}
                         </li>

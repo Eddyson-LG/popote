@@ -11,6 +11,31 @@ const base = process.env.VITE_BASE || '/'
 // `npm run dev:iphone` : HTTPS local (certificat mkcert) pour tester caméra et installation sur l'iPhone.
 const httpsLocal = process.env.POPOTE_HTTPS === '1'
 
+/**
+ * Content-Security-Policy, ajoutée seulement au build (en dev, Vite injecte des scripts en ligne).
+ * Seuls destinataires réseau : Anthropic (clé de l'utilisateur), Open Food Facts / Open Prices,
+ * et jsDelivr (données de langue de l'OCR Tesseract).
+ */
+const CSP = [
+  "default-src 'self'",
+  "script-src 'self' 'wasm-unsafe-eval' https://cdn.jsdelivr.net",
+  "worker-src 'self' blob:",
+  "connect-src 'self' https://api.anthropic.com https://*.openfoodfacts.org https://cdn.jsdelivr.net",
+  "img-src 'self' data: blob: https://*.openfoodfacts.org",
+  "style-src 'self' 'unsafe-inline'",
+  "font-src 'self'",
+  "media-src 'self' blob:",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+].join('; ')
+
+const csp = {
+  name: 'popote-csp',
+  apply: 'build' as const,
+  transformIndexHtml: (html: string) => html.replace('<meta charset="UTF-8" />', `<meta charset="UTF-8" />\n    <meta http-equiv="Content-Security-Policy" content="${CSP}" />`),
+}
+
 export default defineConfig({
   base,
   resolve: {
@@ -20,6 +45,7 @@ export default defineConfig({
   plugins: [
     ...(httpsLocal ? [mkcert()] : []),
     react(),
+    csp,
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',

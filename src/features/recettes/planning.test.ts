@@ -69,4 +69,9 @@ describe('planning sans IA', () => {
     expect(plan).toHaveLength(creneauxDeLaSemaine(reglages()).length)
     expect(plan.some((r) => r.recetteId === 'pates-thon')).toBe(false)
   })
+  it('ne planifie pas les jours déjà passés (milieu de semaine)', () => {
+    const plan = genererPlanning(ctx({ jourDebut: 2 }))
+    expect(plan.every((r) => r.jour >= 2)).toBe(true)
+    expect(plan.length).toBeGreaterThan(0)
+  })
 })

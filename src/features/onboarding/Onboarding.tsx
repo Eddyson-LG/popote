@@ -12,6 +12,9 @@ import { isoJour } from '@/lib/dates'
 import { JOURS_COURTS } from '@/lib/dates'
 import { Bouton } from '@/ui'
 import { chargerDemo } from '@/lib/demo'
+import { ALIMENTS } from '@/lib/seed'
+
+const NOMS = new Map(ALIMENTS.map((a) => [a.id, a]))
 
 const EQUIPEMENTS: { id: Equipement; label: string; emoji: string }[] = [
   { id: 'plaques', label: 'Plaques', emoji: '🔥' },
@@ -58,7 +61,10 @@ export default function Onboarding() {
   async function terminer() {
     const aliments = await db.aliments.bulkGet(placard)
     await db.transaction('rw', db.reglages, db.magasins, db.stock, async () => {
-      await db.reglages.put({ ...r, onboardingFait: true })
+      // update (et pas put) : on ne touche qu'aux réponses du questionnaire, pas à ce qu'ont écrit
+      // les autres modules entre-temps (date du rafraîchissement des prix, clé API, compteurs…).
+      const { budgetHebdo, creneaux, equipement, tempsMaxMinutes, exclusions, allergies, frequenceCourses } = r
+      await db.reglages.update('moi', { budgetHebdo, creneaux, equipement, tempsMaxMinutes, exclusions, allergies, frequenceCourses, onboardingFait: true })
       await db.magasins.clear()
       await db.magasins.bulkPut(magasins)
       await db.stock.bulkAdd(
@@ -93,7 +99,7 @@ export default function Onboarding() {
       sous: 'Je vais chercher à faire encore moins.',
       contenu: (
         <div className="mt-8 text-center">
-          <div className="titre text-7xl font-extrabold text-orange" aria-live="polite">
+          <div className="titre text-7xl font-extrabold text-orange-texte" aria-live="polite">
             {r.budgetHebdo} €
           </div>
           <input
@@ -104,7 +110,7 @@ export default function Onboarding() {
             value={r.budgetHebdo}
             onChange={(e) => maj({ budgetHebdo: Number(e.target.value) })}
             aria-label="Budget hebdomadaire en euros"
-            className="mt-6 w-full accent-[var(--c-orange)]"
+            className="mt-6 h-11 w-full accent-[var(--c-orange)]"
           />
         </div>
       ),
@@ -129,7 +135,7 @@ export default function Onboarding() {
                       aria-pressed={actif}
                       aria-label={`${label} ${j}`}
                       onClick={() => basculerJour(type, i as Jour)}
-                      className={`min-h-11 rounded-xl text-sm font-semibold ${actif ? 'bg-orange text-white' : 'bg-surface-2 text-encre-2'}`}
+                      className={`min-h-11 rounded-xl text-sm font-semibold ${actif ? 'bg-orange text-sur-orange' : 'bg-surface-2 text-encre-2'}`}
                     >
                       {j[0]}
                     </button>
@@ -269,7 +275,7 @@ export default function Onboarding() {
       sous: 'Je ne te le remettrai pas dans la liste.',
       contenu: (
         <Choix
-          options={PLACARD.map((id) => ({ id, label: id.replace(/-/g, ' ') }))}
+          options={PLACARD.map((id) => ({ id, label: `${NOMS.get(id)?.emoji ?? ''} ${NOMS.get(id)?.nom ?? id}` }))}
           valeurs={placard}
           onChange={setPlacard}
         />

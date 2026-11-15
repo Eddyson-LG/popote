@@ -76,7 +76,9 @@ export default function Semaine() {
     </Carte>
   )
 
-  const titreSemaine = decalage === 0 ? 'Cette semaine' : decalage === 1 ? 'Semaine pro' : `Semaine du ${semaine.split('-').reverse().slice(0, 2).join('/')}`
+  const jj = (iso: string) => iso.split('-').reverse().slice(0, 2).join('/')
+  const prefixe = semaine === lundiDe() ? 'Cette semaine · ' : semaine === ajouterJours(lundiDe(), 7) ? 'Semaine pro · ' : ''
+  const titreSemaine = `${prefixe}du ${jj(semaine)} au ${jj(ajouterJours(semaine, 6))}`
 
   return (
     <Page
@@ -116,8 +118,8 @@ export default function Semaine() {
               if (!duJour.length) return null
               return (
                 <section key={nomJour} aria-labelledby={`jour-${j}`}>
-                  <h2 id={`jour-${j}`} className={`mb-2 text-xl font-bold ${j === aujourdhui ? 'text-orange' : ''}`}>
-                    {nomJour} {j === aujourdhui && <span className="text-sm font-semibold">· aujourd’hui</span>}
+                  <h2 id={`jour-${j}`} className={`mb-2 text-xl font-bold ${j === aujourdhui ? 'text-orange-texte' : ''}`}>
+                    {nomJour} <span className="text-base font-normal text-encre-3">{jj(ajouterJours(semaine, j))}</span> {j === aujourdhui && <span className="text-sm font-semibold">· aujourd’hui</span>}
                   </h2>
                   <div className="space-y-2">
                     {duJour.map((r) => (
@@ -129,11 +131,11 @@ export default function Semaine() {
             })}
           </div>
           <div className="mt-8 flex flex-col gap-2">
-            <Link to="/vide-frigo" className="text-center font-semibold text-encre-2 underline-offset-4 hover:underline">🧺 Idées vide-frigo</Link>
+            <Link to="/vide-frigo" className="inline-flex min-h-11 items-center justify-center font-semibold text-encre-2 underline-offset-4 hover:underline">🧺 Idées vide-frigo</Link>
             <Bouton variante="doux" onClick={() => generer()} disabled={occupe}>
               {occupe ? 'Je cuisine ça…' : '🔄 Tout regénérer (sauf les verrouillés)'}
             </Bouton>
-            <Link to="/liste" className="text-center font-semibold text-orange underline-offset-4 hover:underline">
+            <Link to="/liste" className="inline-flex min-h-11 items-center justify-center font-semibold text-orange-texte underline-offset-4 hover:underline">
               Voir la liste de courses →
             </Link>
           </div>
@@ -169,7 +171,7 @@ function LigneRepas({ repas, recette }: { repas: Repas; recette?: Recette }) {
             {repas.restes && ' · restes'}
             {!repas.restes && repas.portions > 1 && ` · ${repas.portions} portions`}
           </span>
-          <span className="block truncate font-semibold">{recette?.nom ?? 'Recette supprimée'}</span>
+          <span className="line-clamp-2 block font-semibold leading-tight">{recette?.nom ?? 'Recette supprimée'}</span>
         </span>
       </Link>
       <div className="flex shrink-0 gap-1">
@@ -177,7 +179,7 @@ function LigneRepas({ repas, recette }: { repas: Repas; recette?: Recette }) {
           <button
             type="button"
             className="h-11 w-11 rounded-full bg-surface-2 text-lg disabled:opacity-40"
-            aria-label="Autre idée"
+            aria-label={`Autre idée à la place de ${recette?.nom ?? 'ce repas'}`}
             title="Autre idée"
             disabled={occupe || repas.verrouille}
             onClick={() => agir(() => changerRepas(repas))}
@@ -188,7 +190,7 @@ function LigneRepas({ repas, recette }: { repas: Repas; recette?: Recette }) {
         <button
           type="button"
           className={`h-11 w-11 rounded-full text-lg ${repas.verrouille ? 'bg-cta text-cta-texte' : 'bg-surface-2'}`}
-          aria-label={repas.verrouille ? 'Déverrouiller' : 'Verrouiller'}
+          aria-label={`${repas.verrouille ? 'Déverrouiller' : 'Verrouiller'} ${recette?.nom ?? 'ce repas'}`}
           aria-pressed={repas.verrouille}
           onClick={() => agir(() => verrouillerRepas(repas, !repas.verrouille))}
         >
@@ -196,8 +198,8 @@ function LigneRepas({ repas, recette }: { repas: Repas; recette?: Recette }) {
         </button>
         <button
           type="button"
-          className={`h-11 w-11 rounded-full text-lg ${repas.cuisine ? 'bg-vert text-white' : 'bg-surface-2'}`}
-          aria-label={repas.cuisine ? 'Marqué cuisiné (annuler)' : 'Marquer cuisiné'}
+          className={`h-11 w-11 rounded-full text-lg ${repas.cuisine ? 'bg-vert text-sur-vert' : 'bg-surface-2'}`}
+          aria-label={`${recette?.nom ?? 'Repas'} : ${repas.cuisine ? 'cuisiné (annuler)' : 'marquer cuisiné'}`}
           aria-pressed={repas.cuisine}
           disabled={occupe}
           onClick={() => agir(() => marquerCuisine(repas, !repas.cuisine))}

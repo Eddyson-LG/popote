@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import type { Produit, StockItem } from '@/types'
 import { PAR_ID } from '@/test/fixtures'
 import {
+  quantiteEnUniteBase,
   aConsommerVite,
   emplacementPourAliment,
   emplacementPourCategorie,
@@ -82,4 +83,11 @@ describe('valeurs par défaut', () => {
     const sansQ: Produit = { codeBarres: '2', nom: 'Truc', source: 'manuel', majLe: '' }
     expect(itemDepuisProduit(sansQ, undefined, AUJ)).toMatchObject({ quantite: 1, unite: 'piece', emplacement: 'placard' })
   })
+})
+
+describe('quantité en unité de base (produits scannés)', () => {
+  const produit = (q?: { quantite: number; unite: 'g' | 'ml' | 'piece' }) => ({ codeBarres: '1', nom: 'x', source: 'manuel' as const, majLe: '', quantiteNormalisee: q })
+  it('garde la quantité si les unités concordent', () => expect(quantiteEnUniteBase(produit({ quantite: 500, unite: 'g' }), PAR_ID.get('pates'))).toEqual({ quantite: 500, unite: 'g' }))
+  it('prend le format de vente si la contenance est inconnue', () => expect(quantiteEnUniteBase(produit(), PAR_ID.get('pates'))).toEqual({ quantite: PAR_ID.get('pates')!.formatVente.quantite, unite: 'g' }))
+  it('convertit un poids en pièces', () => expect(quantiteEnUniteBase(produit({ quantite: 1000, unite: 'g' }), PAR_ID.get('pomme')).unite).toBe('piece'))
 })

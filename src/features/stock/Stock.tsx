@@ -203,7 +203,7 @@ function LigneStock({ item: i, aliment, aujourdhui }: { item: StockItem; aliment
                 role="radio"
                 aria-checked={i.emplacement === e}
                 onClick={() => majStock(id, { emplacement: e })}
-                className={`min-h-11 rounded-xl px-2 text-sm font-semibold ${i.emplacement === e ? 'bg-orange text-white' : 'bg-surface-2 text-encre'}`}
+                className={`min-h-11 rounded-xl px-2 text-sm font-semibold ${i.emplacement === e ? 'bg-orange text-sur-orange' : 'bg-surface-2 text-encre'}`}
               >
                 <span aria-hidden>{EMPLACEMENT_LIBELLES[e].emoji}</span> {EMPLACEMENT_LIBELLES[e].nom}
               </button>

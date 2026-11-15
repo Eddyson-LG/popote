@@ -78,11 +78,16 @@ export default function Prix() {
                   <span className="flex-1 font-semibold">
                     {t.magasin.enseigne} {t.magasin.ville && <span className="font-normal text-encre-3">· {t.magasin.ville}</span>}
                   </span>
-                  <span className="text-xs text-encre-3">{Math.round(t.couverture * 100)} % prix du magasin</span>
-                  <span className={`titre text-xl font-extrabold ${i === 0 ? 'text-orange' : ''}`}>{prix(t.total)}</span>
+                  <span className="text-right text-xs text-encre-3">
+                    {Math.round(t.couverture * 100)} % prix du magasin
+                    <br />
+                    {t.datePlusAncienne ? `constatés, le plus vieux ${age(t.datePlusAncienne)}` : 'reste estimé'}
+                  </span>
+                  <span className={`titre text-xl font-extrabold ${i === 0 ? 'text-orange-texte' : ''}`}>{prix(t.total)}</span>
                 </li>
               ))}
             </ul>
+            <p className="mt-2 text-xs text-encre-3">Les articles sans prix du magasin sont estimés ; chaque article affiche sa source et son âge dans la liste.</p>
             {couvertureMax < 0.2 && (
               <p className="mt-3 text-sm text-encre-2">
                 Pour l’instant je connais peu de vrais prix dans tes magasins, donc les totaux se ressemblent. Scanne un ticket après tes courses : je saurai où c’est moins cher.
@@ -211,7 +216,7 @@ function Promos({ promos, alimentsParId }: { promos: import('@/types').Promo[]; 
           {promos.map((p) => (
             <li key={p.id} className="flex items-center gap-2 text-sm">
               <span className="flex-1">{alimentsParId.get(p.alimentId ?? '')?.emoji} {p.libelle} · {magasins?.find((m) => m.id === p.magasinId)?.enseigne}</span>
-              <strong className="text-orange">{prix(p.prix)}</strong>
+              <strong className="text-orange-texte">{prix(p.prix)}</strong>
               <Pastille>jusqu’au {p.fin.split('-').reverse().slice(0, 2).join('/')}</Pastille>
               <button type="button" aria-label={`Supprimer la promo ${p.libelle}`} className="h-11 w-11 text-encre-3" onClick={() => db.promos.delete(p.id!)}>✕</button>
             </li>

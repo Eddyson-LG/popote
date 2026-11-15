@@ -11,14 +11,7 @@ import prixRef from './prix-reference.json'
 import contrat from './contrat-aliments.json'
 import { zAliment, zFichierPrixReference, zRecette } from '@/types/schemas'
 
-/** Mots interdits dans le nom, les étapes ou les ingrédients d'une recette. */
-const INTERDITS = [
-  /fromage/i, /gruy[eè]re/i, /emmental/i, /parmesan/i, /comt[eé]/i, /mozzarella/i, /ch[eè]vre/i,
-  /feta/i, /f[eé]ta/i, /raclette/i, /cheddar/i, /roquefort/i, /camembert/i, /brie\b/i, /ricotta/i,
-  /mascarpone/i, /burrata/i, /reblochon/i, /bleu d/i, /r[aâ]p[eé] (?:de )?fromage/i, /gratin/i,
-  /pur[eé]e/i, /soupe/i, /velout[eé]/i, /potage/i, /bouillon de l[eé]gumes en soupe/i, /gaspacho/i,
-  /cr[eè]me de (?:l[eé]gumes|potiron|courge)/i,
-]
+import { MOTS_INTERDITS as INTERDITS } from '@/lib/interdits'
 
 describe('aliments.json', () => {
   it('respecte le format', () => {

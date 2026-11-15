@@ -4,6 +4,7 @@ import { initialiserBase } from '@/lib/seed'
 import { useReglages } from '@/lib/hooks'
 import { TabBar } from './TabBar'
 import { demarrerRafraichissement } from '@/features/prix/rafraichir'
+import { notifierAlertes } from '@/features/suivi/notifications'
 
 // Chaque écran est chargé à la demande (démarrage plus rapide sur iPhone).
 const Accueil = lazy(() => import('@/features/accueil/Accueil'))
@@ -16,6 +17,7 @@ const MesGouts = lazy(() => import('@/features/gouts/MesGouts'))
 const Stock = lazy(() => import('@/features/stock/Stock'))
 const Tickets = lazy(() => import('@/features/tickets/Tickets'))
 const Prix = lazy(() => import('@/features/prix/Prix'))
+const Economies = lazy(() => import('@/features/suivi/Economies'))
 const Onboarding = lazy(() => import('@/features/onboarding/Onboarding'))
 
 function Chargement() {
@@ -49,6 +51,7 @@ function Routeur() {
         <Route path="/plus/stock" element={<Stock />} />
         <Route path="/plus/tickets" element={<Tickets />} />
         <Route path="/plus/prix" element={<Prix />} />
+        <Route path="/plus/economies" element={<Economies />} />
         <Route path="/plus/*" element={<Plus />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
@@ -67,6 +70,7 @@ export function App() {
         setPret(true)
         // Prix : rafraîchis à l'ouverture si le réseau est là, puis périodiquement.
         demarrerRafraichissement()
+        notifierAlertes().catch(() => {})
       })
       .catch((e: unknown) => setErreur(e instanceof Error ? e.message : String(e)))
   }, [])

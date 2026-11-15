@@ -21,3 +21,4 @@ Chaque décision non couverte par le cahier des charges, avec l'option la plus s
 | 15 | Économies | (prix d'un repas dehors − coût de la portion maison) × déjeuners/dîners/gamelles cuisinés | Simple et parlant ; les petits-déj et goûters ne remplacent pas un achat dehors. |
 | 16 | Synchronisation | Reportée (documentée dans LIMITES.md) ; export/import JSON + AirDrop à la place | Un seul utilisateur, pas de compte ni de serveur à gérer en V1. |
 | 17 | HTTPS local | `npm run dev:iphone` (vite-plugin-mkcert) activé seulement par ce script | Le `npm run dev` classique reste simple ; la caméra iPhone exige HTTPS. |
+| 18 | OCR hors ligne | Le cœur WebAssembly de Tesseract (≈ 4 Mo) est précaché ; les données de langue (≈ 1,5 Mo) sont téléchargées à la 1ʳᵉ lecture puis gardées en local | Lire un ticket sans réseau après la première fois ; précache total ≈ 5,7 Mo, acceptable pour une PWA. |

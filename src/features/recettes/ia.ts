@@ -265,7 +265,7 @@ export function videFrigoRegles(recettes: Recette[], stock: StockItem[], aliment
   const bientot = new Set(stock.filter((s) => s.alimentId && s.peremption && s.peremption <= ajouterJours(aujourdhui, 3)).map((s) => s.alimentId!))
   return recettes
     .map((r) => {
-      const utiles = r.ingredients.filter((i) => !['epice-herbe', 'condiment', 'matiere-grasse'].includes(alimentsParId.get(i.alimentId)?.categorie ?? ''))
+      const utiles = r.ingredients.filter((i) => !['epice-herbe', 'condiment', 'matiere-grasse', 'sucre'].includes(alimentsParId.get(i.alimentId)?.categorie ?? ''))
       const dispo = utiles.filter((i) => enStock.has(i.alimentId))
       const manque = utiles.filter((i) => !enStock.has(i.alimentId)).map((i) => i.alimentId)
       const urgent = utiles.filter((i) => bientot.has(i.alimentId)).length

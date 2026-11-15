@@ -23,7 +23,7 @@ export default function Accueil() {
   const d = useLiveQuery(async () => {
     const aujourdhui = isoJour()
     const [repas, liste, stock, promos, gouts, recettes, aliments] = await Promise.all([
-      db.repas.where('semaine').anyOf(semaine, ajouterJours(semaine, -7)).toArray(),
+      db.repas.where('semaine').anyOf(semaine, ajouterJours(semaine, -7), active).toArray(),
       db.listes.get(active),
       db.stock.toArray(),
       db.promos.where('fin').aboveOrEqual(aujourdhui).toArray(),
@@ -35,14 +35,21 @@ export default function Accueil() {
     const a = new Map(aliments.map((x) => [x.id, x]))
     const g = new Map(gouts.map((x) => [x.id, x]))
     const ORDRE = ['petit-dejeuner', 'dejeuner', 'gouter', 'diner', 'gamelle']
-    const duJour = repas.filter((x) => x.semaine === semaine && x.jour === jourDe()).sort((x, y) => ORDRE.indexOf(x.type) - ORDRE.indexOf(y.type))
+    const trier = (t: typeof repas) => t.sort((x, y) => ORDRE.indexOf(x.type) - ORDRE.indexOf(y.type))
+    let duJour = trier(repas.filter((x) => x.semaine === semaine && x.jour === jourDe()))
+    let demain = false
+    // Le dimanche, la semaine active est la suivante : on montre ce qui est prévu demain.
+    if (!duJour.length && active !== semaine) {
+      duJour = trier(repas.filter((x) => x.semaine === active && x.jour === 0))
+      demain = duJour.length > 0
+    }
     const bientot = stock.filter((s) => s.peremption && s.peremption <= ajouterJours(aujourdhui, 3)).sort((x, y) => x.peremption!.localeCompare(y.peremption!))
     const promosAimees = promos.filter((p) => p.alimentId && (g.get(`aliment:${p.alimentId}`)?.score ?? 0) > 0.2)
     // « T'as aimé ? » : repas cuisinés avant aujourd'hui, recette pas encore notée.
     const aNoter = repas
       .filter((x) => x.cuisine && !x.restes && x.cuisineLe && x.cuisineLe.slice(0, 10) < aujourdhui && !g.get(`recette:${x.recetteId}`)?.note)
       .slice(0, 1)
-    return { duJour, liste, bientot, promosAimees, aNoter, r, a }
+    return { duJour, demain, liste, bientot, promosAimees, aNoter, r, a }
   }, [semaine, active])
 
   if (!reglages || !d) return null
@@ -72,7 +79,7 @@ export default function Accueil() {
         )
       })}
 
-      <h2 className="mb-2 text-xl font-bold">Au menu aujourd’hui</h2>
+      <h2 className="mb-2 text-xl font-bold">{d.demain ? 'Au menu demain' : 'Au menu aujourd’hui'}</h2>
       {d.duJour.length === 0 ? (
         <Carte className="mb-6">
           <p className="text-encre-2">Rien de prévu.</p>

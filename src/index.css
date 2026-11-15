@@ -1,0 +1,135 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/bricolage-grotesque';
+@import '@fontsource-variable/inter';
+
+/*
+ * Design tokens Popote.
+ * Les couleurs sont des variables CSS : le mode sombre (automatique, selon iOS)
+ * les redéfinit, et Tailwind les expose en classes (bg-fond, text-encre, bg-orange…).
+ */
+:root {
+  --c-fond: #fff8f1;
+  --c-surface: #ffffff;
+  --c-surface-2: #fdeee0;
+  --c-encre: #1c1917;
+  --c-encre-2: #57534e;
+  --c-encre-3: #a8a29e;
+  --c-trait: #f1e4d6;
+  --c-orange: #ff6b1a;
+  --c-orange-doux: #ffe3d1;
+  --c-vert: #16a34a;
+  --c-vert-doux: #dcfce7;
+  --c-rouge: #e5484d;
+  --c-rouge-doux: #ffe4e4;
+  --c-cta: #1c1917;
+  --c-cta-texte: #fff8f1;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-fond: #16120f;
+    --c-surface: #221c18;
+    --c-surface-2: #2c241e;
+    --c-encre: #faf5f0;
+    --c-encre-2: #c9bfb6;
+    --c-encre-3: #8a7f76;
+    --c-trait: #3a302a;
+    --c-orange: #ff7a2e;
+    --c-orange-doux: #43271a;
+    --c-vert: #4ade80;
+    --c-vert-doux: #163323;
+    --c-rouge: #ff6b6f;
+    --c-rouge-doux: #3d1d1f;
+    --c-cta: #faf5f0;
+    --c-cta-texte: #16120f;
+    color-scheme: dark;
+  }
+}
+
+@theme {
+  --color-fond: var(--c-fond);
+  --color-surface: var(--c-surface);
+  --color-surface-2: var(--c-surface-2);
+  --color-encre: var(--c-encre);
+  --color-encre-2: var(--c-encre-2);
+  --color-encre-3: var(--c-encre-3);
+  --color-trait: var(--c-trait);
+  --color-orange: var(--c-orange);
+  --color-orange-doux: var(--c-orange-doux);
+  --color-vert: var(--c-vert);
+  --color-vert-doux: var(--c-vert-doux);
+  --color-rouge: var(--c-rouge);
+  --color-rouge-doux: var(--c-rouge-doux);
+  --color-cta: var(--c-cta);
+  --color-cta-texte: var(--c-cta-texte);
+
+  --font-titre: 'Bricolage Grotesque Variable', ui-rounded, system-ui, sans-serif;
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --radius-carte: 1.5rem;
+  --shadow-carte: 0 1px 2px rgb(28 25 23 / 0.04), 0 8px 24px rgb(28 25 23 / 0.06);
+  --ease-ressort: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background: var(--c-fond);
+  color: var(--c-encre);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+h1,
+h2,
+h3,
+.titre {
+  font-family: var(--font-titre);
+  letter-spacing: -0.02em;
+}
+
+/* Pas de zoom iOS sur les champs : 16 px minimum. */
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Hover uniquement sur les appareils qui en ont vraiment un. */
+@custom-variant hover (@media (hover: hover) and (pointer: fine) { &:hover });
+
+/* Safe areas (encoche, Dynamic Island, barre home). */
+.pt-safe {
+  padding-top: max(env(safe-area-inset-top), 0.75rem);
+}
+.pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom), 0.5rem);
+}
+
+:focus-visible {
+  outline: 3px solid var(--c-orange);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

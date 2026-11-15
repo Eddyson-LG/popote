@@ -1,0 +1,3 @@
+[
+  { "id": "riz-saute-oeuf-carotte", "nom": "Riz sauté œuf-carotte", "emoji": "🍳", "types": ["diner", "gamelle", "dejeuner"], "tempsMinutes": 20, "portions": 2, "ingredients": [ { "alimentId": "riz-blanc", "quantite": 150, "unite": "g" }, { "alimentId": "oeuf", "quantite": 2, "unite": "piece" }, { "alimentId": "carotte", "quantite": 200, "unite": "g" } ], "etapes": ["Cuis le riz.", "Râpe les carottes et fais-les revenir 5 min.", "Ajoute le riz puis les œufs battus, mélange 2 min."], "equipement": ["plaques"], "gamelle": true, "batch": true, "peuSucre": true, "tags": ["rapide"], "source": "base" }
+]

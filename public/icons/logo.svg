@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Popote">
+  <!-- Logo provisoire : une marmite orange stylisée (remplacé par le module identité). -->
+  <rect width="512" height="512" rx="112" fill="#FF6B1A"/>
+  <path d="M136 232h240v72c0 66-54 112-120 112s-120-46-120-112z" fill="#FFF8F1"/>
+  <rect x="112" y="208" width="288" height="36" rx="18" fill="#FFF8F1"/>
+  <rect x="226" y="164" width="60" height="30" rx="15" fill="#FFF8F1"/>
+  <path d="M206 128c-10-14 10-26 0-40M256 124c-10-14 10-26 0-40M306 128c-10-14 10-26 0-40" stroke="#FFF8F1" stroke-width="14" stroke-linecap="round" fill="none"/>
+</svg>

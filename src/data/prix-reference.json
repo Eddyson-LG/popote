@@ -1,0 +1,5 @@
+{ "dateReference": "2026-11-01", "source": "Données provisoires (seront remplacées)", "prix": [
+  { "alimentId": "riz-blanc", "prixUnitaire": 1.6, "unitePrix": "kg" },
+  { "alimentId": "oeuf", "prixUnitaire": 0.3, "unitePrix": "piece" },
+  { "alimentId": "carotte", "prixUnitaire": 1.3, "unitePrix": "kg" }
+] }

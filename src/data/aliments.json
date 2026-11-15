@@ -1,0 +1,5 @@
+[
+  { "id": "riz-blanc", "nom": "Riz blanc", "emoji": "🍚", "categorie": "feculent", "rayon": "epicerie-salee", "uniteBase": "g", "formatVente": { "quantite": 1000, "libelle": "paquet de 1 kg" }, "saisons": [], "tags": [], "conservationJours": 365 },
+  { "id": "oeuf", "nom": "Œuf", "emoji": "🥚", "categorie": "proteine-animale", "rayon": "frais", "uniteBase": "piece", "formatVente": { "quantite": 6, "libelle": "boîte de 6" }, "poidsPieceG": 60, "saisons": [], "tags": ["oeuf"], "conservationJours": 28 },
+  { "id": "carotte", "nom": "Carotte", "emoji": "🥕", "categorie": "legume", "rayon": "fruits-legumes", "uniteBase": "g", "formatVente": { "quantite": 1000, "libelle": "sachet de 1 kg" }, "saisons": [], "tags": [], "conservationJours": 21 }
+]

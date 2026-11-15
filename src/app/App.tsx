@@ -18,6 +18,7 @@ const Stock = lazy(() => import('@/features/stock/Stock'))
 const Tickets = lazy(() => import('@/features/tickets/Tickets'))
 const Prix = lazy(() => import('@/features/prix/Prix'))
 const Economies = lazy(() => import('@/features/suivi/Economies'))
+const VideFrigo = lazy(() => import('@/features/recettes/VideFrigo'))
 const Onboarding = lazy(() => import('@/features/onboarding/Onboarding'))
 
 function Chargement() {
@@ -51,6 +52,7 @@ function Routeur() {
         <Route path="/plus/stock" element={<Stock />} />
         <Route path="/plus/tickets" element={<Tickets />} />
         <Route path="/plus/prix" element={<Prix />} />
+        <Route path="/vide-frigo" element={<VideFrigo />} />
         <Route path="/plus/economies" element={<Economies />} />
         <Route path="/plus/*" element={<Plus />} />
         <Route path="*" element={<Navigate to="/" replace />} />

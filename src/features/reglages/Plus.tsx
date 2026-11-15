@@ -3,6 +3,7 @@ import { Page } from '@/ui'
 
 const ENTREES = [
   { to: '/plus/stock', emoji: '🧺', titre: 'Stock', sous: 'Frigo, congélo, placards' },
+  { to: '/plus/tickets', emoji: '🧾', titre: 'Scanner un ticket', sous: 'Tes vrais prix, sans rien taper' },
   { to: '/plus/prix', emoji: '🏷️', titre: 'Prix et comparateur', sous: 'Où ta liste coûte le moins cher' },
   { to: '/plus/economies', emoji: '💰', titre: 'Économies', sous: 'Gamelles vs sandwichs' },
   { to: '/plus/gouts', emoji: '😍', titre: 'Mes goûts', sous: 'J’adore, j’aime, jamais' },

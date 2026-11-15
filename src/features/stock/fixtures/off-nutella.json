@@ -1,0 +1,20 @@
+{
+  "code": "3017624010701",
+  "errors": [],
+  "warnings": [],
+  "status": "success",
+  "result": { "id": "product_found", "name": "Product found", "lc_name": "Product found" },
+  "product": {
+    "code": "3017624010701",
+    "product_name": "Nutella",
+    "brands": "Ferrero, Nutella",
+    "image_front_small_url": "https://images.openfoodfacts.org/images/products/301/762/401/0701/front_fr.200.jpg",
+    "image_front_url": "https://images.openfoodfacts.org/images/products/301/762/401/0701/front_en.100.400.jpg",
+    "nutriscore_grade": "e",
+    "categories_tags": ["en:breakfasts", "en:spreads", "en:sweet-spreads", "fr:pates-a-tartiner", "en:hazelnut-spreads"],
+    "categories_tags_fr": ["Petit-déjeuners", "Produits à tartiner", "Produits à tartiner sucrés", "Pâtes à tartiner", "Pâtes à tartiner aux noisettes"],
+    "quantity": "400.0 g",
+    "product_quantity": 400,
+    "product_quantity_unit": "g"
+  }
+}

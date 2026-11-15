@@ -354,6 +354,8 @@ export interface ListeCourses {
   magasinId?: string
   /** Liste validée (courses faites) : alimente le stock et l'historique. */
   validee: boolean
+  /** Substitutions choisies par l'utilisateur : alimentId d'origine → alimentId de remplacement. */
+  substitutions?: Record<string, string>
 }
 
 // ─────────────────────────── Suivi ───────────────────────────

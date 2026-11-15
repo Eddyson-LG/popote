@@ -40,3 +40,11 @@ export function age(isoDate: string, maintenant: Date = new Date()): string {
   if (mois < 12) return `il y a ${mois} mois`
   return `il y a ${Math.floor(mois / 12)} an${mois >= 24 ? 's' : ''}`
 }
+
+/**
+ * Semaine « de travail » de l'appli : la semaine en cours, sauf le dimanche
+ * où l'on prépare déjà la semaine suivante (jour classique de courses).
+ */
+export function semaineActive(d: Date = new Date()): string {
+  return jourDe(d) === 6 ? ajouterJours(lundiDe(d), 7) : lundiDe(d)
+}

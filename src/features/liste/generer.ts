@@ -22,6 +22,8 @@ export interface ContexteListe {
   reglages: Reglages
   magasinId?: string
   maintenant?: Date
+  /** alimentId d'origine → remplaçant moins cher choisi par l'utilisateur. */
+  substitutions?: Record<string, string>
 }
 
 /** Besoins agrégés par aliment pour les repas non cuisinés (les restes ne coûtent rien de plus). */
@@ -117,6 +119,14 @@ export function trierParRayon(items: ItemListe[]): ItemListe[] {
 
 export function genererListe(ctx: ContexteListe): ItemListe[] {
   const besoins = besoinsDuPlanning(ctx)
+  for (const [de, vers] of Object.entries(ctx.substitutions ?? {})) {
+    const q = besoins.get(de)
+    const a = ctx.alimentsParId.get(de)
+    const b = ctx.alimentsParId.get(vers)
+    if (q === undefined || !a || !b || a.uniteBase !== b.uniteBase) continue
+    besoins.delete(de)
+    besoins.set(vers, (besoins.get(vers) ?? 0) + q)
+  }
   const stock = quantitesEnStock(ctx.stock, ctx.alimentsParId)
   const items = new Map<string, ItemListe>()
 

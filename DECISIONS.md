@@ -12,3 +12,7 @@ Chaque décision non couverte par le cahier des charges, avec l'option la plus s
 | 6 | Unités | Quantités en `g`, `ml` ou `piece` ; prix en €/kg, €/L ou €/pièce | Trois unités suffisent pour arrondir aux formats vendus et comparer les prix. |
 | 7 | Villes des magasins | Laissées vides par défaut, demandées dans le questionnaire | On ne devine pas l'emplacement des magasins de l'utilisateur. |
 | 8 | TypeScript | TypeScript 7 (dernière version au moment du projet) | Installé par défaut par npm ; le typecheck passe. |
+| 9 | Semaine planifiée le dimanche | Le dimanche, planning et liste portent sur la semaine suivante | Jour de courses classique ; planifier une semaine qui se termine n'a pas de sens. |
+| 10 | Produits de placard | Huile, sel, épices, condiments affichés à part (« vérifie si t'en as ») et hors du total principal | Sinon la 1ʳᵉ liste compterait ~20 € de produits qui durent des mois ; le questionnaire demande ce qui est déjà au placard. |
+| 11 | Contrat d'identifiants d'aliments | `src/data/contrat-aliments.json` fixe ids + unités, partagé par les fichiers de données | Permet de générer aliments, recettes et prix en parallèle et de vérifier leur cohérence par test. |
+| 12 | Pesto | Tagué `fromage` (contient du parmesan) donc exclu par défaut | « Fromage sous toutes ses formes, y compris dans un plat ». |

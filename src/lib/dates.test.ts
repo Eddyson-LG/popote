@@ -20,3 +20,11 @@ describe('dates', () => {
     expect(age('2026-09-01T08:00:00', now)).toBe('il y a 2 mois')
   })
 })
+
+import { semaineActive } from './dates'
+describe('semaine active', () => {
+  it('passe à la semaine suivante le dimanche', () => {
+    expect(semaineActive(new Date(2026, 10, 15))).toBe('2026-11-16')
+    expect(semaineActive(new Date(2026, 10, 14))).toBe('2026-11-09')
+  })
+})

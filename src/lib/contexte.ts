@@ -5,7 +5,7 @@
 import prixRef from '@/data/prix-reference.json'
 import type { Aliment, CibleGout, FichierPrixReference, Gout, ListeCourses, PrixAffiche, Repas, Verdict } from '@/types'
 import { db } from './db'
-import { ajouterJours, isoJour, lundiDe } from './dates'
+import { ajouterJours, isoJour, semaineActive } from './dates'
 import { meilleurPrix, type ResolveurPrix } from './prix'
 import { calculerScore, cleGout, type CarteGouts } from './scoring'
 import { autreIdee, coutPortion, genererPlanning, graine, normaliserRestes, type ContextePlanning } from '@/features/recettes/planning'
@@ -129,7 +129,7 @@ async function contextePlanning(semaine: string, aleatoire: () => number): Promi
  * Génère le planning de la semaine, puis vérifie le budget : tant que la liste dépasse,
  * on remplace le plat le plus cher par une alternative (au plus 12 essais).
  */
-export async function planifierSemaine(semaine = lundiDe(), seed = Date.now()): Promise<Repas[]> {
+export async function planifierSemaine(semaine = semaineActive(), seed = Date.now()): Promise<Repas[]> {
   const aleatoire = graine(seed)
   const ctx = await contextePlanning(semaine, aleatoire)
   let plan = normaliserRestes(genererPlanning(ctx))
@@ -189,7 +189,7 @@ export async function choisirRecette(repas: Repas, recetteId: string): Promise<v
  * Recalcule la liste de la semaine en conservant ce qui a déjà été coché,
  * les prix payés et les articles ajoutés à la main.
  */
-export async function regenererListe(semaine = lundiDe(), magasinId?: string): Promise<ListeCourses> {
+export async function regenererListe(semaine = semaineActive(), magasinId?: string): Promise<ListeCourses> {
   const [repas, recettes, aliments, stock, achats, prix, gouts, reglages, existante] = await Promise.all([
     db.repas.where('semaine').equals(semaine).toArray(),
     db.recettes.toArray(),
@@ -213,6 +213,7 @@ export async function regenererListe(semaine = lundiDe(), magasinId?: string): P
     gouts,
     reglages,
     magasinId: magasin,
+    substitutions: existante?.substitutions,
   })
   const anciens = new Map((existante?.items ?? []).map((i) => [i.id, i]))
   const fusion = items.map((i) => {
@@ -228,7 +229,104 @@ export async function regenererListe(semaine = lundiDe(), magasinId?: string): P
     items: [...fusion, ...manuels],
     magasinId: magasin,
     validee: existante?.validee ?? false,
+    substitutions: existante?.substitutions,
   }
   await db.listes.put(liste)
   return liste
+}
+
+/** Marque un repas comme cuisiné : décrémente le stock des ingrédients utilisés. */
+export async function marquerCuisine(repas: Repas, cuisine = true): Promise<void> {
+  const rec = await db.recettes.get(repas.recetteId)
+  await db.transaction('rw', db.repas, db.stock, async () => {
+    await db.repas.update(repas.id, { cuisine, cuisineLe: cuisine ? new Date().toISOString() : undefined })
+    // Les restes ne consomment rien : c'est la préparation d'origine qui a tout utilisé.
+    if (!cuisine || !rec || repas.restes) return
+    const facteur = repas.portions / rec.portions
+    for (const ing of rec.ingredients) {
+      let besoin = ing.quantite * facteur
+      const lignes = (await db.stock.where('alimentId').equals(ing.alimentId).toArray())
+        .filter((s) => s.unite === ing.unite)
+        .sort((a, b) => (a.peremption ?? '9999').localeCompare(b.peremption ?? '9999'))
+      for (const l of lignes) {
+        if (besoin <= 0) break
+        const pris = Math.min(l.quantite, besoin)
+        besoin -= pris
+        if (l.quantite - pris <= 0.001) await db.stock.delete(l.id!)
+        else await db.stock.update(l.id!, { quantite: l.quantite - pris })
+      }
+    }
+  })
+}
+
+export async function verrouillerRepas(repas: Repas, verrouille: boolean): Promise<void> {
+  await db.repas.update(repas.id, { verrouille })
+}
+
+/** Remplace un article par un autre aliment moins cher, et recalcule la liste. */
+export async function substituer(semaine: string, de: string, vers: string): Promise<void> {
+  const l = await db.listes.get(semaine)
+  if (!l) return
+  await db.listes.update(semaine, { substitutions: { ...(l.substitutions ?? {}), [de]: vers } })
+  await regenererListe(semaine)
+}
+
+/** Ajoute un article à la main. */
+export async function ajouterArticle(semaine: string, alimentId: string): Promise<void> {
+  const [l, a] = await Promise.all([db.listes.get(semaine), db.aliments.get(alimentId)])
+  if (!l || !a) return
+  if (l.items.some((i) => i.id === a.id)) return
+  const resolveur = await chargerResolveurPrix()
+  const p = resolveur(a.id, l.magasinId)
+  const { cout } = await import('./prix')
+  await db.listes.update(semaine, {
+    items: [
+      ...l.items,
+      {
+        id: a.id, alimentId: a.id, nom: a.nom, emoji: a.emoji, rayon: a.rayon, quantiteBesoin: a.formatVente.quantite, unite: a.uniteBase,
+        nbFormats: 1, libelleFormat: a.formatVente.libelle, prixEstime: Math.round(cout(a.formatVente.quantite, a, p) * 100) / 100,
+        sourcePrix: p?.source ?? 'estimation', datePrix: p?.date ?? new Date(0).toISOString(), magasinId: l.magasinId, raison: 'manuel', coche: false,
+      },
+    ],
+  })
+}
+
+export async function majArticle(semaine: string, id: string, changement: Partial<import('@/types').ItemListe>): Promise<void> {
+  const l = await db.listes.get(semaine)
+  if (!l) return
+  await db.listes.update(semaine, { items: l.items.map((i) => (i.id === id ? { ...i, ...changement } : i)), majLe: new Date().toISOString() })
+}
+
+/**
+ * Valide les courses : les articles cochés partent dans le stock, les achats et les prix payés
+ * alimentent l'historique et les goûts, et la dépense est enregistrée.
+ */
+export async function validerCourses(semaine: string): Promise<{ montant: number; articles: number }> {
+  const l = await db.listes.get(semaine)
+  if (!l) return { montant: 0, articles: 0 }
+  const coches = l.items.filter((i) => i.coche)
+  const maintenant = new Date().toISOString()
+  const aliments = new Map((await db.aliments.bulkGet(coches.map((i) => i.alimentId ?? ''))).filter(Boolean).map((a) => [a!.id, a!]))
+  let montant = 0
+  await db.transaction('rw', [db.stock, db.achats, db.prix, db.depenses, db.listes, db.gouts], async () => {
+    for (const i of coches) {
+      const a = i.alimentId ? aliments.get(i.alimentId) : undefined
+      const q = a ? i.nbFormats * a.formatVente.quantite : i.quantiteBesoin
+      const paye = i.prixPaye ?? i.prixEstime
+      montant += paye
+      await db.stock.add({
+        alimentId: i.alimentId, codeBarres: i.codeBarres, nom: i.nom, quantite: q, unite: i.unite,
+        emplacement: a?.rayon === 'surgeles' ? 'congelateur' : a && ['frais', 'boucherie-poisson'].includes(a.rayon) ? 'frigo' : a?.categorie === 'legume' || a?.categorie === 'fruit' ? 'frigo' : 'placard',
+        peremption: a?.conservationJours ? ajouterJours(isoJour(), a.conservationJours) : undefined,
+        ajouteLe: maintenant,
+      })
+      await db.achats.add({ alimentId: i.alimentId, codeBarres: i.codeBarres, date: maintenant, quantite: q, unite: i.unite, prix: i.prixPaye, magasinId: l.magasinId })
+      if (i.prixPaye && i.alimentId)
+        await db.prix.add({ cle: i.alimentId, alimentId: i.alimentId, magasinId: l.magasinId, prix: i.prixPaye, quantite: q, unite: i.unite, source: 'liste', date: maintenant })
+    }
+    await db.depenses.add({ date: maintenant, montant: Math.round(montant * 100) / 100, magasinId: l.magasinId, origine: 'liste' })
+    await db.listes.update(semaine, { validee: true, items: l.items.filter((i) => !i.coche) })
+  })
+  for (const i of coches) if (i.alimentId) await enregistrerGout('aliment', i.alimentId, { achat: true })
+  return { montant: Math.round(montant * 100) / 100, articles: coches.length }
 }

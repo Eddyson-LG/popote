@@ -55,11 +55,11 @@ export default function Onboarding() {
   }
 
   async function terminer() {
+    const aliments = await db.aliments.bulkGet(placard)
     await db.transaction('rw', db.reglages, db.magasins, db.stock, async () => {
       await db.reglages.put({ ...r, onboardingFait: true })
       await db.magasins.clear()
       await db.magasins.bulkPut(magasins)
-      const aliments = await db.aliments.bulkGet(placard)
       await db.stock.bulkAdd(
         aliments.filter(Boolean).map((a) => ({
           alimentId: a!.id,

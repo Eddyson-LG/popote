@@ -12,3 +12,9 @@ export function quantite(q: number, unite: 'g' | 'ml' | 'piece'): string {
   if (unite === 'ml') return q >= 1000 ? `${arrondi(q / 1000)} L` : `${Math.round(q)} ml`
   return arrondi(q)
 }
+
+/** « 2 × paquet de 500 g », « 5 pièces », « boîte de 6 ». */
+export function formatAchat(nbFormats: number, libelle: string): string {
+  if (/^la pi[eè]ce$/i.test(libelle)) return nbFormats > 1 ? `${nbFormats} pièces` : '1 pièce'
+  return nbFormats > 1 ? `${nbFormats} × ${libelle}` : libelle
+}

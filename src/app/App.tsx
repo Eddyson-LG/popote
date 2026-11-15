@@ -10,6 +10,8 @@ const Swipe = lazy(() => import('@/features/gouts/Swipe'))
 const Semaine = lazy(() => import('@/features/recettes/Semaine'))
 const Liste = lazy(() => import('@/features/liste/Liste'))
 const Plus = lazy(() => import('@/features/reglages/Plus'))
+const FicheRecette = lazy(() => import('@/features/recettes/FicheRecette'))
+const MesGouts = lazy(() => import('@/features/gouts/MesGouts'))
 const Onboarding = lazy(() => import('@/features/onboarding/Onboarding'))
 
 function Chargement() {
@@ -37,6 +39,9 @@ function Routeur() {
         <Route path="/swipe" element={<Swipe />} />
         <Route path="/semaine" element={<Semaine />} />
         <Route path="/liste" element={<Liste />} />
+        <Route path="/bienvenue" element={<Navigate to="/swipe?premier=1" replace />} />
+        <Route path="/recette/:id" element={<FicheRecette />} />
+        <Route path="/plus/gouts" element={<MesGouts />} />
         <Route path="/plus/*" element={<Plus />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

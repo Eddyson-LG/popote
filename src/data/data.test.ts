@@ -8,6 +8,7 @@ import { describe, expect, it } from 'vitest'
 import aliments from './aliments.json'
 import recettes from './recettes.json'
 import prixRef from './prix-reference.json'
+import contrat from './contrat-aliments.json'
 import { zAliment, zFichierPrixReference, zRecette } from '@/types/schemas'
 
 /** Mots interdits dans le nom, les étapes ou les ingrédients d'une recette. */
@@ -26,6 +27,16 @@ describe('aliments.json', () => {
   it('a des identifiants uniques', () => {
     const ids = aliments.map((a) => a.id)
     expect(new Set(ids).size).toBe(ids.length)
+  })
+  it('contient au moins 150 aliments', () => {
+    expect(aliments.length).toBeGreaterThanOrEqual(150)
+  })
+  it('respecte le contrat d\'identifiants et d\'unités (contrat-aliments.json)', () => {
+    const parId = new Map(aliments.map((a) => [a.id, a]))
+    for (const c of contrat) {
+      expect(parId.has(c.id), c.id).toBe(true)
+      expect(parId.get(c.id)?.uniteBase, c.id).toBe(c.uniteBase)
+    }
   })
   it("n'expose aucun aliment de nature fromage (exclu par défaut, mais présent seulement si tagué)", () => {
     for (const a of aliments) {
@@ -62,6 +73,12 @@ describe('recettes.json', () => {
         expect(al?.tags.some((t) => ['fromage', 'puree', 'soupe'].includes(t)), `${r.id} → ${i.alimentId}`).toBe(false)
       }
     }
+  })
+  it('contient au moins 60 recettes, dont des petits-déjeuners et des goûters peu sucrés', () => {
+    expect(recettes.length).toBeGreaterThanOrEqual(60)
+    expect(recettes.filter((r) => r.types.includes('petit-dejeuner') && r.peuSucre).length).toBeGreaterThanOrEqual(8)
+    expect(recettes.filter((r) => r.types.includes('gouter') && r.peuSucre).length).toBeGreaterThanOrEqual(8)
+    expect(recettes.filter((r) => r.gamelle).length).toBeGreaterThanOrEqual(25)
   })
   it('respecte 30 minutes maximum', () => {
     for (const r of recettes) expect(r.tempsMinutes, r.id).toBeLessThanOrEqual(30)

@@ -1,0 +1,862 @@
+[
+ {
+  "id": "carotte",
+  "uniteBase": "g",
+  "nom": "Carotte"
+ },
+ {
+  "id": "oignon",
+  "uniteBase": "p",
+  "nom": "Oignon"
+ },
+ {
+  "id": "oignon-rouge",
+  "uniteBase": "p",
+  "nom": "Oignon rouge"
+ },
+ {
+  "id": "ail",
+  "uniteBase": "p",
+  "nom": "Ail (gousse)"
+ },
+ {
+  "id": "echalote",
+  "uniteBase": "p",
+  "nom": "Échalote"
+ },
+ {
+  "id": "pomme-de-terre",
+  "uniteBase": "g",
+  "nom": "Pomme de terre"
+ },
+ {
+  "id": "patate-douce",
+  "uniteBase": "g",
+  "nom": "Patate douce"
+ },
+ {
+  "id": "courgette",
+  "uniteBase": "p",
+  "nom": "Courgette"
+ },
+ {
+  "id": "aubergine",
+  "uniteBase": "p",
+  "nom": "Aubergine"
+ },
+ {
+  "id": "poivron-rouge",
+  "uniteBase": "p",
+  "nom": "Poivron rouge"
+ },
+ {
+  "id": "poivron-vert",
+  "uniteBase": "p",
+  "nom": "Poivron vert"
+ },
+ {
+  "id": "tomate",
+  "uniteBase": "p",
+  "nom": "Tomate"
+ },
+ {
+  "id": "tomate-cerise",
+  "uniteBase": "g",
+  "nom": "Tomate cerise"
+ },
+ {
+  "id": "concombre",
+  "uniteBase": "p",
+  "nom": "Concombre"
+ },
+ {
+  "id": "salade-verte",
+  "uniteBase": "p",
+  "nom": "Salade verte"
+ },
+ {
+  "id": "epinards-frais",
+  "uniteBase": "g",
+  "nom": "Épinards frais"
+ },
+ {
+  "id": "chou-fleur",
+  "uniteBase": "p",
+  "nom": "Chou-fleur"
+ },
+ {
+  "id": "brocoli",
+  "uniteBase": "p",
+  "nom": "Brocoli"
+ },
+ {
+  "id": "chou-blanc",
+  "uniteBase": "p",
+  "nom": "Chou blanc"
+ },
+ {
+  "id": "chou-rouge",
+  "uniteBase": "p",
+  "nom": "Chou rouge"
+ },
+ {
+  "id": "poireau",
+  "uniteBase": "p",
+  "nom": "Poireau"
+ },
+ {
+  "id": "champignon-paris",
+  "uniteBase": "g",
+  "nom": "Champignon de Paris"
+ },
+ {
+  "id": "haricot-vert",
+  "uniteBase": "g",
+  "nom": "Haricots verts"
+ },
+ {
+  "id": "petits-pois-frais",
+  "uniteBase": "g",
+  "nom": "Petits pois frais"
+ },
+ {
+  "id": "potiron",
+  "uniteBase": "g",
+  "nom": "Potiron"
+ },
+ {
+  "id": "courge-butternut",
+  "uniteBase": "p",
+  "nom": "Courge butternut"
+ },
+ {
+  "id": "betterave-cuite",
+  "uniteBase": "g",
+  "nom": "Betterave cuite"
+ },
+ {
+  "id": "radis",
+  "uniteBase": "p",
+  "nom": "Radis (botte)"
+ },
+ {
+  "id": "celeri-branche",
+  "uniteBase": "p",
+  "nom": "Céleri branche"
+ },
+ {
+  "id": "fenouil",
+  "uniteBase": "p",
+  "nom": "Fenouil"
+ },
+ {
+  "id": "navet",
+  "uniteBase": "g",
+  "nom": "Navet"
+ },
+ {
+  "id": "mais-doux",
+  "uniteBase": "g",
+  "nom": "Maïs doux (boîte)"
+ },
+ {
+  "id": "avocat",
+  "uniteBase": "p",
+  "nom": "Avocat"
+ },
+ {
+  "id": "endive",
+  "uniteBase": "p",
+  "nom": "Endive"
+ },
+ {
+  "id": "banane",
+  "uniteBase": "p",
+  "nom": "Banane"
+ },
+ {
+  "id": "pomme",
+  "uniteBase": "p",
+  "nom": "Pomme"
+ },
+ {
+  "id": "poire",
+  "uniteBase": "p",
+  "nom": "Poire"
+ },
+ {
+  "id": "orange",
+  "uniteBase": "p",
+  "nom": "Orange"
+ },
+ {
+  "id": "clementine",
+  "uniteBase": "p",
+  "nom": "Clémentine"
+ },
+ {
+  "id": "citron",
+  "uniteBase": "p",
+  "nom": "Citron"
+ },
+ {
+  "id": "kiwi",
+  "uniteBase": "p",
+  "nom": "Kiwi"
+ },
+ {
+  "id": "fraise",
+  "uniteBase": "g",
+  "nom": "Fraise"
+ },
+ {
+  "id": "raisin",
+  "uniteBase": "g",
+  "nom": "Raisin"
+ },
+ {
+  "id": "peche",
+  "uniteBase": "p",
+  "nom": "Pêche"
+ },
+ {
+  "id": "abricot",
+  "uniteBase": "g",
+  "nom": "Abricot"
+ },
+ {
+  "id": "melon",
+  "uniteBase": "p",
+  "nom": "Melon"
+ },
+ {
+  "id": "pasteque",
+  "uniteBase": "p",
+  "nom": "Pastèque"
+ },
+ {
+  "id": "ananas",
+  "uniteBase": "p",
+  "nom": "Ananas"
+ },
+ {
+  "id": "mangue",
+  "uniteBase": "p",
+  "nom": "Mangue"
+ },
+ {
+  "id": "prune",
+  "uniteBase": "g",
+  "nom": "Prune"
+ },
+ {
+  "id": "fruits-rouges-surgeles",
+  "uniteBase": "g",
+  "nom": "Fruits rouges surgelés"
+ },
+ {
+  "id": "compote-sans-sucre",
+  "uniteBase": "g",
+  "nom": "Compote sans sucre ajouté"
+ },
+ {
+  "id": "raisins-secs",
+  "uniteBase": "g",
+  "nom": "Raisins secs"
+ },
+ {
+  "id": "dattes",
+  "uniteBase": "g",
+  "nom": "Dattes"
+ },
+ {
+  "id": "riz-blanc",
+  "uniteBase": "g",
+  "nom": "Riz blanc"
+ },
+ {
+  "id": "riz-basmati",
+  "uniteBase": "g",
+  "nom": "Riz basmati"
+ },
+ {
+  "id": "riz-complet",
+  "uniteBase": "g",
+  "nom": "Riz complet"
+ },
+ {
+  "id": "pates",
+  "uniteBase": "g",
+  "nom": "Pâtes"
+ },
+ {
+  "id": "pates-completes",
+  "uniteBase": "g",
+  "nom": "Pâtes complètes"
+ },
+ {
+  "id": "spaghetti",
+  "uniteBase": "g",
+  "nom": "Spaghetti"
+ },
+ {
+  "id": "nouilles-asiatiques",
+  "uniteBase": "g",
+  "nom": "Nouilles asiatiques"
+ },
+ {
+  "id": "semoule",
+  "uniteBase": "g",
+  "nom": "Semoule"
+ },
+ {
+  "id": "boulgour",
+  "uniteBase": "g",
+  "nom": "Boulgour"
+ },
+ {
+  "id": "quinoa",
+  "uniteBase": "g",
+  "nom": "Quinoa"
+ },
+ {
+  "id": "lentilles-vertes",
+  "uniteBase": "g",
+  "nom": "Lentilles vertes"
+ },
+ {
+  "id": "lentilles-corail",
+  "uniteBase": "g",
+  "nom": "Lentilles corail"
+ },
+ {
+  "id": "pois-chiches-boite",
+  "uniteBase": "g",
+  "nom": "Pois chiches (boîte)"
+ },
+ {
+  "id": "haricots-rouges-boite",
+  "uniteBase": "g",
+  "nom": "Haricots rouges (boîte)"
+ },
+ {
+  "id": "haricots-blancs-boite",
+  "uniteBase": "g",
+  "nom": "Haricots blancs (boîte)"
+ },
+ {
+  "id": "flocons-avoine",
+  "uniteBase": "g",
+  "nom": "Flocons d'avoine"
+ },
+ {
+  "id": "pain-complet",
+  "uniteBase": "g",
+  "nom": "Pain complet"
+ },
+ {
+  "id": "baguette",
+  "uniteBase": "p",
+  "nom": "Baguette"
+ },
+ {
+  "id": "pain-de-mie",
+  "uniteBase": "g",
+  "nom": "Pain de mie"
+ },
+ {
+  "id": "tortilla",
+  "uniteBase": "p",
+  "nom": "Tortilla de blé"
+ },
+ {
+  "id": "galette-riz",
+  "uniteBase": "g",
+  "nom": "Galettes de riz soufflé"
+ },
+ {
+  "id": "farine",
+  "uniteBase": "g",
+  "nom": "Farine de blé"
+ },
+ {
+  "id": "gnocchis",
+  "uniteBase": "g",
+  "nom": "Gnocchis"
+ },
+ {
+  "id": "muesli-sans-sucre",
+  "uniteBase": "g",
+  "nom": "Muesli sans sucre ajouté"
+ },
+ {
+  "id": "pain-pita",
+  "uniteBase": "p",
+  "nom": "Pain pita"
+ },
+ {
+  "id": "oeuf",
+  "uniteBase": "p",
+  "nom": "Œuf"
+ },
+ {
+  "id": "poulet-filet",
+  "uniteBase": "g",
+  "nom": "Filet de poulet"
+ },
+ {
+  "id": "poulet-cuisse",
+  "uniteBase": "g",
+  "nom": "Cuisse de poulet"
+ },
+ {
+  "id": "dinde-escalope",
+  "uniteBase": "g",
+  "nom": "Escalope de dinde"
+ },
+ {
+  "id": "boeuf-hache",
+  "uniteBase": "g",
+  "nom": "Bœuf haché 5 %"
+ },
+ {
+  "id": "boeuf-emince",
+  "uniteBase": "g",
+  "nom": "Émincé de bœuf"
+ },
+ {
+  "id": "porc-filet-mignon",
+  "uniteBase": "g",
+  "nom": "Filet mignon de porc"
+ },
+ {
+  "id": "lardons",
+  "uniteBase": "g",
+  "nom": "Lardons"
+ },
+ {
+  "id": "jambon-blanc",
+  "uniteBase": "g",
+  "nom": "Jambon blanc"
+ },
+ {
+  "id": "chorizo",
+  "uniteBase": "g",
+  "nom": "Chorizo"
+ },
+ {
+  "id": "saucisse-toulouse",
+  "uniteBase": "g",
+  "nom": "Saucisse de Toulouse"
+ },
+ {
+  "id": "merguez",
+  "uniteBase": "g",
+  "nom": "Merguez"
+ },
+ {
+  "id": "thon-boite",
+  "uniteBase": "g",
+  "nom": "Thon (boîte)"
+ },
+ {
+  "id": "sardine-boite",
+  "uniteBase": "g",
+  "nom": "Sardines (boîte)"
+ },
+ {
+  "id": "maquereau-boite",
+  "uniteBase": "g",
+  "nom": "Maquereau (boîte)"
+ },
+ {
+  "id": "saumon-filet",
+  "uniteBase": "g",
+  "nom": "Filet de saumon"
+ },
+ {
+  "id": "colin-surgele",
+  "uniteBase": "g",
+  "nom": "Colin surgelé"
+ },
+ {
+  "id": "crevettes",
+  "uniteBase": "g",
+  "nom": "Crevettes"
+ },
+ {
+  "id": "surimi",
+  "uniteBase": "g",
+  "nom": "Surimi"
+ },
+ {
+  "id": "tofu",
+  "uniteBase": "g",
+  "nom": "Tofu nature"
+ },
+ {
+  "id": "tofu-fume",
+  "uniteBase": "g",
+  "nom": "Tofu fumé"
+ },
+ {
+  "id": "edamame-surgele",
+  "uniteBase": "g",
+  "nom": "Edamame surgelés"
+ },
+ {
+  "id": "beurre-cacahuete",
+  "uniteBase": "g",
+  "nom": "Beurre de cacahuète"
+ },
+ {
+  "id": "houmous",
+  "uniteBase": "g",
+  "nom": "Houmous"
+ },
+ {
+  "id": "lait",
+  "uniteBase": "ml",
+  "nom": "Lait demi-écrémé"
+ },
+ {
+  "id": "yaourt-nature",
+  "uniteBase": "p",
+  "nom": "Yaourt nature"
+ },
+ {
+  "id": "yaourt-grec",
+  "uniteBase": "g",
+  "nom": "Yaourt à la grecque"
+ },
+ {
+  "id": "skyr",
+  "uniteBase": "g",
+  "nom": "Skyr nature"
+ },
+ {
+  "id": "creme-fraiche",
+  "uniteBase": "g",
+  "nom": "Crème fraîche"
+ },
+ {
+  "id": "creme-liquide",
+  "uniteBase": "ml",
+  "nom": "Crème liquide"
+ },
+ {
+  "id": "beurre",
+  "uniteBase": "g",
+  "nom": "Beurre"
+ },
+ {
+  "id": "lait-coco",
+  "uniteBase": "ml",
+  "nom": "Lait de coco"
+ },
+ {
+  "id": "boisson-avoine",
+  "uniteBase": "ml",
+  "nom": "Boisson à l'avoine"
+ },
+ {
+  "id": "huile-olive",
+  "uniteBase": "ml",
+  "nom": "Huile d'olive"
+ },
+ {
+  "id": "huile-tournesol",
+  "uniteBase": "ml",
+  "nom": "Huile de tournesol"
+ },
+ {
+  "id": "huile-sesame",
+  "uniteBase": "ml",
+  "nom": "Huile de sésame"
+ },
+ {
+  "id": "sauce-soja",
+  "uniteBase": "ml",
+  "nom": "Sauce soja"
+ },
+ {
+  "id": "vinaigre-balsamique",
+  "uniteBase": "ml",
+  "nom": "Vinaigre balsamique"
+ },
+ {
+  "id": "vinaigre-cidre",
+  "uniteBase": "ml",
+  "nom": "Vinaigre de cidre"
+ },
+ {
+  "id": "moutarde",
+  "uniteBase": "g",
+  "nom": "Moutarde"
+ },
+ {
+  "id": "ketchup",
+  "uniteBase": "g",
+  "nom": "Ketchup"
+ },
+ {
+  "id": "mayonnaise",
+  "uniteBase": "g",
+  "nom": "Mayonnaise"
+ },
+ {
+  "id": "concentre-tomate",
+  "uniteBase": "g",
+  "nom": "Concentré de tomate"
+ },
+ {
+  "id": "coulis-tomate",
+  "uniteBase": "g",
+  "nom": "Coulis de tomate"
+ },
+ {
+  "id": "tomates-concassees-boite",
+  "uniteBase": "g",
+  "nom": "Tomates concassées (boîte)"
+ },
+ {
+  "id": "pesto-basilic",
+  "uniteBase": "g",
+  "nom": "Pesto au basilic"
+ },
+ {
+  "id": "sauce-pimentee",
+  "uniteBase": "ml",
+  "nom": "Sauce pimentée"
+ },
+ {
+  "id": "bouillon-cube",
+  "uniteBase": "p",
+  "nom": "Bouillon cube"
+ },
+ {
+  "id": "miel",
+  "uniteBase": "g",
+  "nom": "Miel"
+ },
+ {
+  "id": "sel",
+  "uniteBase": "g",
+  "nom": "Sel"
+ },
+ {
+  "id": "poivre",
+  "uniteBase": "g",
+  "nom": "Poivre"
+ },
+ {
+  "id": "cornichons",
+  "uniteBase": "g",
+  "nom": "Cornichons"
+ },
+ {
+  "id": "olives",
+  "uniteBase": "g",
+  "nom": "Olives"
+ },
+ {
+  "id": "capres",
+  "uniteBase": "g",
+  "nom": "Câpres"
+ },
+ {
+  "id": "harissa",
+  "uniteBase": "g",
+  "nom": "Harissa"
+ },
+ {
+  "id": "cumin",
+  "uniteBase": "g",
+  "nom": "Cumin"
+ },
+ {
+  "id": "paprika",
+  "uniteBase": "g",
+  "nom": "Paprika"
+ },
+ {
+  "id": "curry",
+  "uniteBase": "g",
+  "nom": "Curry en poudre"
+ },
+ {
+  "id": "curcuma",
+  "uniteBase": "g",
+  "nom": "Curcuma"
+ },
+ {
+  "id": "gingembre-frais",
+  "uniteBase": "g",
+  "nom": "Gingembre frais"
+ },
+ {
+  "id": "cannelle",
+  "uniteBase": "g",
+  "nom": "Cannelle"
+ },
+ {
+  "id": "herbes-provence",
+  "uniteBase": "g",
+  "nom": "Herbes de Provence"
+ },
+ {
+  "id": "persil",
+  "uniteBase": "p",
+  "nom": "Persil (bouquet)"
+ },
+ {
+  "id": "coriandre",
+  "uniteBase": "p",
+  "nom": "Coriandre (bouquet)"
+ },
+ {
+  "id": "basilic",
+  "uniteBase": "p",
+  "nom": "Basilic (pot)"
+ },
+ {
+  "id": "ciboulette",
+  "uniteBase": "p",
+  "nom": "Ciboulette (bouquet)"
+ },
+ {
+  "id": "piment-espelette",
+  "uniteBase": "g",
+  "nom": "Piment d'Espelette"
+ },
+ {
+  "id": "ras-el-hanout",
+  "uniteBase": "g",
+  "nom": "Ras el hanout"
+ },
+ {
+  "id": "thym",
+  "uniteBase": "g",
+  "nom": "Thym"
+ },
+ {
+  "id": "sucre",
+  "uniteBase": "g",
+  "nom": "Sucre"
+ },
+ {
+  "id": "chocolat-noir",
+  "uniteBase": "g",
+  "nom": "Chocolat noir 70 %"
+ },
+ {
+  "id": "pate-a-tartiner",
+  "uniteBase": "g",
+  "nom": "Pâte à tartiner"
+ },
+ {
+  "id": "confiture",
+  "uniteBase": "g",
+  "nom": "Confiture"
+ },
+ {
+  "id": "sirop-erable",
+  "uniteBase": "ml",
+  "nom": "Sirop d'érable"
+ },
+ {
+  "id": "levure-chimique",
+  "uniteBase": "g",
+  "nom": "Levure chimique"
+ },
+ {
+  "id": "sucre-vanille",
+  "uniteBase": "g",
+  "nom": "Sucre vanillé"
+ },
+ {
+  "id": "amandes",
+  "uniteBase": "g",
+  "nom": "Amandes"
+ },
+ {
+  "id": "noix",
+  "uniteBase": "g",
+  "nom": "Noix"
+ },
+ {
+  "id": "noisettes",
+  "uniteBase": "g",
+  "nom": "Noisettes"
+ },
+ {
+  "id": "graines-chia",
+  "uniteBase": "g",
+  "nom": "Graines de chia"
+ },
+ {
+  "id": "graines-courge",
+  "uniteBase": "g",
+  "nom": "Graines de courge"
+ },
+ {
+  "id": "sesame",
+  "uniteBase": "g",
+  "nom": "Graines de sésame"
+ },
+ {
+  "id": "cacahuetes",
+  "uniteBase": "g",
+  "nom": "Cacahuètes"
+ },
+ {
+  "id": "epinards-surgeles",
+  "uniteBase": "g",
+  "nom": "Épinards surgelés"
+ },
+ {
+  "id": "poelee-legumes-surgelee",
+  "uniteBase": "g",
+  "nom": "Poêlée de légumes surgelée"
+ },
+ {
+  "id": "petits-pois-surgeles",
+  "uniteBase": "g",
+  "nom": "Petits pois surgelés"
+ },
+ {
+  "id": "haricots-verts-surgeles",
+  "uniteBase": "g",
+  "nom": "Haricots verts surgelés"
+ },
+ {
+  "id": "brocoli-surgele",
+  "uniteBase": "g",
+  "nom": "Brocoli surgelé"
+ },
+ {
+  "id": "wok-legumes-surgele",
+  "uniteBase": "g",
+  "nom": "Légumes pour wok surgelés"
+ },
+ {
+  "id": "the",
+  "uniteBase": "p",
+  "nom": "Thé (sachet)"
+ },
+ {
+  "id": "cafe",
+  "uniteBase": "g",
+  "nom": "Café moulu"
+ },
+ {
+  "id": "jus-orange",
+  "uniteBase": "ml",
+  "nom": "Jus d'orange 100 %"
+ },
+ {
+  "id": "cacao-non-sucre",
+  "uniteBase": "g",
+  "nom": "Cacao en poudre non sucré"
+ }
+]

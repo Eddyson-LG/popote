@@ -11,6 +11,7 @@ import { magasinsParDefaut, reglagesParDefaut } from '@/lib/defaults'
 import { isoJour } from '@/lib/dates'
 import { JOURS_COURTS } from '@/lib/dates'
 import { Bouton } from '@/ui'
+import { chargerDemo } from '@/lib/demo'
 
 const EQUIPEMENTS: { id: Equipement; label: string; emoji: string }[] = [
   { id: 'plaques', label: 'Plaques', emoji: '🔥' },
@@ -78,7 +79,14 @@ export default function Onboarding() {
     {
       titre: 'Salut ! Moi c’est Popote 🍲',
       sous: 'Je te fais un planning de repas et une liste de courses sous ton budget. 5 minutes de questions, et c’est parti.',
-      contenu: <img src="icons/logo.svg" alt="" className="mx-auto mt-6 h-32 w-32 rounded-[2rem] shadow-carte" />,
+      contenu: (
+        <div className="text-center">
+          <img src="icons/logo.svg" alt="" className="mx-auto mt-6 h-32 w-32 rounded-[2rem] shadow-carte" />
+          <button type="button" className="mt-8 min-h-11 text-sm font-semibold text-encre-2 underline underline-offset-4" onClick={() => chargerDemo()}>
+            Juste tester ? Charger des données de démo
+          </button>
+        </div>
+      ),
     },
     {
       titre: 'Ton budget courses par semaine ?',
